@@ -1,0 +1,32 @@
+{"type":"FeatureCollection","features":
+        [
+
+        {"type":"Feature","properties":{"id":1,"chapter":"History","zoom":16,"image":"../high-park/MapleLeafinHighPark.jpg","source-credit":"Source: HPHS Quadrennial Catalogue 1904","source-link":"https://www.flickr.com/photos/56513965@N06/21047067205","description":"This scroll-driven storymap is built on an open-source Leaflet template. The design is ideal for telling a story that narrates different locations on a map. Or users can click any marker point to go directly to the chapter narrative."},"geometry":{"type":"Point","coordinates":[-79.4569444,43.64483328097461]}},
+
+        {"type":"Feature","properties":{"id":2,"chapter":"Geology","zoom":16,"image":"https://static1.squarespace.com/static/5a0b1e33b1ffb63ce12556de/t/5a16fbdb652dea2e1ae9fb19/1511455733968/Myseum-Logo-with-Text-Black-872x1024.png?format=750w","source-credit":"Source: Flickr","source-link":"https://flic.kr/p/FNxWf8","description":"See directions to create your own storymap. Insert your text, map points, zoom levels, and image links in an easy-to-edit spreadsheet template, named data.csv. Then drag this file into the http://geojson.io tool to convert it into a map file, named data.geojson. "},"geometry":{"type":"Point","coordinates":[    -79.46484088897705,43.6439016262324]}},
+        
+        {"type":"Feature","properties":{"id":3,"chapter":"Biology","zoom":16,"image":"../high-park/Item180A-UniversityofTorontobotanyclass,High Park-1910Formspartof-Fonds1244;WilliamJamesfamilyfonds.jpg","source-credit":"Source: Carlos Velazquez/Flickr","source-link":"https://flic.kr/p/xMnMXR","description":"Images can be uploaded a local subfolder, or pulled from an external URL (such as this photo on a Flickr server). They are automatically resized to fit into the storymap."},"geometry":{"type":"Point","coordinates":[ -79.45603251457214,43.64081929882219]}},
+        
+          {"type":"Feature","properties":{"id":4,"chapter":"Literature","zoom":16,"image":"../high-park/highparkernesthemingway.jpg","source-credit":"Source: public domain/Wikimedia","source-link":"https://commons.wikimedia.org/wiki/File:Airport_2.jpg#/media/File:Airport_2.jpg","description":"The Leafet 1.x code includes a 'fly to' feature that animates the distance traveled from one map point to the next. Users with some coding skills can easily modify the background map, or add map overlays, or extend the code by adding new features."},"geometry":
+          
+          {"type":"Point","coordinates":[-79.46010947227478,
+          43.640516492384684]}},
+          
+          {"type":"Feature","properties":{"id":5,"chapter":"Ecology","zoom":16,"image":"../high-park/highparkautumn.JPG","source-credit":"Source: Trinity College/edX","source-link":"https://www.edx.org/sites/default/files/trinity1.jpg","description":"To learn how to create your own Leaflet storymap from this template, click on 'View code in GitHub' at the bottom of the map, or go to Leaflet Templates section of the Data Visualization For All book, at http://DataVizForAll.org."},"geometry":{"type":"Point","coordinates":[-79.46395039558409, 43.64283796940432]}},
+          
+             {"type":"Feature","properties":{"id":6,"chapter":"Urban Planning","zoom":16,"image":"../high-park/Item210-HighPark-October15,1913Formspartof-Subseries52;ParksDept.photographs.jpg","source-credit":"Source: Trinity College/edX","source-link":"https://www.edx.org/sites/default/files/trinity1.jpg","description":"To learn how to create your own Leaflet storymap from this template, click on 'View code in GitHub' at the bottom of the map, or go to Leaflet Templates section of the Data Visualization For All book, at http://DataVizForAll.org."},"geometry":{"type":"Point","coordinates":[-79.46395039558409,43.64283796940432]}},
+             
+                  {"type":"Feature","properties":{"id":7,"chapter":"Intersections","zoom":16,"image":"../high-park/highparkgrenadierpong.jpg","source-credit":"Source: Trinity College/edX","source-link":"https://www.edx.org/sites/default/files/trinity1.jpg","description":"To learn how to create your own Leaflet storymap from this template, click on 'View code in GitHub' at the bottom of the map, or go to Leaflet Templates section of the Data Visualization For All book, at http://DataVizForAll.org."},"geometry":{"type":"Point","coordinates":[-79.46012020111084,43.64897896936855]}},
+                  
+                    {"type":"Feature","properties":{"id":8,"chapter":"Maps","zoom":16,"image":"../high-park/Item98-Proposedfieldhouse,ParksideDr.,HighParkfortheCityofToronto-January22,1934.jpg","source-credit":"Source: Trinity College/edX","source-link":"https://www.edx.org/sites/default/files/trinity1.jpg","description":"To learn how to create your own Leaflet storymap from this template, click on 'View code in GitHub' at the bottom of the map, or go to Leaflet Templates section of the Data Visualization For All book, at http://DataVizForAll.org."},"geometry":{"type":"Point","coordinates":[-79.46863889694214,43.64512830196416]}},
+                    
+                        {"type":"Feature","properties":{"id":9,"chapter":"Photos","zoom":16,"image":"../high-park/motorcyclehighpark.jpg","source-credit":"Source: Trinity College/edX","source-link":"https://www.edx.org/sites/default/files/trinity1.jpg","description":"To learn how to create your own Leaflet storymap from this template, click on 'View code in GitHub' at the bottom of the map, or go to Leaflet Templates section of the Data Visualization For All book, at http://DataVizForAll.org."},"geometry":{"type":"Point","coordinates":[ -79.46687936782837,43.642473060898425]}}
+        ]
+}
+
+
+
+
+
+
+

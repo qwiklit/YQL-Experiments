@@ -1,0 +1,18 @@
+<!-- Fetch Twitter search results using YQL + JSONP + a simple JavaScript handler function -->
+<!-- Described in blog post: http://developer.yahoo.net/blog/archives/2010/03/yql_code_samples_yql_is_easy_to_use.html -->
+
+<ul>Puppy Tweets:</ul>
+<script>
+function handleResponse (json) {
+    var results = json.query.results.json.results,
+        ul = document.getElementsByTagName( 'ul' )[0],
+        li = null;
+    for ( var i = 0; i < results.length; i++ ) {
+        li = document.createElement( 'li' );
+        li.innerHTML = results[i].text;
+        ul.appendChild( li );
+    }
+}
+</script>
+<!-- run this query in the YQL console: http://developer.yahoo.com/yql/console/?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Fsearch.twitter.com%2Fsearch.json%3Fq%3Dpuppy%22 -->
+<script src="http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Fsearch.twitter.com%2Fsearch.json%3Fq%3Dpuppy%22&format=json&diagnostics=false&callback=handleResponse"></script>

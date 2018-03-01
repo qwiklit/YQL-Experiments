@@ -1,0 +1,232 @@
+<head>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+
+<style>
+body {
+    font-size: 75%;
+    font-family:"Segoe UI", Verdana, Helvetica, Sans-Serif;
+}
+#body {
+    clear: both;
+    margin: 0 auto;
+    max-width: 534px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0.75em;
+    border: 0 none;
+    margin-top:35px;
+}
+#body td {
+    padding:15px 30px 15px 10px;
+}
+#body tr td:nth-child(1) {
+    font-weight:bold;
+}
+#address {
+    width:400px;
+}    
+</style>
+</head>
+
+<div id="body">
+    
+<h1>Ashgabat</h1>
+
+    <hr/>
+    <table border="1">
+   
+          <tr>
+            <td>Title</td>
+              <td id="title"></td>
+        </tr>
+          <tr>
+            <td>URL</td>
+           <td id="url"></td>
+        </tr>
+         <tr>
+            <td>description</td>
+            <td id="description"></td>
+        </tr>
+    
+    </table>
+    
+<br />
+    
+    <table border="1">
+   
+          <tr>
+            <td>Title</td>
+              <td id="b_title"></td>
+        </tr>
+          <tr>
+            <td>URL</td>
+           <td id="b_url"></td>
+        </tr>
+         <tr>
+            <td>description</td>
+            <td id="b_description"></td>
+        </tr>
+    
+    </table>
+    
+        <table border="1">
+   
+          <tr>
+            <td>Title</td>
+              <td id="c_title"></td>
+        </tr>
+          <tr>
+            <td>URL</td>
+        <td id="c_url"></td>
+        </tr>
+         <tr>
+            <td>description</td>
+            <td id="c_description"></td>
+        </tr>
+    
+    </table>
+    
+        
+        <table border="1">
+   
+          <tr>
+            <td>Title</td>
+              <td id="d_title"></td>
+        </tr>
+          <tr>
+            <td>URL</td>
+           <td id="d_url"></td>
+        </tr>
+         <tr>
+            <td>description</td>
+            <td id="d_description"></td>
+        </tr>
+    
+    </table>
+    
+        <table border="1">
+   
+          <tr>
+            <td>Title</td>
+              <td id="e_title"></td>
+        </tr>
+          <tr>
+            <td>URL</td>
+           <td id="e_url"></td>
+        </tr>
+         <tr>
+            <td>description</td>
+            <td id="e_description"></td>
+        </tr>
+    
+    </table>
+</div>
+
+<script>
+
+
+$(document).ready(function() {
+
+// The NewsAPI url used to get the JSON data
+//Switch the name of the API to whatever you think will work best
+var newsAPI = "https://newsapi.org/v2/everything?q=ashgabat&apiKey=8f17d6ab81184c428bb2f8085b01ef9a";
+
+$.getJSON(newsAPI, function (json) {
+
+    // Set the variables from the results array
+    //the variable is separate from the console log
+
+    
+    var title = json.articles[0].title
+        console.log('title : ', title);
+    var url = json.articles[(0)].url
+        console.log('URL : ', url);
+    var description = json.articles[0].description
+        console.log('description: ', description);
+    var urlToImage = json.articles[0].urlToImage
+   
+    var b_title = json.articles[1].title
+        console.log('title : ', b_title);
+    var b_url = json.articles[(1)].url
+        console.log('URL : ', b_url);
+    var b_description = json.articles[1].description
+        console.log('description: ', b_description);
+    
+    var c_title = json.articles[2].title
+        console.log('title : ', c_title);
+    var c_url = json.articles[(2)].url
+        console.log('URL : ', c_url);
+    var c_description = json.articles[2].description
+        console.log('description: ', c_description);
+    
+    var d_title = json.articles[3].title
+        console.log('title : ', d_title);
+    var d_url = json.articles[(3)].url
+        console.log('URL : ', d_url);
+    var d_description = json.articles[3].description
+        console.log('description: ', d_description);
+    
+    var e_title = json.articles[4].title
+        console.log('title : ', e_title);
+    var e_url = json.articles[(4)].url
+        console.log('URL : ', e_url);
+    var e_description = json.articles[4].description
+        console.log('description: ', e_description);
+  
+  
+  
+
+    
+    //the HTML is a textual representation of the variable
+
+    // Set the table td text
+
+    $('#title').text(title);
+    $('#url').text(url);
+    $('#description').text(description);
+    
+    $('#b_title').text(b_title);
+    $('#b_url').text(b_url);
+    $('#b_description').text(b_description);
+    
+    $('#c_title').text(c_title);
+    $('#c_url').text(c_url);
+    $('#c_description').text(c_description);
+    
+    $('#d_title').text(d_title);
+    $('#d_url').text(d_url);
+    $('#d_description').text(d_description);
+    
+    $('#e_title').text(e_title);
+    $('#e_url').text(e_url);
+    $('#e_description').text(e_description);
+});
+
+// Caching the link jquery object
+var $myLink = $('a.myLink');
+
+// Set the links properties
+//Not Necessary for what you're trying to do
+$myLink.prop({
+    href: newsAPI,
+    title: 'Click on this link to open in a new window.'
+}).click(function (e) {
+    e.preventDefault();
+    window.open(this.href, '_blank');
+});
+})
+
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const url = "http://newsapi.org/v2/everything?q=ashgabat&apiKey=8f17d6ab81184c428bb2f8085b01ef9a"; // site that doesn’t send Access-Control-*
+fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+.then(response => response.text())
+.then(contents => console.log(contents))
+.catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+
+</script>

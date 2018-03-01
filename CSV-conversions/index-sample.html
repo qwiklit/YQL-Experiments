@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Bootstrap 3 Sidebar Navigation</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+<style>
+   .dropdown-menu li {color: white;}
+   iframe#main-interface {height: 1500px; width: 100%; border: none;}
+    iframe#main-interface body {color: white;}
+    p {height: 0px;}
+    
+</style>
+</head>
+
+<body>
+
+      <div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       Omniwire World Map
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+                </li>
+                
+                <li class="dropdown">
+                  <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Afghanistan<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li id="afghanistan"><a href="#">Something else here</a></li>
+                      
+                  </ul>
+                </li>
+                
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Albania<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li id="albania"><a href="#">Something else here</a></li>
+                      
+                  </ul>
+                </li>
+                
+                  <li class="dropdown">
+                  <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Algeria<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li id="algeria"><a href="#">Something else here</a></li>
+                      
+                  </ul>
+                </li>
+                
+                     <li class="dropdown">
+                  <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> American Samoa<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li id="american-samoa"><a href="#">Something else here</a></li>
+                      
+                  </ul>
+                </li>
+                
+                 <li class="dropdown">
+                  <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Andorra<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li id="andorra"><a href="#">Something else here</a></li>
+                    
+                  </ul>
+                </li>
+                
+                  <li class="dropdown">
+                  <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Angola<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li id="angola"><a href="#">Something else here</a></li>
+                    
+                  </ul>
+                </li>
+                
+                 <li class="dropdown">
+                  <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Antarctica<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li id="antarctica"><a href="#">Something else here</a></li>
+                    
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+         
+
+
+
+<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+ 
+ 
+
+<script>
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(2,33) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<a target="iframe_front" href="#"><p class="country"><div style="font-size: 10px; color: white;"></div> ' + feed[i].col0 + '</p>'     
+         }
+        document.getElementById('afghanistan').innerHTML = feedmarkup
+    })
+})
+
+
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(36,26) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<a target="iframe_front" href=""><p class="country"><div style="font-size: 10px; color: white;"></div> ' + feed[i].col0 + '</p> </a>'     
+         }
+        document.getElementById('albania').innerHTML = feedmarkup
+    })
+})
+
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(62,51) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<a target="iframe_front" href=""><p class="country"><div style="font-size: 10px; color: white;"></div> ' + feed[i].col0 + '</p> </a>'     
+         }
+        document.getElementById('algeria').innerHTML = feedmarkup
+    })
+})
+
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(113,2) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<a target="iframe_front" href=""><p class="country"><div style="font-size: 10px; color: white;"></div> ' + feed[i].col0 + '</p> </a>'     
+         }
+        document.getElementById('american-samoa').innerHTML = feedmarkup
+    })
+})
+
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(114,2) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<a target="iframe_front" href=""><p class="country"><div style="font-size: 10px; color: white;"></div> ' + feed[i].col0 + '</p> </a>'     
+         }
+        document.getElementById('andorra').innerHTML = feedmarkup
+    })
+})
+
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(115,49) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+        feedmarkup += '<a target="iframe_front" href=""><p class="country"><div style="font-size: 10px; color: white;"></div> ' + feed[i].col0 + '</p> </a>'
+         }
+        document.getElementById('angola').innerHTML = feedmarkup
+     })
+})      
+   
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(164,38) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<a target="iframe_front" href=""><p class="country"><div style="font-size: 10px; color: white;"></div> ' + feed[i].col0 + '</p> </a>'     
+         }
+        document.getElementById('antarctica').innerHTML = feedmarkup
+    })
+});
+          </script>     
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="page-header">Omniwire World Feed</h1>  
+                                     <div id="images" ></div>
+                    </div>
+                     <iframe id="main-interface" name="iframe_front"></iframe>    
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

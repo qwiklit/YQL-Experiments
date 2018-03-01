@@ -1,0 +1,17 @@
+<html>  
+  <head>       
+  </head>  
+  <body> 
+        <h1>all</h1>
+    <script>  
+      function top_stories(o){ 
+        // parse through the output here:
+        var items = o.query.results.item;
+        // do whatever you want with the output here:  
+        console.log(items[0].title);
+      }  
+    </script> 
+    <script src='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&diagnostics=false&callback=top_stories'></script>  
+  </body>  
+</html>
+  

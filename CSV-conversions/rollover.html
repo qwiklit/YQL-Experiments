@@ -1,0 +1,72 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Catamaran|Goudy+Bookletter+1911|Martel:900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Slabo+13px|Ultra" rel="stylesheet">
+<meta http-equiv="X-Frame-Options" content="allow"> 
+</head>
+    
+<style>
+    body {background: #efefef; margin-left: 5%; margin-right: 5%;}
+    p.city-name {font-family: 'martel', serif; font-size: 35px; }
+    
+    body {
+min-height: 2500px;
+text-align: left;
+background: purple}
+    
+    a {display: inline; color: aqua; text-decoration: none;}
+    
+
+</style>
+
+<h1>Omniwire World Feed</h1>
+
+<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+ 
+<div id="news-2"></div>
+
+
+ 
+</iframe>
+<script>
+
+
+YUI().use('yql', function(Y){
+    var query = 'select * from csv(2,34) where url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUGUeWGloPJdnO75TYHrz5NUlfdgtL2Ovx2S3IaR6zJPQe8hWLhsk5AnBnq-7y3sifqxnUb-h27egH/pub?gid=2065225921&single=true&output=csv"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.row // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<hr/>'
+            
+             feedmarkup += '<div id="json-response"> <a href="https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + feed[i].col0 + '&utf8=">  <h3>' + feed[i].col0 + '</h3> </a> </div>'
+                feedmarkup += '<div id="photo-response"> <a href="https://api.qwant.com/api/search/images?count=10&offset=1&q=' + feed[i].col0 + '">  <h3> Photo Search </h3> </a> </div>'
+                  feedmarkup += '<div id="photo-response"> <a href="https://newsapi.org/v2/everything?q=' + feed[i].col0 + '&apiKey=8f17d6ab81184c428bb2f8085b01ef9a"> <h3> News Search </h3> </a> </div>'
+              //feedmarkup += '<p><div style="font-size: 13px">Population</div> ' + feed[i].col4 + '</p>' 
+      //      feedmarkup += '<p><div id="' + feed[i].col5 + '"' + 'style="font-size: 13px">Country</div> ' + feed[i].col5 + '</p>' 
+    //        feedmarkup += ' <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDf0v07xnTG5IHWKxiNr8vV07oGfrlwzKM&q=' + feed[i].col2 + ',' + feed[i].col3 + '">' +
+//'</iframe>'
+
+         }
+        document.getElementById('news-2').innerHTML = feedmarkup
+    })
+})
+
+YUI().use('yql', function(Y){
+    var query = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Madrid&utf8="'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.source// get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+          
+            feedmarkup += '<h2>' + feed[i].title + '</h2>' 
+        }
+        document.getElementById('qznews').innerHTML = feedmarkup
+    })
+})
+
+
+
+
+</script>
