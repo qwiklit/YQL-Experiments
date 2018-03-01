@@ -1,0 +1,19 @@
+body { margin: 50px;  width: 500px; }
+h1, figure { text-align: center; }
+.spinner { width: 50px;  margin: 0 45%; }
+.badges li { 
+  list-style-type: decimal;
+  list-style-position:inside;
+}
+
+figcaption { margin: auto; }
+.badges li, figcaption { 
+  font-size: 1.25em; 
+  font-weight: 600;
+}
+
+img { 
+  width: 50%; 
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
