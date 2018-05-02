@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+    
+
+<channel>
+<item>
+<title>For The Best</title>
+        <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/2016/03/14/for-the-best</link>
+    <dc:creator><![CDATA[Ann Beattie]]></dc:creator>
+<description>The Clavells weren’t the sort to play pranks, so the printed invitation to their annual Christmas party...</description>
+<content>
+
+    </content>
+</item>
+
+
+<item>
+<title>Save a Horse Ride a Cowgirl</title>
+        <pub>The New Yorker</pub>
+        <link>http://www.newyorker.com/magazine/2015/11/23/save-a-horse-ride-a-cowgirl</link>
+    <dc:creator><![CDATA[Ann Beattie]]></dc:creator>
+<description>Heidi and Bree were rear-ended on Route 1 by Sterne Clough, driving his brother’s Ford pickup.</description>
+<content>
+
+    </content>
+</item>
+    <item>
+<title>Major Maybe</title>
+                <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/2015/04/20/major-maybe</link>
+    <dc:creator><![CDATA[Daniel Solomon]]></dc:creator>
+<description>The red-haired homeless lady was arrested after she fell in the street and a taxi almost ran over her.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>Starlight</title>
+            <pub>The New Yorker</pub>	
+    <link>http://www.newyorker.com/magazine/2011/09/19/starlight-ann-beattie</link>
+    <dc:creator><![CDATA[Ann Beattie ]]></dc:creator>
+<description>I said, “Oh, Ollie, we’re always glad to see you, but I don’t think we need any pictures now.</description>
+<content>
+
+    </content>
+</item>
+    
+
+
+</channel>
+</rss>  

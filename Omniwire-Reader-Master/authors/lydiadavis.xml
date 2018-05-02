@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+    
+
+<channel>
+<item>
+<title>Long Story Short</title>
+        <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/2014/03/17/long-story-short</link>
+    <dc:creator><![CDATA[Lydia Davis]]></dc:creator>
+<description>Somewhere in the files of General Mills is a letter from the very-short-story writer Lydia Davis.</description>
+<content>
+
+    </content>
+</item>
+
+
+<item>
+<title>The Landing</title>
+        <pub>Fifty-Two Stories</pub>
+        <link>http://www.telegraph.co.uk/culture/books/9013382/Exclusive-Lydia-Davis-story-The-Landing.html</link>
+    <dc:creator><![CDATA[Lydia Davis ]]></dc:creator>
+<description>A new story by Lydia Davis. Can the pilot bring his terrified passengers safely down to earth?</description>
+<content>
+
+    </content>
+</item>
+    <item>
+<title>Sister Godzilla</title>
+                <pub>The Atlantic</pub>
+		<link>http://www.theatlantic.com/magazine/archive/2001/02/sister-godzilla/302088/</link>
+    <dc:creator><![CDATA[Daniel Solomon]]></dc:creator>
+<description>The door banged shut, and then the children were alone with their sixth-grade teacher.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>Five Short Stories By Lydia Davis</title>
+            <pub>Five Dials</pub>	
+    <link>http://fivedials.com/five-short-stories/</link>
+    <dc:creator><![CDATA[Lydia Davis ]]></dc:creator>
+<description>A friend of mine told me a sad story the other day about a neighbour of hers.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>Matchimanito</title>
+            <pub>The Atlantic</pub>
+		<link>http://www.theatlantic.com/magazine/archive/1988/07/matchimanito/376332/</link>
+    <dc:creator><![CDATA[Lydia Davis ]]></dc:creator>
+<description>We started dying before the snow, and, like the snow, we continued to fall. </description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>The Two Davises and the Rug</title>
+            <pub>Harper's</pub>
+		<link>http://harpers.org/archive/2013/09/the-two-davises-and-the-rug/</link>
+    <dc:creator><![CDATA[Lydia Davis ]]></dc:creator>
+<description>They were both named Davis, but they were not married to each other and they were not related by blood.</description>
+<content>
+
+    </content>
+</item>
+
+
+</channel>
+</rss>  

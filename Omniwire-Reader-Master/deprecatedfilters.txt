@@ -1,0 +1,761 @@
+/*
+      a[href*="www.neworleansreview.org"] {
+  color: transparent;
+  background-image: url(logos/neworleansreview.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="atticusreview.org"] {
+  color: transparent;
+  background-image: url(logos/atticusreview.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="augurybooks"] {
+  color: transparent;
+  background-image: url(logos/augury-books.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+
+    a[href*="3ammagazine"] {
+  color: transparent;
+  background-image: url(logos/3ammagazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="altpoetics"] {
+  color: transparent;
+  background-image: url(logos/.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+
+    a[href*="theamericanreader.com"] {
+  color: transparent;
+  background-image: url(logos/americanreader.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="americanscholar"] {
+  color: transparent;
+  background-image: url(logos/americanscholar.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="americanshortfiction"] {
+  color: transparent;
+  background-image: url(logos/americanshortfiction.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="apex-magazine"] {
+  color: transparent;
+  background-image: url(logos/apex.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+     a[href*="appalachianheritage"] {
+  color: transparent;
+  background-image: url(logos/appalachianheritage.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="berfrois.com"] {
+  color: transparent;
+  background-image: url(logos/Berfrois%20header-logo.gif);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+
+    a[href*="berkeleyfictionreview"] {
+  color: transparent;
+  background-image: url(logos/berkeley-fiction-review.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="bookriot.com"] {
+  color: transparent;
+  background-image: url(logos/bookriot.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="briarcliffreview"] {
+  color: transparent;
+  background-image: url(logos/briar-cliff-review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="brickmag.com"] {
+  color: transparent;
+  background-image: url(logos/brick.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+ a[href*="brooklynquarterly"] {
+  color: transparent;
+  background-image: url(logos/brooklyn-quarterly.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="buenosairesreview"] {
+  color: transparent;
+  background-image: url(logos/Buenos-Aires-Review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+
+    a[href*="thecaribbeanwriter.org"] {
+  color: transparent;
+  background-image: url(logos/the-caribbean-writer.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="www.carvezine.com"] {
+  color: transparent;
+  background-image: url(logos/carve-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="chelseastation"] {
+  color: transparent;
+  background-image: url(logos/chelsea-station.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="chicagoliterati"] {
+  color: transparent;
+  background-image: url(logos/chicago-literary.jpeg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+     a[href*="cimarronreview"] {
+  color: transparent;
+  background-image: url(logos/cimarron-review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+   a[href*="coloradoreview"] {
+  color: transparent;
+  background-image: url(logos/colorado-review.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="columbiareview"] {
+  color: transparent;
+  background-image: url(logos/columbiareview.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+
+    a[href*="deadmule.com"] {
+  color: transparent;
+  background-image: url(logos/dead-mule.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="ducts.org"] {
+  color: transparent;
+  background-image: url(logos/ducts.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+      a[href*="echolocationmagazine.com"] {
+  color: transparent;
+  background-image: url(logos/echolocation.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="eighteenbridges"] {
+  color: transparent;
+  background-image: url(logos/eighteen-bridges.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="electricliterature.com"] {
+  color: transparent;
+  background-image: url(logos/electric-literature.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="escapepod"] {
+  color: transparent;
+  background-image: url(logos/escape-pod.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="eventmagazine"] {
+  color: transparent;
+  background-image: url(logos/event-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="feathertale.com"] {
+  color: transparent;
+  background-image: url(logos/feathertale.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="fictioninternational"] {
+  color: transparent;
+  background-image: url(logos/fiction-international.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+     
+      a[href*="fivepoints"] {
+  color: transparent;
+  background-image: url(logos/five-points.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="adweek.com/galleycat/"] {
+  color: transparent;
+  background-image: url(logos/galleycat.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="geist.com"] {
+  color: transparent;
+  background-image: url(logos/geist.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="harpers.org"] {
+  color: transparent;
+  background-image: url(logos/harpers.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="hazlitt.net"] {
+  color: transparent;
+  background-image: url(logos/hazlitt.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="idahoreview.org"] {
+  color: transparent;
+  background-image: url(logos/idahoreview.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+     a[href*="imagejournal"] {
+  color: transparent;
+  background-image: url(logos/imagejournal.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="iowareview.org"] {
+  color: transparent;
+  background-image: url(logos/iowareview.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="thejournalofbisonjack"] {
+  color: transparent;
+  background-image: url(logos/journalofbisonJack.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+    
+  a[href*="kenyonreview"] {
+  color: transparent;
+  background-image: url(logos/kenyon-review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="lightspeedmagazine.com"] {
+  color: transparent;
+  background-image: url(logos/lightspeed-magazine.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+
+}
+    
+  a[href*="literaryorphans"] {
+  color: transparent;
+  background-image: url(logos/literary-orphans.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="lithub.com"] {
+  color: transparent;
+  background-image: url(logos/lithub.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+     a[href*="lrb.co.uk"] {
+  color: transparent;
+  background-image: url(logos/london-review-of-books.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+    
+  a[href*="litreactor.com"] {
+  color: transparent;
+  background-image: url(logos/lit-reactor.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="latimes.com"] {
+  color: transparent;
+  background-image: url(logos/la-times.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="daCunha"] {
+  color: transparent;
+  background-image: url(logos/dacunha.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="mastersreview.com"] {
+  color: transparent;
+  background-image: url(logos/masters-review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="mcsweeneys.net"] {
+  color: transparent;
+  background-image: url(logos/mcsweeneys.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="themillions.com"] {
+  color: transparent;
+  background-image: url(logos/the-millions.gif);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="midamericanreview"] {
+  color: transparent;
+  background-image: url(logos/mid-american-review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="narrativemagazine.com"] {
+  color: transparent;
+  background-image: url(logos/narrative-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="narrativenortheast.com"] {
+  color: transparent;
+  background-image: url(logos/narrativenortheast.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="necessaryfiction"] {
+  color: transparent;
+  background-image: url(logos/necessaryfiction.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="newdawnmagazine.com"] {
+  color: transparent;
+  background-image: url(logos/new-dawn-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="newyorker.com"] {
+  color: transparent;
+  background-image: url(logos/the-new-yorker.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="nybooks.com"] {
+  color: transparent;
+  background-image: url(logos/newyorkreviewofbooks.jpeg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="theoffingmag.com"] {
+  color: transparent;
+  background-image: url(logos/offing.jpeg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+   a[href*="parisreview"] {
+  color: transparent;
+  background-image: url(logos/the-paris-review.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}  
+    
+       a[href*="pitheadchapel"] {
+  color: transparent;
+  background-image: url(logos/pitheadchapel.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="portlandreview.org"] {
+  color: transparent;
+  background-image: url(logos/portland-review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="prairieschooner"] {
+  color: transparent;
+  background-image: url(logos/Prairie-Schooner.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="prismmagazine.ca"] {
+  color: transparent;
+  background-image: url(logos/PrismInternational.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="publicbooks.org"] {
+  color: transparent;
+  background-image: url(logos/public-books.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="purplepassionpress.com"] {
+  color: transparent;
+  background-image: url(logos/purplepassionpress.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="quaintmagazine.com"] {
+  color: transparent;
+  background-image: url(logos/quaint-magazine.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="npr.org"] {
+  color: transparent;
+  background-image: url(logos/npr-books.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+   
+
+a[href*="queenmobs"] {
+  color: transparent;
+  background-image: url(logos/queenmobsteahouse.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="rattle.com"] {
+  color: transparent;
+  background-image: url(logos/rattle-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="redividerjournal.org"] {
+  color: transparent;
+  background-image: url(logos/redivider-journal.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+      a[href*="rustytoque"] {
+  color: transparent;
+  background-image: url(logos/the-rusty-toque.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    
+  a[href*="salamandermag.org"] {
+  color: transparent;
+  background-image: url(logos/Salamander-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="salmagundi."] {
+  color: transparent;
+  background-image: url(logos/salmagundi-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+  a[href*="sciphijournal"] {
+  color: transparent;
+  background-image: url(logos/sciphijournal.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    /*nonfiction*/
+ /*
+a[href*="shimmerzine.com"] {
+  color: transparent;
+  background-image: url(logos/shimmer-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+   
+  a[href*="shortfictionbreak.com"] {
+  color: transparent;
+  background-image: url(logos/ShortFictionBreak.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="sonorareview"] {
+  color: transparent;
+  background-image: url(logos/sonora-review.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="souwester.org"] {
+  color: transparent;
+  background-image: url(logos/souwester.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="shenandoahliterary"] {
+  color: transparent;
+  background-image: url(logos/shenandoah.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="thesunmagazine.org"] {
+  color: transparent;
+  background-image: url(logos/sunmagazine.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="sycamorereview.com"] {
+  color: transparent;
+  background-image: url(logos/sycamore-review.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+} 
+    a[href*="thestar.com"] {
+  color: transparent;
+  background-image: url(logos/toronto-star.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="thirdcoastmagazine"] {
+  color: transparent;
+  background-image: url(logos/third-coast-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="tor.com"] {
+  color: transparent;
+  background-image: url(logos/tor.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="tweedsmag.org"] {
+  color: transparent;
+  background-image: url(logos/tweeds.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+  a[href*="thewalrus.ca"] {
+  color: transparent;
+  background-image: url(logos/TheWalrus.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}   
+  a[href*="waterstonereview.com"] {
+  color: transparent;
+  background-image: url(logos/waterstone-review.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}    
+  a[href*="wordswithoutborders.org"] {
+  color: transparent;
+  background-image: url(logos/words-without-borders.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}   
+  a[href*="worldliteraturetoday"] {
+  color: transparent;
+  background-image: url(logos/world-literature-today.jpeg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+    a[href*="theawl"] {
+  color: transparent;
+  background-image: url(logos/theawl.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+a[href*="brainpickings"] {
+  color: transparent;
+  background-image: url(logos/brain-pickings.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+    
+a[href*="bookforum.com"] {
+  color: transparent;
+  background-image: url(logos/bookforum.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+       
+    
+a[href*="full-stop."] {
+  color: transparent;
+  background-image: url(logos/full-stop.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+a[href*="theguardian.com"] {
+  color: transparent;
+  background-image: url(logos/theguardian.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+       
+
+a[href*="gutsmagazine"] {
+  color: transparent;
+  background-image: url(logos/GUTS.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+   
+a[href*="harpers.org"] {
+  color: transparent;
+  background-image: url(logos/harpers.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+     
+a[href*="hazlitt.net"] {
+  color: transparent;
+  background-image: url(logos/hazlitt.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+     
+a[href*="kenyonreview"] {
+  color: transparent;
+  background-image: url(logos/kenyon-review.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+     
+a[href*="lrb.co.uk"] {
+  color: transparent;
+  background-image: url(logos/london-review-of-books.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+     
+a[href*="narrativemagazine"] {
+  color: transparent;
+  background-image: url(logos/narrative-magazine.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+     
+a[href*="newyorkreviewofbooks"] {
+  color: transparent;
+  background-image: url(logos/newyorkreviewofbooks.jpeg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+a[href*="omnivoracious"] {
+  color: transparent;
+  background-image: url(logos/omnivoracious.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+   
+a[href*="the-tls.co"] {
+  color: transparent;
+  background-image: url(logos/times-literary-supplement.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+     
+
+ */

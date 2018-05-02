@@ -1,0 +1,289 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #0D0630;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 50px;
+}
+
+.sidebar-nav li ul a {
+    text-indent: 40px;
+    line-height: 50px;
+    background-color: mintcream;
+  
+    transition: 0.5s;
+    -webkit- transition: .5s;
+}
+
+.sidebar-nav li ul a:hover {
+border-left-color: #e5dedd;
+}
+
+.sidebar-nav li ul  {
+    margin-left: -40px;
+    background-color: #B6C0D2;
+    color:  #313C53;
+}
+
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #B6C0D2;
+    font-family: 'Catamaran', helvetica neue, serif; 
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #B6C0D2;
+}
+
+.sidebar-nav li ul a:hover  {
+    color:  #efefef;
+    background-color: #e5dedd;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 70px;
+    border-bottom-style: solid;
+    border-bottom-color:#FFF;
+    border-bottom-width: 1px;
+    line-height: 50px;
+    
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color:  #FFF;
+    font-family: "Open Sans", serif;
+}
+
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #B6C0D2;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0px;
+        padding-top: 0px;
+        position: relative;
+       
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+ li:hover .submenu {
+  display: block;
+  max-height: 5000px;
+}
+
+.submenu a {
+  background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 1.3s ease-out;
+  -webkit-transition: all 1.3s ease-out;
+    
+}
+@media(max-width:430px) {
+    .sidebar-nav > .sidebar-brand{height: 85px}
+
+}
+
+
+/*menu mods*/
+
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  margin-left: -20px;
+  border-style: none;
+  background-color: #0D0630;
+   
+}
+
+#myInput::placeholder {color: #60c0fe; opacity: 0.7; }
+input, select, #myInput {color: #60c0fe; padding-left: 20px; opacity: 1;}
+input, select, #myInput2 {color: #60c0fe; padding-left: 20px; opacity: 1;}
+#myInput2::placeholder {color:#60c0fe; opacity: 0.7;}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #042b38;
+  padding: 3px;
+  text-decoration: none;
+  font-size: 15px;
+  color:  #313C53;
+  display: block
+}
+
+#myUL li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+}
+
+#myUL li a:hover:not(.header) {
+ background: #18334f;
+    color:#efefef;
+  
+    
+}
+
+
+/*2*/
+
+#myInput2 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  background: #0D0630;
+  border-style: none;
+  margin-left: -20px;
+}
+
+#myUL2 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL2 li a {
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #042b38;
+  padding: 3px;
+  text-decoration: none;
+  font-size: 15px;
+  color:  #313C53;
+  display: block
+}
+
+#myUL2 li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+}
+
+#myUL2 li a:hover:not(.header) {
+  
+     background-color: #18334f;
+    color:#efefef;
+  
+    
+}
+
+
+
+#sidebar-wrapper li a {font-weight: 400; font-size: 16px; margin-left: -8px; color: white; }
+#sidebar-wrapper li ul li a { margin-left: -20px; background: ;}

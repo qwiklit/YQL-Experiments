@@ -1,0 +1,107 @@
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<head>
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="/text/css" href="menus.css">
+<link rel="stylesheet" type="/text/css" href="vladstyle.css">   <link rel="icon" href="new-icons/Tapestry-LOGO.png">
+
+    <!-- Custom CSS -->
+<link href="css/simple-sidebar.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Catamaran|Goudy+Bookletter+1911|Martel:900" rel="stylesheet">
+ 
+</head>
+<body>
+
+    
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" id="sidebar-nav">
+                
+            </ul>
+            
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                       <!-- /Make sure to keep all page content within the <code>#page-content-wrapper</code>-->
+                 
+        <!-- /#page-content-wrapper -->
+             
+   
+    <!-- /#wrapper -->
+
+
+<div id="navMenu"></div>
+
+<div id="mainheader">
+
+</div>
+    
+<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
+<div id="launcharea">
+<div class="lit-feed-visible feedlist" id="tapestrylaunch"></div>
+
+</div>
+                        
+
+<a class="signature" href="#"><h6 style="text-align: center; color: black;">Welcome to Tapestry. Short Stories, Poetry, and everything in between.</h6></a>
+                        
+
+        </div>
+               </div>
+            </div>
+       </div>  
+         </div>
+</body>
+ 
+
+
+<script src="sidebarnav.js"></script>
+<script src="headerarea.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+ 
+        
+        
+        
+        YUI().use('yql', function(Y){
+    var query = 'select * from rss(0,30) where url = "http://rssmix.com/u/8236762/rss.xml"'
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.item // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<div class="row">'
+            feedmarkup += '<a href="' + feed[i].link + '">'
+            feedmarkup += '<h2 class="read">' + feed[i].title  + '<h2>' + '</a>' 
+            feedmarkup += '<h4 class="author">' + '<span class="boldby">' + "by " + '</span>' + feed[i].creator + '<a href="http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=' + feed[i].creator + '">' + '<img style="height: 23px; width: 23px; margin-left: 10px; " src="new-icons/amazon.png">' + '</a>' + '</h4>'
+            feedmarkup += '<h3>' + feed[i].description + '</h3>' + '</p>' + '</div>'  
+            feedmarkup += '<hr>'
+        }
+        document.getElementById('tapestrylaunch').innerHTML = feedmarkup
+        
+    })
+     
+})
+        
+    </script>

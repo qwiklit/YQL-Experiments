@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+    
+
+<channel>
+<item>
+<title>Michael Ondaatje: Poetry Collection</title>
+        <pub>Poem Hunter</pub>	<link>http://www.poemhunter.com/michael-ondaatje/poems/</link>
+    <dc:creator><![CDATA[Michael Ondaatje]]></dc:creator>
+<description></description>
+<content>
+
+    </content>
+</item>
+
+
+<item>
+<title>The Cat's Table</title>
+        <pub>The New Yorker</pub>	<link>http://www.newyorker.com/magazine/2011/05/16/the-cats-table</link>
+    <dc:creator><![CDATA[Michael Ondaatje]]></dc:creator>
+<description>He wasn't talking. He was looking out the window of the car all the way.</description>
+<content>
+
+    </content>
+</item>
+<item>
+<title>Bruise</title>
+        <pub>Michael Ondaatje</pub>	<link>http://www.newyorker.com/magazine/2014/01/13/bruise-2</link>
+    <dc:creator><![CDATA[Michael Ondaatje]]></dc:creator>
+<description>
+</description>
+<content>
+
+    </content>
+</item>
+<item>
+<title>The Brother Thief</title>
+         <pub>The New Yorker</pub>	<link>http://www.newyorker.com/magazine/1996/09/09/the-brother-thief</link>
+    <dc:creator><![CDATA[Michael Ondaatje]]></dc:creator>
+<description></description>
+<content>
+
+    </content>
+</item>
+<item>
+<title>Drawn By Desire</title>
+       <pub>The New Yorker</pub>	<link>http://www.newyorker.com/magazine/1992/08/10/drawn-by-desire</link>
+    <dc:creator><![CDATA[Michael Ondaatje]]></dc:creator>
+<description></description>
+<content>
+
+    </content>
+</item>
+
+
+
+
+</channel>
+</rss>  

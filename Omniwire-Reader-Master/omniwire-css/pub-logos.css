@@ -1,0 +1,14 @@
+    a[href*="www.neworleansreview.org"] {
+  color: transparent;
+  background-image: url(logos/neworleansreview.png);
+  background-repeat: no-repeat;
+background-size:contain;
+}
+    
+      a[href*="atticusreview.org"] {
+  color: transparent;
+  background-image: url(logos/atticusreview.png);
+  background-repeat: no-repeat;
+background-size:contain;
+}
+    

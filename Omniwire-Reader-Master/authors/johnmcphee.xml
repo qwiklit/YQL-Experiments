@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+    
+
+<channel>
+<item>
+<title>Structure</title>
+        <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/2013/01/14/structure</link>
+    <dc:creator><![CDATA[John Mcphee]]></dc:creator>
+<description>Out the back door and under the big ash was a picnic table. At the end of summer, 1966</description>
+<content>
+
+    </content>
+</item>
+
+
+<item>
+<title>Omission</title>
+        <pub>The New Yorker</pub>
+        <link>http://www.newyorker.com/magazine/2015/09/14/omission</link>
+    <dc:creator><![CDATA[John Mcphee]]></dc:creator>
+<description>In the nineteen-fifties, the entry-level job for writers was a column called Miscellany.</description>
+<content>
+
+    </content>
+</item>
+    <item>
+<title>Industry, Ingenuity, and Fracture: On John McPhee</title>
+                <pub>LA Review of Books</pub>
+		<link>https://lareviewofbooks.org/article/industry-ingenuity-and-fracture-on-john-mcphee/</link>
+    <dc:creator><![CDATA[Daniel Solomon]]></dc:creator>
+<description>THE WORLD THE WORK of John McPhee creates appears deceptively small.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>Looking for a Ship</title>
+            <pub>The New Yorker</pub>	<link>http://www.newyorker.com/magazine/1990/03/26/i-looking-for-a-ship</link>
+    <dc:creator><![CDATA[John Mcphee]]></dc:creator>
+<description>REPORTER AT LARGE about the U.S. Merchant Marine. Writer accompanied a merchant mariner named George Anderson Chase.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>A Fleet of One</title>
+            <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/2003/02/17/a-fleet-of-one</link>
+    <dc:creator><![CDATA[John Mcphee]]></dc:creator>
+<description>The little four-wheelers live on risk. They endanger themselves. They endangered us. If you’re in a big truck, they’re around you like gnats.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>Survival on the Bark Canoe</title>
+            <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/1975/02/24/the-survival-of-the-bark-canoei</link>
+    <dc:creator><![CDATA[John Mcphee]]></dc:creator>
+<description>REPORTER AT LARGE about bark canoes and Henri Vaillancourt, of Greenville, N.H., who builds them entirely by hand the way the American Indians did.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>The Sporting Scene Ruidoso</title>
+            <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/1974/04/29/the-sporting-scene-ruidoso</link>
+    <dc:creator><![CDATA[John Mcphee]]></dc:creator>
+<description>THE SPORTING SCENE about the 1973 All-American Futurity, a race for quarter horses held at Ruidoso Downs in New Mexico.</description>
+<content>
+
+    </content>
+</item>
+    
+
+</channel>
+</rss>  

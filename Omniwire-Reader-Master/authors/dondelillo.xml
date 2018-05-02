@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+    
+
+<channel>
+<item>
+<title>Midnight in Doestoevsky</title>
+        <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/2009/11/30/midnight-in-dostoevsky</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description>We were two sombre boys hunched in our coats, grim winter settling in.</description>
+<content>
+
+    </content>
+</item>
+
+
+<item>
+<title>Still Life</title>
+        <pub>The New Yorker</pub>
+        <link>http://www.newyorker.com/magazine/2007/04/09/still-life-8</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description>When he appeared at the door, it was not possible, a man come out of an ash storm, all blood and slag, reeking of burned matter</description>
+<content>
+
+    </content>
+</item>
+    <item>
+<title>The Red Bow</title>
+                <pub>Esquire</pub>
+		<link>http://www.esquire.com/entertainment/books/a775/the-red-bow-george-saunders-0903/</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description>Next night, walking out where it happened, I found her little red bow.</description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>The Starveling</title>
+            <pub>Granta</pub>
+		<link>http://granta.com/the-starveling/</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description>When it started, long before the woman, he lived in one room. </description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>Baader-Meinhof</title>
+            <pub>The New Yorker</pub>
+		<link>http://www.newyorker.com/magazine/2002/04/01/baader-meinhof</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description>She knew there was someone else in the room. There was no outright noise, just an intimation behind her, a faint displacement of air. </description>
+<content>
+
+    </content>
+</item>
+    
+<item>
+<title>Plexiglass</title>
+            <pub>The New Yorker</pub>
+		<link>http://harpers.org/archive/2016/04/plexiglass/</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description>In a lovely urban coincidence, the last two houses on our block were both occupied by widows who had lost their ... </description>
+<content>
+    
+    <item>
+<title>Pafko at the Wall</title>
+                <pub>Grantland</pub>
+		<link>http://grantland.com/features/underworld-don-delillo/</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description> In the radio booth they’re talking about the crowd. Looks like thirty-five thousand and how do you figure it. </description>
+<content>
+
+    </content>
+</item>
+    
+     <item>
+<title>Human Moments in World War III</title>
+                 <pub>Granta</pub>
+		<link>http://granta.com/human-moments-in-world-war-iii/</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description>A note about Vollmer. He no longer describes the earth as a library globe or a map that has come alive, as a cosmic eye staring into deep space. </description>
+<content>
+
+    </content>
+</item>
+    
+     <item>
+<title>Coming Sun. Mon. Tues.</title>
+                 <pub>The Kenyon Review</pub>
+		<link>http://www.kenyonreview.org/kr-online-issue/don-delillo-342846/</link>
+    <dc:creator><![CDATA[Don Delillo]]></dc:creator>
+<description> It’s like this, and it is no dream: First off, a plastic palomino and its stiff-armed rider float above a toybox...</description>
+<content>
+
+    </content>
+</item>
+
+
+</channel>
+</rss>

@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id='map'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibXlzZXVtLW9mLXRvcm9udG8iLCJhIjoiY2plNXdqN3p3NzQzdzJxcXB5cjd3eWk2aCJ9.SDhXNXzsOLuvcUVLjNI_7w';
+
+    var basestyle = 'mapbox/dark-v9'
+    var style_url = 'https://api.mapbox.com/styles/v1/' + basestyle + '?access_token=' + mapboxgl.accessToken
+
+    loadJSON(style_url, initmap)
+
+    function loadJSON(url, callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', url, true);
+        xobj.onreadystatechange = function() {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                callback(JSON.parse(xobj.responseText));
+            }
+        }
+        xobj.send(null);
+    }
+
+    function initmap(style) {
+
+        var old_sources = style.sources.composite.url
+
+        var source_types = {
+            'lidar': ['maning.sf-lidar', 'L2014_SF_TreeBldg1m_toInt_vectgeojson'],
+        }
+
+        var selected_source = 'lidar'
+
+        var new_sources = old_sources + ',' + source_types[selected_source][0]
+        style.sources.composite.url = new_sources
+
+        var map = new mapboxgl.Map({
+            style: style,
+            center: [-122.4027, 37.7927],
+            zoom: 16,
+            minZoom: 16,
+            pitch: 45,
+            bearing: -17.6,
+            container: 'map'
+        });
+
+        map.on('load', function() {
+
+            map.addLayer({
+                'id': 'sf-lidar',
+                'source': 'composite',
+                'source-layer': source_types[selected_source][1],
+                'filter': [">=", "DN", 1],
+                'type': 'fill-extrusion',
+                'minzoom': 16,
+                'paint': {
+                    'fill-extrusion-color': {
+                        'type': 'exponential',
+                        'property': 'DN',
+                        'stops': [
+                            [0, '#f7fcf0'],
+                            [20, '#e0f3db'],
+                            [40, '#ccebc5'],
+                            [60, '#a8ddb5'],
+                            [80, '#7bccc4'],
+                            [100, '#4eb3d3'],
+                            [120, '#2b8cbe'],
+                            [140, '#0868ac'],
+                            [160, '#084081']
+                        ]
+                    },
+                    'fill-extrusion-height': {
+                        'type': 'identity',
+                        'property': 'DN'
+                    },
+                    'fill-extrusion-opacity': 0.6
+                }
+            }, 'waterway-label');
+        });
+    };
+    </script>
+</body>
+
+</html>
