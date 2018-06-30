@@ -1,0 +1,185 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="omniwire-css/style.css">
+<link rel="icon" href="logos/enso.png">
+<!-- Custom CSS -->
+<link href="omniwire-css/simple-sidebar.css" rel="stylesheet">
+<link href="style-carousel.less" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Catamaran|Goudy+Bookletter+1911|Martel:900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Slabo+13px|Ultra" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Catamaran:100,400|Open+Sans:300|Heebo" rel="stylesheet">
+<link rel="stylesheet" href="OwlCarousel2-2.3.3/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="OwlCarousel2-2.3.3/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+<script src="OwlCarousel2-2.3.3/docs/assets/vendors/jquery.min.js"></script>
+  
+<style>
+    .row {margin-left: 0px;}   
+    
+</style>
+</head>
+<body>
+
+    <title>Omniwire | Louisville</title>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" id="sidebar-nav">
+                
+            </ul>
+            
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                       <!-- /Make sure to keep all page content within the <code>#page-content-wrapper</code>--> 
+        <!-- /#page-content-wrapper -->
+    <!-- /#wrapper -->
+<div id="navMenu"></div>
+<div id="mainheader">
+</div>
+<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+<div class="publication-header">
+<h1 class="pub-title">Baltimore, Maryland<a href="omniwire-maryland-baltimore.html">
+<hr /></a>     
+<button style="display: none;" class="launch-map btn-primary"><h4>Launch Map</h4></button>      
+</h1> 
+</div>
+
+ 
+<div id="launcharea">
+        <h1 class="latest-news-header">The Latest News</h1>
+    <hr />
+
+<div class="lit-feed-visible feedlist" id="tapestrylaunch-3"></div>
+</div>
+                        
+
+<a href="#"><h4>© Tapestry Media 2018</h4></a>
+                        
+
+                    </div>
+               </div>
+            </div>
+       </div>  
+    </div>
+</body>
+ 
+
+
+<script src="omniwire-nav.js"></script>
+<script src="headerarea.js"></script>
+<script src="js/conditions.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+ 
+        
+        
+     
+         YUI().use('yql', function(Y){
+    var query = 'select * from rss(0,50) where url  = "http://feed.informer.com/digests/PYUVQYUQFZ/feeder.rss"'
+
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.item // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<div class="row">'
+            feedmarkup += '<a href="' + feed[i].link + '">'
+            feedmarkup += '<h2 style="display: inline;" class="read">' + feed[i].title  + '<h2>' + '</a>' 
+            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  feed[i].pubDate.substring(0, 17)  + '</h4>' + '</a>' + '<h5 class="read">' + feed[i].source.url  + '<h5>' + '</a>'
+          
+
+              feedmarkup += '<h3 class="description cut-description">' + feed[i].description + '</h3>' + '</p>'  
+                feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' + '</div>' + '</h4>' + '</a>' 
+                  feedmarkup += '<div class="icon-logos">' + '<a href="https://www.facebook.com/sharer/sharer.php?u=' +  feed[i].link + '"' + 'target="_blank"><img src="logos/facebook.png">' + '<a href="http://twitter.com/share&url=' + feed[i].link + '"' + '>' +
+                    
+                    '<a href="https://twitter.com/intent/tweet?url=' + feed[i].link + '"' + 'target="_blank">'
+      + '<img src="logos/twitter.png">' +  '</a>' +
+                
+                
+'<a href="https://plusone.google.com/_/+1/confirm?hl=en&url='
+ + feed[i].link + '"' + 'target="_blank">' + '<img src="logos/googleplus.png">' +  '</a>' + '</div>' + '</div>' + '</div>'
+                
+            feedmarkup += '<hr>'
+        }
+        document.getElementById('tapestrylaunch-3').innerHTML = feedmarkup
+        
+       var resource = document.createElement('script'); 
+  resource.src = "js/titles.js";
+  var script = document.getElementsByTagName('script')[0];
+  script.parentNode.insertBefore(resource, script);
+    })
+
+})
+         $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+<script>
+// Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+  interval: false
+});
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+</script>
+
+<script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 5,
+                nav: true,
+                loop: true,
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 2
+                  },
+                  1000: {
+                    items: 3
+                  }
+                }
+              })
+            })
+</script>
+<script src="OwlCarousel2-2.3.3/docs/assets/owlcarousel/owl.carousel.js"></script>
+<script src="OwlCarousel2-2.3.3/docs/assets/owlcarousel/owl.carousel.js"></script>

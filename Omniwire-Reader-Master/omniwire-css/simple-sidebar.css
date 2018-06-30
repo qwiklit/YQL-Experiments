@@ -5,7 +5,6 @@
  */
 
 
-
  body {
     overflow-x: hidden;
  }
@@ -286,4 +285,5 @@ input, select, #myInput2 {color: #60c0fe; padding-left: 20px; opacity: 1;}
 
 
 #sidebar-wrapper li a {font-weight: 400; font-size: 16px; margin-left: -8px; color: white; }
-#sidebar-wrapper li ul li a { margin-left: -20px; background: ;}
+#sidebar-wrapper li ul li a.cities { margin-left: -20px; background: #0D0630; color: red; }
+

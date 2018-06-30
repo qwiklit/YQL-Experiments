@@ -1,0 +1,10 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/OwlCarousel2-2.3.3/docs/assets/vendors/foundation.min.js",
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/omniwire-nav.js",
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/OwlCarousel2-2.3.3/src/js/owl.hash.js",
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/OwlCarousel2-2.3.3/docs_src/assets/js/app.js",
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/OwlCarousel2-2.3.3/docs_src/assets/js/foundation.min.js",
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/js/titles.js"
+    ]
+}

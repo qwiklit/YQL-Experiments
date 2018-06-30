@@ -1,0 +1,2185 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='utf-8' />
+      <title>Myseum Tours</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <style>
+
+        body {
+          color:#404040;
+          font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+          margin:0;
+          padding:0;
+          -webkit-font-smoothing:antialiased;
+        }
+
+        * {
+          -webkit-box-sizing:border-box;
+          -moz-box-sizing:border-box;
+          box-sizing:border-box;
+        }
+
+        .sidebar {
+          position:absolute;
+          width:25%;
+          height:100%;
+          top:0;left:0;
+          overflow:hidden;
+          border-right:1px solid rgba(0,0,0,0.25);
+        }
+        .pad2 {
+          padding:20px;
+        }
+
+        .map {
+          position:absolute;
+          left:25%;
+          width:75%;
+          top:0;bottom:0;
+        }
+
+        h1 {
+          font-size:22px;
+          margin:0;
+          font-weight:400;
+          line-height: 20px;
+          padding: 20px 2px;
+        }
+
+        a {
+          color:#404040;
+          text-decoration:none;
+        }
+
+        a:hover {
+          color:#101010;
+        }
+
+        .heading {
+          background:#fff;
+          border-bottom:1px solid #eee;
+          min-height:60px;
+          line-height:60px;
+          padding:0 10px;
+          background-color: black;
+          color: #fff;
+        }
+
+        .listings {
+          height:100%;
+          overflow:auto;
+          padding-bottom:60px;
+              background: #191a1a;
+        }
+          
+          .listings div 
+          {color: #fefefe}
+
+        .listings .item {
+          display:block;
+          border-bottom:1px solid #eee;
+          padding:10px;
+          text-decoration:none;
+        }
+
+        .listings .item:last-child { border-bottom:none; }
+        .listings .item .title {
+          display:block;
+          color:#3fc2f3;
+          font-weight:700;
+          
+        }
+
+        .listings .item .title small { font-weight:400; }
+        .listings .item.active .title,
+        .listings .item .title:hover { color:#3fc2f3; text-decoration: underline; }
+        .listings .item.active {
+            background: #343332;
+        }
+        ::-webkit-scrollbar {
+          width:3px;
+          height:3px;
+          border-left:0;
+          background:rgba(0,0,0,0.1);
+        }
+        ::-webkit-scrollbar-track {
+          background:none;
+        }
+        ::-webkit-scrollbar-thumb {
+          background:#3fc2f3;
+          border-radius:0;
+        }
+
+        .marker {
+          border: none;
+          cursor: pointer;
+          height: 56px;
+          width: 56px;
+          background-image: url(marker.png);
+          background-color: rgba(0, 0, 0, 0);
+        }
+
+        .clearfix { display:block; }
+        .clearfix:after {
+          content:'.';
+          display:block;
+          height:0;
+          clear:both;
+          visibility:hidden;
+        }
+
+        /* Marker tweaks */
+        .mapboxgl-popup {
+          padding-bottom: 50px;
+        }
+
+        .mapboxgl-popup-close-button {
+          display:none;
+      
+        }
+        .mapboxgl-popup-content {
+          font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+          padding:0;
+          width:180px;
+         opacity: 1;
+        }
+        .mapboxgl-popup-content-wrapper {
+          padding:1%;
+        }
+        .mapboxgl-popup-content h3 {
+          background:black;
+          color:#fff;
+          margin:0;
+          display:block;
+          padding:10px;
+          border-radius:3px 3px 0 0;
+          font-weight:700;
+          margin-top:-15px;
+          text-align: center;
+        }
+
+        .mapboxgl-popup-content h4 {
+          margin:0;
+          display:block;
+          padding: 10px 10px 10px 10px;
+          font-weight:400;
+        background: black;
+            color: deepskyblue;
+            text-align: center;
+            
+        }
+
+        .mapboxgl-popup-content div {
+          padding:10px;
+          border-style: none;
+          
+        }
+
+        .mapboxgl-container .leaflet-marker-icon {
+          cursor:pointer;
+        }
+
+        .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+          margin-top: 15px;
+        }
+
+        .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+          border-bottom-color: #3fc2f3;
+        }
+          
+          .modal-footer button {border-radius: 1px; padding: 10px 25px 10px 25px; color: black;}
+          .modal-footer button:hover {color: black;}
+          .modal-footer button p {padding-top: 0px; padding-bottom: 0px;}
+          .myButton {
+	background-color:#030a05;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:0px;
+	border-top:1px dotted white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#f7f7f7;
+	font-family:Arial;
+	font-size:17px;
+	padding:11px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #284966;
+              width: 100%;
+              text-align: center;
+}
+          
+          .modal h1 {color: #3fc2f3; padding: 15px 2px 15px 2px; margin-top: -5px;font-family: 'HelveticaNeue-Light',Arial,Helvetica,sans-serif;text-transform: uppercase; }
+          .modal h5 {font-size: 19px; font-style: italic;}
+          .modal p {padding-top 10px; padding-bottom: 10px;font-family: 'HelveticaNeue-Medium', Arial,Helvetica,sans-serif;}
+.myButton:hover {color: white;}         
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+          .modal-content {margin-left: 0 auto; margin-right: 0 auto; max-width: 600px;background: black; border-radius: 0px; color: white;}
+          .mapboxgl-popup-content {width: 300px;}
+          .modal-dialog { position: absolute; margin-left: -5%;overflow-y: initial!important; display: inherit; }
+          .modal-body {    overflow-y: auto;height: 50vh; }
+          .modal {display: inline-table; height: 80%; margin-left: -50%; padding: 0px; margin-top: -50%; }
+          .modal-open {position: table-cell; vertical-align: middle;display: inherit; }
+          p {margin-bottom: 0px;}
+          .mapboxgl-popup-content div {padding-right: 10px;}
+          h4.modal-title {padding-left: 0px; background: white;}
+          .modal-backdrop { position: inherit;}
+          p.image-box img { width: 100%; padding: 10px 0px 10px 0px;}
+          p.year-tags {font-size: 12px; margin-bottom: 10px;}
+          .listings div {font-size: 13px; line-height: 1.4;}
+      
+      
+      iframe {width: 100%; height: 2000px; border-style: none;}
+      
+      #listings {padding-bottom: 100px;}
+      </style>
+  </head>
+
+  <body>
+      
+<div style="margin: 0 auto; width: 100%; position: relative;" class="modal fade" id="myModal-1" role="dialog">
+    <div style="width: 110%; " class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div style="margin: 0 auto; position: relative; z-index: 1; max-width: 85%;height: 90vh;" class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="background: black;" class="modal-title">Myseum of Toronto</h4>
+        </div>
+        <div style="height: 73vh;" class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+</div>
+      
+    </div>
+  </div>
+      
+    <div class='sidebar'>
+      <div class='heading'>
+          <h1 style="padding-top: 25px;">Myseum Tours<button style="display: inline; margin-left: 65px; background: black; border-style: none; border-color: white;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-1"><img height="40" width="40" src="icons/hiking-icon.png"></button></h1>
+           
+
+      </div>
+    <div id='listings' class='listings'></div>
+    </div>
+
+      
+      
+
+    <div id='map' class='map'>
+   </div>
+
+          
+   
+  <script>
+        
+  // This will let you use the .remove() function later on
+  if (!('remove' in Element.prototype)) {
+    Element.prototype.remove = function() {
+      if (this.parentNode) {
+          this.parentNode.removeChild(this);
+      }
+    };
+  }
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoibXlzZXVtLW9mLXRvcm9udG8iLCJhIjoiY2plNXdqN3p3NzQzdzJxcXB5cjd3eWk2aCJ9.SDhXNXzsOLuvcUVLjNI_7w';
+
+  // This adds the map
+  var map = new mapboxgl.Map({
+    // container id specified in the HTML
+    container: 'map',
+    // style URL
+    style: 'mapbox://styles/mapbox/dark-v9',
+    // initial position in [long, lat] format
+    center: [-79.394737, 43.64814],
+    // initial zoom
+    zoom: 12,
+    pitch: 60, // pitch in degrees
+    bearing: -15, // bearing in degrees
+    scrollZoom: false
+    
+  });
+      
+      map.on('load', function () {
+
+        
+          //yellow line
+          map.addLayer({
+        "id": "subway-route-1",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+          [-79.52747583389282,
+          43.79424241892078],
+         [-79.52316284179688,
+          43.78296164549345],
+         [-79.51191902160645,
+          43.77839141631051],
+         [ -79.50006365776062,
+          43.77391380217663],            
+         [ -79.49112117290497,
+          43.764934323497926],
+         [
+         -79.47919607162476,
+          43.753985128558305
+          ],   
+           [
+            -79.46226596832275,
+            43.7492731811147
+          ],
+          [
+            -79.46089267730713,
+            43.74632802557607
+          ],
+          [
+            -79.45067882537842,
+            43.73612736700192
+          ],
+          [
+            -79.45007801055908,
+            43.73445292873336
+          ],
+          [
+            -79.44754600524902,
+            43.72483950684785
+          ],
+          [
+            -79.44398403167725,
+            43.715441671101225
+          ],
+          [
+            -79.44059371948242,
+            43.7086172362984
+          ],
+          [
+            -79.43613052368164,
+            43.699309936491446
+          ],
+          [
+            -79.43484306335448,
+            43.69574175510575
+          ],
+          [
+            -79.42810535430908,
+            43.69099419331105
+          ],
+          [
+            -79.4218397140503,
+            43.690466663244976
+          ],
+          [
+            -79.41892147064209,
+            43.689659843580785
+          ],
+          [
+            -79.41729068756104,
+            43.68817030184036
+          ],
+          [
+            -79.41540241241455,
+            43.68401180203764
+          ],
+          [
+            -79.40982341766357,
+            43.68156001408878
+          ],
+          [
+            -79.40703392028809,
+            43.67494899793425
+          ],
+          [
+            -79.4053602218628,
+            43.670354999132734
+          ],
+          [
+            -79.40398693084717,
+            43.667468049697405
+          ],
+          [
+            -79.4032573699951,
+            43.667468049697405
+          ],
+          [
+            -79.39913749694824,
+            43.66836829614057
+          ],
+          [
+            -79.39596176147461,
+            43.66898914788972
+          ],
+          [
+            -79.39514636993408,
+            43.66883393555448
+          ],
+          [
+            -79.39398765563965,
+            43.66811995364278
+          ],
+          [
+            -79.39300060272217,
+            43.66597795695
+          ],
+          [
+            -79.39072608947754,
+            43.66318393334909
+          ],
+          [
+            -79.39021110534668,
+            43.661228039453285
+          ],
+          [
+            -79.39085483551025,
+            43.660234545135005
+          ],
+          [
+            -79.38845157623291,
+            43.654645833275175
+          ],
+          [
+            -79.38484668731688,
+            43.647752372270084
+          ],
+          [
+            -79.3837308883667,
+            43.645454376109036
+          ],
+          [
+            -79.37986850738525,
+            43.645702812364746
+          ],
+          [
+            -79.37982559204102,
+            43.645702812364746
+          ],
+          [
+            -79.37703609466553,
+            43.64703813963579
+          ],
+          [
+            -79.37793731689452,
+            43.64924291736786
+          ],
+          [
+            -79.3792676925659,
+            43.65247230485361
+          ],
+          [
+            -79.38072681427002,
+            43.656384599372586
+          ],
+          [
+            -79.38308715820312,
+            43.66141431780774
+          ],
+          [
+            -79.38368797302246,
+            43.66529498541197
+          ],
+          [
+            -79.38579082489014,
+            43.67091374750086
+          ],
+          [
+            -79.38634872436523,
+            43.673179729223286
+          ],
+          [
+            -79.38789367675781,
+            43.67507315518335
+          ],
+          [
+            -79.38853740692139,
+            43.6768113296983
+          ],
+          [
+            -79.3906831741333,
+            43.682242800546135
+          ],
+          [
+            -79.39282894134521,
+            43.68711518739324
+          ],
+          [
+            -79.39480304718018,
+            43.68925642967865
+          ],
+          [
+            -79.39724922180176,
+            43.697975771783746
+          ],
+          [
+            -79.39827919006348,
+            43.69974430929246
+          ],
+          [
+            -79.39857959747314,
+            43.706104407756314
+          ],
+          [
+            -79.4022274017334,
+            43.72511862794109
+          ],
+          [
+            -79.4068193435669,
+            43.74459186600233
+          ],
+          [
+            -79.41093921661377,
+            43.76151727392542
+          ],
+          [
+            -79.41269874572754,
+            43.768738564033384
+          ],
+          [
+            -79.41583156585693,
+            43.781071626974814
+          ]
+             
+                       
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#f6c213",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+          
+            //green line
+          map.addLayer({
+        "id": "subway-route-2",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+          [
+            -79.53547954559325,
+            43.637612578800066
+          ],
+          [
+            -79.5265531539917,
+            43.6449109182176
+          ],
+          [
+            -79.5246434211731,
+            43.64537673956842
+          ],
+          [
+            -79.51114654541014,
+            43.64821817158656
+          ],
+          [
+            -79.49893712997437,
+            43.650453958023796
+          ],
+          [
+            -79.49681282043457,
+            43.650500536022925
+          ],
+          [
+            -79.49436664581297,
+            43.649895019216856
+          ],
+          [
+            -79.48960304260254,
+            43.64814053861799
+          ],
+          [
+            -79.4871997833252,
+            43.648202645000865
+          ],
+          [
+            -79.48511838912964,
+            43.649584495409826
+          ],
+          [
+            -79.48389530181885,
+            43.64994159764943
+          ],
+          [
+            -79.47602033615112,
+            43.65168049995188
+          ],
+          [
+            -79.46677207946777,
+            43.65382300676892
+          ],
+          [
+            -79.45949792861937,
+            43.65554627200379
+          ],
+          [
+            -79.45265293121338,
+            43.65697452643116
+          ],
+          [
+            -79.4376540184021,
+            43.65990855122967
+          ],
+          [
+            -79.42568063735962,
+            43.66246988423254
+          ],
+          [
+            -79.41171169281006,
+            43.665527817491075
+          ],
+          [
+            -79.39894437789917,
+            43.66847694566027
+          ],
+          [
+            -79.39031839370728,
+            43.670184269427175
+          ],
+          [
+            -79.38722848892212,
+            43.67077406089649
+          ],
+          [
+            -79.38566207885742,
+            43.67077406089649
+          ],
+          [
+            -79.37628507614136,
+            43.672419238046814
+          ],
+          [
+            -79.37152147293091,
+            43.67243475837122
+          ],
+          [
+            -79.36853885650635,
+            43.67381605116974
+          ],
+          [
+            -79.36684370040894,
+            43.67476276157897
+          ],
+          [
+            -79.35946226119995,
+            43.6761905588656
+          ],
+          [
+            -79.35770273208618,
+            43.67719930820758
+          ],
+          [
+            -79.34467792510986,
+            43.67985301394873
+          ],
+          [
+            -79.33791875839233,
+            43.68120309989344
+          ],
+          [
+            -79.3303656578064,
+            43.682661779297774
+          ],
+          [
+            -79.32302713394164,
+            43.684275596036315
+          ],
+          [
+            -79.3127703666687,
+            43.68654107320606
+          ],
+          [
+            -79.30167675018309,
+            43.6890857537494
+          ],
+          [
+            -79.29850101470947,
+            43.68983051787641
+          ],
+          [
+            -79.28946733474731,
+            43.694671259285
+          ],
+          [
+            -79.28255796432495,
+            43.697572413818605
+          ],
+          [
+            -79.28104519844055,
+            43.69946506999592
+          ],
+          [
+            -79.2790174484253,
+            43.711145469808486
+          ],
+          [
+            -79.27833080291747,
+            43.715550235375034
+          ],
+          [
+            -79.27494049072266,
+            43.72214126922904
+          ],
+          [
+            -79.27348136901855,
+            43.72491704061533
+          ],
+          [
+            -79.26732301712036,
+            43.73116593227012
+          ],
+         
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#009247",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+          
+              //blue line
+          map.addLayer({
+        "id": "subway-route-3",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+         [
+            -79.26270961761475,
+            43.73277844364429
+          ],
+          [
+            -79.2701768875122,
+            43.75051320325138
+          ],
+          [
+            -79.27631378173828,
+            43.76691007943185
+          ],
+          [
+            -79.27687168121338,
+            43.76895549917517
+          ],
+          [
+            -79.27554130554199,
+            43.76979224163757
+          ],
+          [
+            -79.27206516265868,
+            43.77053600288821
+          ],
+          [
+            -79.25751686096191,
+            43.77453356114858
+          ],
+          [
+            -79.25412654876709,
+            43.775060351224695
+          ],
+          [
+            -79.25198078155518,
+            43.774998376162486
+          ]
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#0a80c5",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+             
+    
+             //purple line
+          map.addLayer({
+        "id": "subway-route-4",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+         [
+            -79.41089630126953,
+            43.76161025744937
+          ],
+          [
+            -79.38772201538086,
+            43.766724128714095
+          ],
+          [
+            -79.37660694122314,
+            43.76926540515574
+          ],
+          [
+            -79.3666934967041,
+            43.77093886970382
+          ],
+          [
+            -79.34639453887938,
+            43.77509133873172
+          ]
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#a12268",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+             
+    
+            map.addLayer({
+        'id': 'kensington',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[[-79.39810752868652,43.65303121967545],[-79.40003871917725,43.657999122810814],[-79.40767765045166,43.65650879502444],[-79.4060468673706,43.65237915187759],[-79.40561771392822,43.65244125387767],[-79.40381526947021,43.65185128228425],[-79.39810752868652,43.65303121967545]]]
+                }
+            }
+        },
+        'layout': {},
+        'paint': {
+            'fill-color': '#efefef',
+            'fill-opacity': 0.7
+        }
+    });
+          
+           //up-express
+          map.addLayer({
+        "id": "up-express",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+         [
+            -79.61371421813963,
+            43.683189378007924
+          ],
+          [
+            -79.61551666259766,
+            43.684585940432
+          ],
+          [
+            -79.61577415466309,
+            43.68494283450224
+          ],
+          [
+            -79.61583852767944,
+            43.68545489619863
+          ],
+          [
+            -79.61566686630249,
+            43.68588936936172
+          ],
+          [
+            -79.61416482925415,
+            43.68772032883126
+          ],
+          [
+            -79.61380004882812,
+            43.68863578760791
+          ],
+          [
+            -79.61229801177979,
+            43.6940041290357
+          ],
+          [
+            -79.61101055145264,
+            43.69564866927127
+          ],
+          [
+            -79.60993766784668,
+            43.697013913695095
+          ],
+          [
+            -79.60998058319092,
+            43.698441181448786
+          ],
+          [
+            -79.61124658584595,
+            43.70078368857779
+          ],
+          [
+            -79.61395025253296,
+            43.70312610418604
+          ],
+          [
+            -79.61446523666382,
+            43.703638010642685
+          ],
+          [
+            -79.61457252502441,
+            43.70418093695652
+          ],
+          [
+            -79.61429357528687,
+            43.70470834638161
+          ],
+          [
+            -79.61358547210693,
+            43.70518921563696
+          ],
+          [
+            -79.60890769958496,
+            43.705483940048154
+          ],
+          [
+            -79.60118293762207,
+            43.70559252236067
+          ],
+          [
+            -79.58483219146729,
+            43.705887244788975
+          ],
+          [
+            -79.5725154876709,
+            43.706181965768245
+          ],
+          [
+            -79.55195903778076,
+            43.70660077729878
+          ],
+          [
+            -79.5339560508728,
+            43.70695754036864
+          ],
+          [
+            -79.53258275985718,
+            43.70694202897495
+          ],
+          [
+            -79.52983617782593,
+            43.7066938461304
+          ],
+          [
+            -79.5265746116638,
+            43.70607338452341
+          ],
+          [
+            -79.52243328094482,
+            43.70473937032095
+          ],
+          [
+            -79.51273441314697,
+            43.69997700771281
+          ],
+          [
+            -79.50264930725098,
+            43.694966035403105
+          ],
+          [
+            -79.48756456375122,
+            43.6875186156969
+          ],
+          [
+            -79.47949647903442,
+            43.68351524548153
+          ],
+          [
+            -79.47518348693848,
+            43.681187581836795
+          ],
+          [
+            -79.47149276733398,
+            43.67851841637491
+          ],
+          [
+            -79.46857452392578,
+            43.67580257383399
+          ],
+          [
+            -79.4616436958313,
+            43.668756329236366
+          ],
+          [
+            -79.45314645767212,
+            43.66026559208131
+          ],
+          [
+            -79.44295406341553,
+            43.64991054536506
+          ],
+          [
+            -79.43913459777832,
+            43.647379730216116
+          ],
+          [
+            -79.43713903427123,
+            43.646541277142155
+          ],
+          [
+            -79.42834138870239,
+            43.642426476674316
+          ],
+          [
+            -79.425208568573,
+            43.6412152741685
+          ],
+          [
+            -79.42387819290161,
+            43.64095129089424
+          ],
+          [
+            -79.42192554473877,
+            43.64068730646014
+          ],
+          [
+            -79.4150161743164,
+            43.64046990664345
+          ],
+          [
+            -79.4072699546814,
+            43.640205920094196
+          ],
+          [
+            -79.4048023223877,
+            43.64019039143755
+          ],
+          [
+            -79.40008163452148,
+            43.64071836351259
+          ],
+          [
+            -79.39934134483337,
+            43.64088141277458
+          ],
+          [
+            -79.39871907234192,
+            43.64105999003001
+          ],
+          [
+            -79.39470648765564,
+            43.64213920649404
+          ],
+          [
+            -79.39435243606567,
+            43.6422401394166
+          ],
+          [
+            -79.39271092414856,
+            43.64238765645995
+          ],
+          [
+            -79.39204573631287,
+            43.64241871263343
+          ],
+          [
+            -79.38982486724854,
+            43.64275256548461
+          ],
+          [
+            -79.3842029571533,
+            43.643932681623234
+          ],
+          [
+            -79.38351631164551,
+            43.64415006890975
+          ],
+          [
+            -79.38325345516205,
+            43.64420441560844
+          ]
+        
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#544f26",
+            "line-width": 3,
+            'line-opacity': 0.9
+        }
+    });   
+             
+
+    
+          });
+      
+    
+
+  var stores = {
+    "type": "FeatureCollection",
+    "features": [
+        
+        
+        //Kipling Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+-79.53577995300292,
+          43.63727093268074          ]
+        },
+        "properties": {
+          "name": "Kipling Station",
+          "year": "1980",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Kipling-interior.jpg/1200px-Kipling-interior.jpg">',
+          "address": "	950 Kipling Avenue, Etobicoke, Ontario",
+          "neighbourhood": "Etobicoke",
+          "city": "Toronto",
+          "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Kipling is the western terminus of the Line 2 Bloor–Danforth of the Toronto subway system. The station is served by buses and subway trains operated by the Toronto Transit Commission and is adjacent to the Kipling GO Station on the Milton line of GO Transit. It is located in the Islington–City Centre West neighbourhood on St. Albans Road at Aukland Road, west of the overpass of Kipling Avenue, after which the station is named. The Toronto Parking Authority operates three commuter  Notably, Kipling is the departing and arriving point for the 192 Airport Rocket bus route, which provides quick and frequent service between Toronto's subway system and Toronto Pearson International Airport."
+        }
+        },
+        
+                //Islington Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+          -79.52479362487793,
+          43.64536121224825        ]
+        },
+        "properties": {
+          "name": "Islington Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Islington_TTC_Station.jpg">',
+          "address": "	1226 Islington Ave, Etobicoke, ON",
+          "neighbourhood": "Etobicoke",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Islington is a subway station on Line 2 Bloor–Danforth in Toronto, Ontario, Canada. It is located on the north side of Bloor Street West on the west side of Islington Avenue. A central platform serves trains running in both directions."
+        }
+        },
+            
+                        //Royal York Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+       -79.51114654541014,
+          43.64831133101638        ]
+        },
+        "properties": {
+          "name": "Royal York Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Royal_York_TTC_and_76_bus.JPG">',
+          "address": "	2900 Bloor St W, Etobicoke, ON",
+          "neighbourhood": "Etobicoke",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Royal York is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located just north of Bloor Street West on the east side of Royal York Road. Wi-Fi service is available at this station. The station was opened in 1968 in what was then the Borough of Etobicoke. The original plan for the Bloor-Danforth extension to Islington had different stations than what was eventually built. The stations were to be at 'Montgomery' and 'Prince Edward', instead of Islington and Royal York. This was probably because these two streets were the ends of the Kingsway shopping district. However, it was decided to include only one station in the Kingsway, at Royal York.Until 1973 the buses and the subway trains serving the station were in separate fare zones and so the turnstiles and collector booths were on the mezzanine level between the bus bays and the subway platforms. When the zones were abolished, they were moved to just inside the street entrance, bringing the buses inside the station's fare-paid area."
+        }
+        },
+      
+        
+                        //Old Mill Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "point",
+              
+          "coordinates": [
+       -79.49440956115723,
+          43.65001922829015       ]
+        },
+        "properties": {
+          "name": "Old Mill Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Old_Mill_Platform.jpg/600px-Old_Mill_Platform.jpg">',
+          "address": "2672 Bloor Street West,Toronto, ON",
+          "neighbourhood": "Etobicoke",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Old Mill is a subway station on Line 2 Bloor–Danforth in Toronto, Ontario, Canada. It is located at 2672 Bloor Street West at Old Mill Terrace and Humber Boulevard in The Kingsway residential neighbourhood. Nearby destinations include the Old Mill Inn and Park Lawn Cemetery. Wi-Fi service is available at this station. The station opened in 1968 in what was then the Borough of Etobicoke.In 2000, the station was damaged by a fire on a waste collection train, just after the subway had closed for the night. This was most likely caused by a lit cigarette disposed of in a garbage can at another station. After this incident, the TTC switched to leaving waste outside stations for collection by truck."
+        }
+        },
+            
+                        //Jane Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+        -79.4838523864746,
+          43.6499881760459       ]
+        },
+        "properties": {
+          "name": "Jane Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Jane_Subway_Station_%28Armadale%29.jpg/2560px-Jane_Subway_Station_%28Armadale%29.jpg">',
+          "address": "15 Jane Street Toronto, ON",
+          "neighbourhood": "Bloor West Village",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Jane is a station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located just north of Bloor Street West, spanning the block east of Jane Street to Armadale Avenue, with entrances from all three streets. It opened in 1968 as part of the westerly extension from Keele to Islington Station.[2] Wi-Fi service is available at this station. In 2006, this station became accessible with elevators."
+        }
+        },
+        
+       //Runnymede Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+        -79.47600960731506,
+          43.65171155132117       ]
+        },
+        "properties": {
+          "name": "Runnymede Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Runnymede_Subway_Station.JPG">',
+          "address": "265 Runnymede Road, Toronto, ON",
+          "neighbourhood": "High Park",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Runnymede is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located just north of Bloor Street West, spanning the block east of Runnymede Road to Kennedy Avenue, with bus platforms at the surface level and entrances at both ends. Wi-Fi service is available at this station."
+        }
+      },
+        
+        //High Park
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+      -79.46687936782837,
+          43.653916157505336      ]
+        },
+        "properties": {
+          "name": "High Park",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/High_Park_TTC_Main_Entrance.jpg/1920px-High_Park_TTC_Main_Entrance.jpg">',
+          "address": "35 Quebec Avenue, Toronto, ON",
+          "neighbourhood": "High Park",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "High Park is a station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located just north of Bloor Street West, spanning the block east of Quebec Avenue to High Park Avenue. It opened in 1968 as part of the westerly extension from Keele to Islington Station. Wi-Fi service is available at this station."
+        }
+      },
+                   //Keele Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+     -79.45958375930786,
+          43.65559284605353       ]
+        },
+        "properties": {
+          "name": "Keele Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Keele_TTC_entrance_bike_racks.jpg/1920px-Keele_TTC_entrance_bike_racks.jpg">',
+          "address": "21 Keele Street, Toronto, ON",
+          "neighbourhood": "High Park",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Keele is a station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located just north of Bloor Street West on the east side of Keele Street. The station opened in 1966, and was the western terminus of the line until 1968. Wi-Fi service is available at this station."
+        }},
+        
+        
+        
+        
+         //Dundas West Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+     -79.45293188095091,
+          43.65685033174256       ]
+        },
+        "properties": {
+          "name": "Dundas West Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dundas_West_TTC_McEntrance.JPG/1400px-Dundas_West_TTC_McEntrance.JPG">',
+          "address": "2365 Dundas Street West, Toronto, ON",
+          "neighbourhood": "Dundas West",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Dundas West is a station on the Bloor–Danforth subway line in Toronto, Ontario, Canada. It is located just north of Bloor Street West at the corner of Dundas Street and Edna Avenue. The station is about 200 metres west of Bloor GO Station on the GO Transit Kitchener line and the Union Pearson Express. Wi-Fi service is available at this station.[2] A McDonald's restaurant serves the station, with access from both the fare-paid and non-fare-paid areas of the station's upper level, and there is a Gateway Newstand on the mezzanine level."
+        }},
+        
+    
+         //Landsdowne Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+     -79.44344758987427,
+          43.65888398743258       ]
+        },
+        "properties": {
+          "name": "Landsdowne Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Keele_TTC_entrance_bike_racks.jpg/1920px-Keele_TTC_entrance_bike_racks.jpg">',
+          "address": "21 Keele Street, Toronto, ON",
+          "neighbourhood": "High Park",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Keele is a station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located just north of Bloor Street West on the east side of Keele Street. The station opened in 1966, and was the western terminus of the line until 1968. Wi-Fi service is available at this station."
+        }},
+        
+            //Landsdowne Station
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.43546533584595,
+          43.660242306873094      ]
+        },
+        "properties": {
+          "name": "Dufferin Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Dufferin_TTC_station_D100.JPG/600px-Dufferin_TTC_station_D100.JPG">',
+          "address": "1006 Dufferin Street, Toronto, ON",
+          "neighbourhood": "Dovercourt",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Dufferin is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located at Dufferin Street just north of Bloor Street West. It opened in 1966 as part of the original segment of the subway line. Wi-Fi service is available at this station."
+        }},
+        
+         {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.43546533584595,
+          43.660242306873094      ]
+        },
+        "properties": {
+          "name": "Ossington Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ossington_Platform_2.jpg/600px-Ossington_Platform_2.jpg">',
+          "address": "746 Ossington Avenue, Toronto, ON",
+          "neighbourhood": "Dovercourt",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Ossington is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located at Ossington Avenue just north of Bloor Street West and opened in 1966 as part of the original segment of the subway line. Wi-Fi service is available at this station."
+        }},
+        
+           {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.41847622394562,
+          43.66410364714211      ]
+        },
+        "properties": {
+          "name": "Christie Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ossington_Platform_2.jpg/600px-Ossington_Platform_2.jpg">',
+          "address": "5 Christie Street, Toronto, ON",
+          "neighbourhood": "Korea Town",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Christie is a station on the Bloor–Danforth line of the subway system in Toronto, Ontario, Canada. It is located on the east side of Christie Street just north of Bloor Street West, and opened in 1966 as part of the original segment of the subway line. Wi-Fi service is available at this station.Christie Station opened in 1966, as part of the first phase of the Bloor-Danforth line.The station was damaged in 1976 when a fire was set on board a late-evening train. Nobody was hurt, but four cars of the train were destroyed and part of the station's platform area, including the tiled wall, suffered severe damage. During the repair parts of the trim were replaced with a different colour; red-brown instead of the original green tile.Christie Street is named after Christy McDougall, wife of Peter McDougall, a landowner in the area. Historical documents indicate that the street was given her name by as early as 1835."
+        }},
+        
+          {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+     -79.41187798976898,
+          43.66555110064934      ]
+        },
+        "properties": {
+          "name": "Bathurst Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Bathurst_TTC_front_door.JPG">',
+          "address": "819 Bathurst Street, Toronto, ON",
+          "neighbourhood": "Annex",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Bathurst is a subway station on Line 2 Bloor–Danforth in Toronto, Ontario, Canada. The station, which opened in 1966, is located on Bathurst Street just north of Bloor Street West. It is a major transfer point for both bus and streetcar routes, including the 511 Bathurst route, which provides services to Exhibition Place. Wi-Fi service is available at this station.The ticket collector and turnstiles are in the station building at the surface, which puts streetcar and bus platforms within the fare paid zone. The opening of the elevators in January 2000 made the station fully accessible. Elevators provide access between the eastbound platform and concourse, and between the westbound platform and street level via the concourse. There are also regular stairway and escalator connections between all levels."
+        }},
+        
+          {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.40430611371993,
+          43.667219703474935      ]
+        },
+        "properties": {
+          "name": "Spadina Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Bathurst_TTC_front_door.JPG">',
+          "address": "6 Spadina Road, Toronto, ON",
+          "neighbourhood": "Annex",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Spadina is a subway station on Line 1 Yonge–University and Line 2 Bloor–Danforth in Toronto, Ontario, Canada. It is located on Spadina Road, north of Bloor Street West. It is the only station open overnight, along with Union station. Wi-Fi service is available at this station.The station consists of two separate sections, one for each line, at the same level and 150 metres apart. The north–south platforms, which opened in 1978, were originally planned as a separate station, but the TTC decided to join to the existing 1966 east–west station with a pedestrian tunnel containing a pair of long moving walkways. The cost of the moving walkways themselves became an issue when they became due for refurbishment or replacement, and they were shut down and ultimately removed in 2004, leaving the corridor as a simple underground walkway. The former location of the moving walkways remains visible because the tiles used to cover their removal are noticeably different. Warnings to hold the handrails are still embossed on the walls where the ends of the moving walkways were once located.An underground loop for the 510 Spadina streetcar was added in 1997 near the east end of the east–west platforms. The streetcar platform adds Postmodern finishes to the station's mix of styles. These range from the basic Modernist tiles of the Bloor–Danforth line platform, to the more intricate round tiles and backlit signage of the Yonge–University line platform. In 1997, this station became accessible only to the Bloor–Danforth platforms and exit."
+        }},
+        
+           {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.39899533987045,
+          43.668401279051274     ]
+        },
+        "properties": {
+          "name": "St.George Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/St_George_Platform_01.jpg/600px-St_George_Platform_01.jpg">',
+          "address": "6 Spadina Road, Toronto, ON",
+          "neighbourhood": "Yorkville",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "St. George is a station on Line 1 Yonge–University and Line 2 Bloor–Danforth of the Toronto subway. It is located north of Bloor Street West between St. George Street and Bedford Road. This is the second-busiest station, after Bloor–Yonge station, serving a combined total of approximately 265,180 people a day. Wi-fi service is available at this station."
+        }},
+        
+         {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.39023792743683,
+          43.67017844908773    ]
+        },
+        "properties": {
+          "name": "Bay Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bay_%28TTC%29_Eastbound_Platform.jpg/600px-Bay_%28TTC%29_Eastbound_Platform.jpg">',
+          "address": "1240 Bay Street, Toronto, ON",
+          "neighbourhood": "Yorkville",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Bay is a subway station on Line 2 Bloor–Danforth in Toronto, Ontario, Canada. It is located in heart of the Yorkville district just north of Bloor Street West on the west side of Bay Street.The Toronto Transit Commission (TTC) operates its lost articles office at this station, where forgotten objects on the city's buses and trains are held until reclaimed or sold by auction.[2] Wi-Fi service is available at this station."
+        }},
+        
+         {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+  -79.38570499420166,
+          43.670805102392244    ]
+        },
+        "properties": {
+          "name": "Bloor-Yonge Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bloor_Yonge_Platform_01.jpg/2560px-Bloor_Yonge_Platform_01.jpg">',
+          "address": "1240 Bay Street, Toronto, ON",
+          "neighbourhood": "Bloor and Yonge",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Bloor–Yonge is a subway station on Line 1 Yonge–University and Line 2 Bloor–Danforth in Toronto, Ontario, Canada. It is located downtown, under the intersection of Yonge Street and Bloor Street. It is the busiest subway station in Toronto; more than 400,000 rides are taken on an average weekday. Wi-Fi is available at this station.The station was opened in 1954 and designed by Charles B. Dolphin.[3] It was originally named “Bloor” , and connected with a pair of enclosed platforms in the centre of Bloor Street to allow interchange with Bloor streetcars within the fare-paid zone. When the streetcars were replaced with the Bloor-Danforth subway in 1966, the station began to be shown on maps as “Bloor–Yonge” . However, actual platform signs still show “Bloor”  on the Yonge–University line and “Yonge”  on the Bloor–Danforth line, following a naming style common in New York subway station complexes, where only the platform's cross street is shown on the platform signs."
+        }},
+   
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.37639236450195,
+          43.672295075306955   ]
+        },
+        "properties": {
+          "name": "Sherbourne Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/TTC_Sherbourne_01.JPG/600px-TTC_Sherbourne_01.JPG">',
+          "address": "1240 Bay Street, Toronto, ON",
+          "neighbourhood": "St.James Town",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Sherbourne is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. The station, which opened in 1966, is located west of Sherbourne Street on the south side of Bloor Street East. The station primarily serves the St. James Town neighbourhood and the southern portion of Rosedale. Wi-Fi service is available at this station. This is not an accessible subway station."
+        }},
+        
+        {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.36862468719482,
+          43.67373845129359  ]
+        },
+        "properties": {
+          "name": "Castle Frank",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Castle_Frank_Station.jpg">',
+          "address": "600 Bloor Street East, Toronto, ON",
+          "neighbourhood": "St.James Town",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Castle Frank Station, opened in 1966, is named after the community that it serves. Its streets, and the brook that flows through it, are in turn named after John Graves Simcoe's summer residence in the area overlooking the Don River, which burned down in 1829. The residence was named after his son Francis Simcoe. In 1954 a historical marker was placed in Prince Edward Viaduct Parkette, near the site of the historic Castle Frank residence, on the south side of Bloor Street at Castle Frank Road.The Parliament streetcar operated to its northerly terminus at the Viaduct Loop until 1966. No consideration was given to construct the short connection, from that location at Bloor Street East and Parliament Street across the Rosedale Ravine, which would have made the streetcar route a genuine feeder line to the subway station. The site of the steetcar loop is now Bloor - Parliament Parkette."
+        }},
+        
+
+          
+          {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.35834646224976,
+          43.67695100225065  ]
+        },
+        "properties": {
+          "name": "Broadview Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Broadview_TTC_8166.jpg">',
+          "address": "769 Broadview Avenue, Toronto, ON",
+          "neighbourhood": "Danforth",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Broadview is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. The entrance to the building is from Broadview Avenue just north of Danforth Avenue. The station, which is the north-eastern terminus of the 504 King and 505 Dundas streetcar routes, has two streetcar platforms and five bus bays to allow riders to transfer between connecting routes. Wi-Fi service is available at this station. Broadview Station was opened in 1966 as part of the original segment of the Bloor-Danforth line, from Keele Station in the west to Woodbine Station in the east.In 2003, a renovation of the station began, adding an extra streetcar track, additional bus bays, new signage, and elevators/stairways to the platforms, satisfying fire safety requirements for a second exit. The elevators entered service in 2006,and the stairs from the westbound subway to the bus/streetcar platform afterwards. The next stage of the renovation was to build a stairway from the bus/streetcar platform to the eastbound subway platform. This was completed and opened in 2008; however, it was closed shortly afterwards due to water ingress.It has since been re-opened."
+        }},
+        
+         
+        
+        
+           {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+     -79.3525743484497,
+          43.67820804059153  ]
+        },
+        "properties": {
+          "name": "Chester Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Chester_TTC_entrance_d81.JPG/600px-Chester_TTC_entrance_d81.JPG">',
+          "address": "22 Chester Avenue, Toronto, ON",
+          "neighbourhood": "Danforth",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Chester is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. The station is located on Chester Avenue just north of Danforth Avenue. Wi-Fi service is available at this station. It opened in 1966 as one of the original stations of this subway line. The Toronto Parking Authority operates a public parking lot across Chester Avenue opposite the subway entrance."
+        }},
+        
+         {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+      -79.34469938278198,
+          43.67979094030124 ]
+        },
+        "properties": {
+          "name": "Pape Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Pape_TTC_bus_7692.JPG">',
+          "address": "	743 Pape Avenue, Toronto, ON",
+          "neighbourhood": "Danforth",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Pape is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. The station opened in 1966 and is located in Toronto's Greektown neighbourhood at the northeast corner of Pape Avenue and Lipton Avenue, just north of Danforth Avenue. Wi-Fi service is available at this station. The ticket collector's booth and turnstiles are at the surface in the main station building on the southwest corner of the site with a secondary exit/entry structure to the east, adjacent to the parking lot. Bus bays are within the fare-paid zone. Stairs, escalators and elevators connect the ground level, concourse and train platforms. Automatic sliding doors, accessible fare gates and the addition of elevators, made the station became fully accessible in 2013."
+        }},
+        
+           {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+     -79.33781147003174,
+          43.68120309989344  ]
+        },
+        "properties": {
+          "name": "Donlands Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Donlands_TTC_entrance.jpg">',
+          "address": "30 Donlands Avenue,Toronto, ON",
+          "neighbourhood": "Greektown",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Donlands is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. The station is located in Toronto's Greektown neighbourhood, at the southwest corner of Donlands Avenue and Strathmore Boulevard, just north of Danforth Avenue. Wi-Fi service is available at this station.Donlands opened in 1966 as part of the original segment of the Bloor-Danforth line, between Keele Station in the west and Woodbine Station in the east. Originally only a small structure covered the stairs and escalator. The current building was constructed in the early 1980s and the fare-collection area was relocated from the concourse up to street level, which also brought the bus bays within the fare-paid zone."
+        }}, 
+        
+              {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.3302798271179,
+          43.682723849975105  ]
+        },
+        "properties": {
+          "name": "Greenwood Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Greenwood_TTC_Platform_2.jpg/2560px-Greenwood_TTC_Platform_2.jpg">',
+          "address": "10 Linnsmore Crescent, Toronto, ON",
+          "neighbourhood": "East York",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Greenwood is a subway station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located at the southwest corner of Linnsmore Crescent and Strathmore Boulevard just north of Danforth Avenue.The entrance, collector's booth and bus bays are at street level, with stairs and escalator to a lower concourse level which provides a passage between the platforms on the level below. Single escalators operate in an up direction at all times. Wi-Fi service is available at this station. It opened in 1966 as part of the original segment of the Bloor-Danforth line. It is one block east of Greenwood Avenue, the closest major intersection, after which it is named."
+        }},
+        
+            {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.32307004928589,
+          43.684275596036315 ]
+        },
+        "properties": {
+          "name": "Coxwell Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Coxwell_TTC_closeup.jpg">',
+          "address": "355 Strathmore Boulevard, Toronto, ON",
+          "neighbourhood": "East York",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Coxwell is a subway station on the Line 2 Bloor–Danforth in Toronto, Ontario, Canada. The station is located on Strathmore Boulevard just east of Coxwell Avenue and one block north of Danforth Avenue. It opened in 1966 as part of the original segment of the Bloor-Danforth line. Automatic sliding doors, accessible fare gates and the addition of elevators, made the station fully accessible in late December 2017."
+        }},
+        
+          {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.31292057037354,
+          43.68652555653013 ]
+        },
+        "properties": {
+          "name": "Woodbine Station",
+          "year": "1966",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Woodbine_TTC_closeup.jpg/600px-Woodbine_TTC_closeup.jpg">',
+          "address": "991 Woodbine Avenue, Toronto, On",
+          "neighbourhood": "Woodbine Heights",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Woodbine is a subway station on Line 2 Bloor–Danforth in Toronto, Ontario, Canada. The station is at the southeast corner of Woodbine Avenue and Strathmore Boulevard, just north of Danforth Avenue.The main entrance, collector, and bus platform are at street level (on the northeast corner of Woodbine and Danforth), the concourse is on the second level, and the subway platforms are on the lower level. Wi-Fi service is available at this station.[2] Automatic sliding doors, accessible fare gates and the addition of elevators, made the station fully accessible in late September 2017 which also coincided with the opening of a new secondary automated entrance on the northwest corner of Woodbine and Danforth."
+        }},
+        
+         {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.30161237716675,
+          43.6890857537494 ]
+        },
+        "properties": {
+          "name": "Main Street Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Main_Street_TTC_and_streetcar.JPG/600px-Main_Street_TTC_and_streetcar.JPG">',
+          "address": "991 Woodbine Avenue, Toronto, On",
+          "neighbourhood": "Woodbine Heights",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Main Street is a station on Line 2 Bloor–Danforth in Toronto, Ontario, Canada and is located on the east side of Main Street a short distance north of Danforth Avenue. Connections to GO Transit's commuter train service on the Lakeshore East line can be made at Danforth GO Station, approximately 300 metres to the south on the east side of Main Street. Wi-Fi service is available at this station."
+        }}, 
+    
+          {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.28873777389526,
+          43.694888462880925 ]
+        },
+        "properties": {
+          "name": "Victoria Park Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Victoria_Park_TTC_west_end.JPG">',
+          "address": "777 Victoria Park Avenue,Toronto, ON",
+          "neighbourhood": "Crescent Town",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Victoria Park is a station on Line 2 Bloor–Danforth of the Toronto subway system. It is located at 777 Victoria Park Avenue, one block north of Danforth Avenue. The station can be accessed by pedestrians directly from Victoria Park Avenue; by way of an unmanned entrance from Albion Avenue; through an automated entrance from Teesdale Place; and via a walkway that leads to the nearby Crescent Town area. A City of Toronto bicycle station is located adjacent to the main Victoria Park Avenue entrance, providing a paid secure indoor bicycle parking area."
+        }},
+        
+       {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.28873777389526,
+          43.694888462880925 ]
+        },
+        "properties": {
+          "name": "Warden Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Warden_TTC_departure.jpg">',
+          "address": "701 Warden Avenue,Toronto, On",
+          "neighbourhood": "Crescent Town",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Warden is a station on the Bloor–Danforth line in Toronto, Ontario, Canada. It is located at the southeast corner of St. Clair Avenue East and Warden Avenue.The main pedestrian street entrance is on the east side of Warden, with another entrance from St. Clair along a walkway on the west side of the elevated tracks. Vehicle entry to the passenger pick up and drop off entrance is on the south side of St. Clair, east of Warden, exiting on to Warden south of St. Clair.The station is on four levels: the subway platform is on the upper floor, the bus concourse to the connecting routes is below it, the two collector entrances and the concourse are found above street level, and the two entrances and the bus platforms are on the lower floor."
+        }},
+        
+          {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.27897453308104,
+          43.711145469808486 ]
+        },
+        "properties": {
+          "name": "Kennedy Station",
+          "year": "1968",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Warden_TTC_departure.jpg">',
+          "address": "2455 Eglinton Avenue East, Toronto, ON",
+          "neighbourhood": "Scarborough",
+          "city": "Toronto",
+           "description": "Green Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "green-line subway",
+          "state": "Kennedy is both a terminal and interchange station on Line 2 Bloor–Danforth and Line 3 Scarborough of the Toronto subway system. Opened in 1980, it is located east of the Kennedy Road and Eglinton Avenue intersection. With the adjacent Kennedy GO station on the Stouffville line of GO Transit, Kennedy is an intermodal transit hub and the fifth busiest station in the system, after St. George, Bloor–Yonge, Sheppard–Yonge, and Union, serving a total of approximately 105,580 customer trips a day."
+        }},
+        
+        
+        //Yellow LINE
+        
+        
+            {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.52747583389282,
+          43.79423854672398 ]
+        },
+        "properties": {
+          "name": "Vaughan Metropolitan Centre station",
+          "year": "2017",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Q3555074_Vaughan_Metropolitan_Centre_A02.jpg/600px-Q3555074_Vaughan_Metropolitan_Centre_A02.jpg">',
+          "address": "1035 Sheppard Avenue West,Toronto, ON",
+          "neighbourhood": "Vaughan",
+          "city": "Vaughan",
+           "description": "Yellow Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "yellow-line subway",
+          "state": "Vaughan Metropolitan Centre (also known as Vaughan, Vaughan Metro Centre or VMC) is a rapid transit station in Vaughan, Ontario, Canada. Opened on December 17, 2017, it is the north terminal station of the western section of the Toronto subway's Line 1 Yonge–University. It is operated by the Toronto Transit Commission (TTC) and is one of two subway stations in the Greater Toronto Area outside Toronto city proper. It provides connections to Viva Rapid Transit's Highway 7 Rapidway and local bus routes of York Region Transit (YRT).Located in Vaughan Metropolitan Centre, a future commercial district under development, the station is designated by Metrolinx as a mobility hub, one of several multimodal transit terminals in the Greater Toronto and Hamilton Area. The station has a 900-space park-and-ride lot, which is privately owned and operated by SmartREIT, unlike other TTC rapid transit station parking lots which are owned and operated by the TTC itself."
+        }},
+        
+           {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.523184299469,
+          43.78291517034481 ]
+        },
+        "properties": {
+          "name": "Highway 407 station",
+          "year": "2017",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Q3555074_Vaughan_Metropolitan_Centre_A02.jpg/600px-Q3555074_Vaughan_Metropolitan_Centre_A02.jpg">',
+          "address": "7332 Jane Street, Vaughan, ON",
+          "neighbourhood": "Vaughan",
+          "city": "Vaughan",
+           "description": "Yellow Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "yellow-line subway",
+          "state": "Vaughan Metropolitan Centre (also known as Vaughan, Vaughan Metro Centre or VMC) is a rapid transit station in Vaughan, Ontario, Canada. Opened on December 17, 2017, it is the north terminal station of the western section of the Toronto subway's Line 1 Yonge–University. It is operated by the Toronto Transit Commission (TTC) and is one of two subway stations in the Greater Toronto Area outside Toronto city proper. It provides connections to Viva Rapid Transit's Highway 7 Rapidway and local bus routes of York Region Transit (YRT).Located in Vaughan Metropolitan Centre, a future commercial district under development, the station is designated by Metrolinx as a mobility hub, one of several multimodal transit terminals in the Greater Toronto and Hamilton Area. The station has a 900-space park-and-ride lot, which is privately owned and operated by SmartREIT, unlike other TTC rapid transit station parking lots which are owned and operated by the TTC itself."
+        }},
+        
+          {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+    -79.51191902160645,
+          43.77839141631051 ]
+        },
+        "properties": {
+          "name": "Pioneer Village Terminal",
+          "year": "2017",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Q4132835_Pioneer_Village_station_A09.jpg/600px-Q4132835_Pioneer_Village_station_A09.jpg ">',
+          "address": "185 Northwest Gate, Toronto & 2800 Steeles Avenue West, Vaughan, ON",
+          "neighbourhood": "Vaughan",
+          "city": "Vaughan",
+           "description": "Yellow Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "yellow-line subway",
+          "state": "Pioneer Village is a subway station on the Line 1 Yonge–University of the Toronto subway. It is located under the intersection of Northwest Gate and Steeles Avenue, at the city boundaries of Toronto and Vaughan, Ontario, Canada. A Toronto Transit Commission (TTC) bus terminal is connected to the southern portion of the station, and there is a regional bus terminal, the Pioneer Village Terminal, for connecting to York Region Transit (YRT) buses on the north side of Steeles Avenue. Pioneer Village, Highway 407 station and Vaughan Metropolitan Centre station are the first subway stations of the Toronto subway network located fully or partially outside of the present-day boundaries of Toronto."
+        }},
+        
+                  {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.50006365776062,
+          43.77391380217663 ]
+        },
+        "properties": {
+          "name": "York University Station",
+          "year": "2017",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/York_University_Station_Platform_Level.jpg/2560px-York_University_Station_Platform_Level.jpg">',
+          "address": "120 Ian Macdonald Boulevard,Toronto, On",
+          "neighbourhood": "Vaughan",
+          "city": "Vaughan",
+           "description": "Yellow Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "yellow-line subway",
+          "state": "York University is a subway station on Line 1 Yonge–University of the Toronto subway. It is located on the main Keele Campus of York University, near Ian Macdonald and York Boulevards. The station opened on December 17, 2017.The station lies at the east end the Harry W. Arthurs Common on the west side of Ian MacDonald Boulevard. The university’s main buildings lie to the west; Seneca College’s York campus is found to the south, and the Aviva Centre to the west. The station was built underground, lying on a northwest-southeast axis. The line approaches from Finch West station along Keele Street, then bends towards the northwest to meet the station."
+        }},
+        
+                        {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.49112117290497,
+          43.764934323497926 ]
+        },
+        "properties": {
+          "name": "Finch West Station",
+          "year": "2017",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Finch_West_Platform_1.jpg/600px-Finch_West_Platform_1.jpg">',
+          "address": "120 Ian Macdonald Boulevard,Toronto, ON",
+          "neighbourhood": "Toronto",
+          "city": "Toronto",
+           "description": "Yellow Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "yellow-line subway",
+          "state": "Downsview Park is a rapid transit station on Line 1 Yonge–University of the Toronto subway and a commuter rail station on the Barrie commuter rail line of GO Transit. Subway service began on December 17, 2017, and GO Train service began on December 30, 2017. Downsview Park station is a fully integrated multi-modal transit facility serving both transit lines. This is in contrast to other interchanges between TTC subway and GO Transit rail lines, which have separate structures for each agency."
+        }},
+        
+           {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+  -79.47917461395264,
+          43.753985128558305 ]
+        },
+        "properties": {
+          "name": "Downsview Park Station",
+          "year": "2017",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Downsview_Park_Platform.jpg/600px-Downsview_Park_Platform.jpg">',
+          "address": "1212 Sheppard Ave West, Toronto, ON",
+          "neighbourhood": "Vaughan",
+          "city": "Vaughan",
+           "description": "Yellow Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "yellow-line subway",
+          "state": "Finch West is a subway station on the Line 1 Yonge–University of the Toronto subway. It is located under Keele Street, north of Finch Avenue West, and opened on December 17, 2017. The station is underground and parallel to Keele Street just north of Finch Avenue West.Nearby landmarks include Fountainhead Park. Industrial areas lie to the east, James Cardinal McGuigan Catholic High School to the west and York University is to the northwest, served by the next station north on the line."
+        }},
+        
+           {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+   -79.46218013763428,
+          43.74926543089556 ]
+        },
+        "properties": {
+          "name": "Sheppard West station",
+          "year": "1996",
+          "image": '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Sheppard_West_Platform_01.jpg/600px-Sheppard_West_Platform_01.jpg">',
+          "address": "1035 Sheppard Avenue West,Toronto, ON",
+          "neighbourhood": "North York",
+          "city": "Toronto",
+           "description": "Yellow Line",
+          "presentedby": "myseum-of-toronto",
+          "tags": "yellow-line subway",
+          "state": "Sheppard West (formerly Downsview) is a subway station on Line 1 Yonge–University in Toronto, Ontario, Canada. The station, which is located at the southeast corner of Sheppard Avenue West–Allen Road intersection, opened in 1996 in what was then the City of North York, and the large commuter parking lot, accessible via Allen Road and Sheppard Avenue, opened in July 2005. It was the northern terminus of the western branch of the line until the opening of the six stations of the Toronto–York Spadina Subway Extension (TYSSE). On May 7, 2017, the station's name was changed from Downsview to Sheppard West in preparation for the opening of the TYSSE, and to avoid naming conflicts with the new Downsview Park station, both of which opened on December 17, 2017."
+        }
+        
+      }]
+    };
+      
+  
+
+      
+  // This adds the data to the map
+  map.on('load', function (e) {
+    // This is where your '.addLayer()' used to be, instead add only the source without styling a layer
+    map.addSource("places", {
+      "type": "geojson",
+      "data": stores
+    });
+    // Initialize the list
+    buildLocationList(stores);
+
+  });
+
+  // This is where your interactions with the symbol layer used to be
+  // Now you have interactions with DOM markers instead
+  stores.features.forEach(function(marker, i) {
+    // Create an img element for the marker
+    var el = document.createElement('div');
+    el.id = "marker-" + i;
+    el.className = 'marker';
+    // Add markers to the map at all points
+    new mapboxgl.Marker(el, {offset: [0, -23]})
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+
+    el.addEventListener('click', function(e){
+        // 1. Fly to the point
+        flyToStore(marker);
+
+        // 2. Close all other popups and display popup for clicked store
+        createPopUp(marker);
+
+        // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+        var activeItem = document.getElementsByClassName('active');
+
+        e.stopPropagation();
+        if (activeItem[0]) {
+            activeItem[0].classList.remove('active');
+        }
+
+        var listing = document.getElementById('listing-' + i);
+        listing.classList.add('active');
+
+    });      
+  });
+
+
+  function flyToStore(currentFeature) {
+    map.flyTo({
+        center: currentFeature.geometry.coordinates,
+        zoom: 15
+      });
+  }
+
+  function createPopUp(currentFeature) {
+    var popUps = document.getElementsByClassName('mapboxgl-popup');
+    if (popUps[0]) popUps[0].remove();
+
+
+    var popup = new mapboxgl.Popup({closeOnClick: false})
+          .setLngLat(currentFeature.geometry.coordinates)
+          .setHTML('<button class="mapboxgl-popup-close-button"><a class="x-button" href="#"><img style="float: right; margin-right: 15px;" width="16" height="16" src="x-white.ico"></a></button>' +
+                   '<h3>' + currentFeature.properties.name +  '</h3>' +
+                   '<h4>' + currentFeature.properties.address + '</h4>' + 
+  
+'<button id="to-expand" class="myButton" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">' + '<p>Read More</p>' + '</button>' + '</a>' +
+                  
+    '<div class="modal fade" id="myModal" role="dialog">' +
+    '<div class="modal-dialog modal-lg">' +
+      '<div class="modal-content">' +
+        '<div class="modal-header">' +
+          '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
+        '<h1>' + currentFeature.properties.name + '</h1>' +
+        '</div>' +
+        '<div class="modal-body">' +
+        
+        '<p class="image-box">' + currentFeature.properties.image + '</p>' +
+        '<h5>' + currentFeature.properties.description + '</h5>' +
+        '<p class="year-tags">' + currentFeature.properties.year + '  |  ' + currentFeature.properties.tags +'</p>' +
+        '<p>' + currentFeature.properties.state + '</p>' +
+        '</div>' +
+        '<div class="modal-footer">' +
+          '<button type="button" class="btn btn-info" data-dismiss="modal">' + '<p>Close</p>' + '</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+  '</div>'
+                  )
+          .addTo(map);
+  }
+
+
+  function buildLocationList(data) {
+    for (i = 0; i < data.features.length; i++) {
+      var currentFeature = data.features[i];
+      var prop = currentFeature.properties;
+
+      var listings = document.getElementById('listings');
+      var listing = listings.appendChild(document.createElement('div'));
+      listing.className = 'item';
+      listing.id = "listing-" + i;
+
+      var link = listing.appendChild(document.createElement('a'));
+      link.href = '#';
+      link.className = 'title';
+      link.dataPosition = i;
+      link.innerHTML = prop.name;
+        
+      var description = listing.appendChild(document.createElement('div'));
+      description.innerHTML = prop.description;
+
+
+      var details = listing.appendChild(document.createElement('div'));
+      details.innerHTML = prop.neighbourhood;
+      if (prop.image) {
+        details.innerHTML += ' &middot; ' + prop.year;
+          
+        
+      }
+
+        link.addEventListener('click', function(e){
+        // Update the currentFeature to the store associated with the clicked link
+        var clickedListing = data.features[this.dataPosition];
+
+        // 1. Fly to the point
+        flyToStore(clickedListing);
+
+        // 2. Close all other popups and display popup for clicked store
+        createPopUp(clickedListing);
+
+        // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+        var activeItem = document.getElementsByClassName('active');
+
+        if (activeItem[0]) {
+           activeItem[0].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+
+      });
+    }
+  }
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+    
+      $("a.x-button").click(function(){
+        $("h3").css("opacity", "0.6");
+    });
+  /*  $("#show").click(function(){
+        $("p").show();
+    });*/
+});
+      
+      map.addControl(new mapboxgl.NavigationControl());
+      
+
+    </script>
+
+                <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
+
+
+
+ 
+  </body>
+</html>

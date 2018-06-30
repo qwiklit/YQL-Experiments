@@ -3,7 +3,7 @@
 <html>
   <head>
       <meta charset='utf-8' />
-      <title>Store Locator</title>
+      <title>Myseum Tours</title>
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
@@ -17,7 +17,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-      <style>
+
+  <style>
 
         body {
           color:#404040;
@@ -247,6 +248,15 @@
           p.image-box img { width: 100%; padding: 10px 0px 10px 0px;}
           p.year-tags {font-size: 12px; margin-bottom: 10px;}
           .listings div {font-size: 13px; line-height: 1.4;}
+      
+      
+      iframe {width: 100%; height: 2000px; border-style: none;}
+      
+      .tour-icon {padding: 5px;}
+      
+      .tour-list img {height: 150px; width: 150px; border-radius: 8px; }
+      .tour-list h1 {text-align: center;}
+      h5.tour-label {margin-top: -5px;font-style: normal; text-align: center;color: #efefef}
       </style>
   </head>
 
@@ -259,14 +269,36 @@
       <div style="margin: 0 auto; position: relative; z-index: 1; max-width: 85%;height: 90vh;" class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 style="background: black;" class="modal-title">Myseum of Toronto</h4>
+          <h1 style="background: black;" class="modal-title">Myseum of Toronto Tours                                  
+</h1>
+
         </div>
         <div style="height: 73vh;" class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
+<div class="container">
+  
+  <div style="margin-top: 25px; position: relative;" class="row tour-list">
+<a href="#listing-13"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/performerwithhorse1912.jpg"></h1><h5 class="tour-label">CNE Vintage Photo Tour</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/Myseum-Main-Feature.jpg"></h1><h5 class="tour-label">Main Feature: Movie Theatre Tour</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/highparkskiing.jpg"></h1><h5 class="tour-label">High Park Nature Walk</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/bought-in-bondage.jpg"></h1><h5 class="tour-label">Ontario Black History Society: Sold in Slavery</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/hurricane-on-humber.jpg"></h1><h5 class="tour-label">Hurricane on the Humber</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/ward-tuberculosis.jpg"></h1><h5 class="tour-label">Uncover The Ward</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/lost-venues.jpg"></h1><h5 class="tour-label">Toronto's Lost Venues</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/drake-tour.jpg"></h1><h5 class="tour-label" >Drake: Tours from the 6ix</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/Waterfront-Tour.jpg"></h1><h5 class="tour-label">Discover: Waterfront Toronto</h5></div></a>
+<a href="#"><div class="col-lg-3 col-sm-6 tour-icon"><h1><img src="icons/chuvalo-ali.jpg"></h1><h5 class="tour-label">Vintage Sport</h5></div></a>
+   
+  </div>
+    
+  
+
+</div>
+            
+             <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
+        </div>
+       
 </div>
       
     </div>
@@ -285,14 +317,17 @@
       
 
     <div id='map' class='map'>
-         
    </div>
+
           
-      
-      
+   
   <script>
       
-    
+          $(window).on('load',function(){
+        $('#myModal-1').modal('show');
+    });
+
+        
   // This will let you use the .remove() function later on
   if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {
@@ -319,14 +354,605 @@
     scrollZoom: false
     
   });
+      
+      map.on('load', function () {
+
+        
+          //yellow line
+          map.addLayer({
+        "id": "subway-route-1",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+           [
+            -79.46226596832275,
+            43.7492731811147
+          ],
+          [
+            -79.46089267730713,
+            43.74632802557607
+          ],
+          [
+            -79.45067882537842,
+            43.73612736700192
+          ],
+          [
+            -79.45007801055908,
+            43.73445292873336
+          ],
+          [
+            -79.44754600524902,
+            43.72483950684785
+          ],
+          [
+            -79.44398403167725,
+            43.715441671101225
+          ],
+          [
+            -79.44059371948242,
+            43.7086172362984
+          ],
+          [
+            -79.43613052368164,
+            43.699309936491446
+          ],
+          [
+            -79.43484306335448,
+            43.69574175510575
+          ],
+          [
+            -79.42810535430908,
+            43.69099419331105
+          ],
+          [
+            -79.4218397140503,
+            43.690466663244976
+          ],
+          [
+            -79.41892147064209,
+            43.689659843580785
+          ],
+          [
+            -79.41729068756104,
+            43.68817030184036
+          ],
+          [
+            -79.41540241241455,
+            43.68401180203764
+          ],
+          [
+            -79.40982341766357,
+            43.68156001408878
+          ],
+          [
+            -79.40703392028809,
+            43.67494899793425
+          ],
+          [
+            -79.4053602218628,
+            43.670354999132734
+          ],
+          [
+            -79.40398693084717,
+            43.667468049697405
+          ],
+          [
+            -79.4032573699951,
+            43.667468049697405
+          ],
+          [
+            -79.39913749694824,
+            43.66836829614057
+          ],
+          [
+            -79.39596176147461,
+            43.66898914788972
+          ],
+          [
+            -79.39514636993408,
+            43.66883393555448
+          ],
+          [
+            -79.39398765563965,
+            43.66811995364278
+          ],
+          [
+            -79.39300060272217,
+            43.66597795695
+          ],
+          [
+            -79.39072608947754,
+            43.66318393334909
+          ],
+          [
+            -79.39021110534668,
+            43.661228039453285
+          ],
+          [
+            -79.39085483551025,
+            43.660234545135005
+          ],
+          [
+            -79.38845157623291,
+            43.654645833275175
+          ],
+          [
+            -79.38484668731688,
+            43.647752372270084
+          ],
+          [
+            -79.3837308883667,
+            43.645454376109036
+          ],
+          [
+            -79.37986850738525,
+            43.645702812364746
+          ],
+          [
+            -79.37982559204102,
+            43.645702812364746
+          ],
+          [
+            -79.37703609466553,
+            43.64703813963579
+          ],
+          [
+            -79.37793731689452,
+            43.64924291736786
+          ],
+          [
+            -79.3792676925659,
+            43.65247230485361
+          ],
+          [
+            -79.38072681427002,
+            43.656384599372586
+          ],
+          [
+            -79.38308715820312,
+            43.66141431780774
+          ],
+          [
+            -79.38368797302246,
+            43.66529498541197
+          ],
+          [
+            -79.38579082489014,
+            43.67091374750086
+          ],
+          [
+            -79.38634872436523,
+            43.673179729223286
+          ],
+          [
+            -79.38789367675781,
+            43.67507315518335
+          ],
+          [
+            -79.38853740692139,
+            43.6768113296983
+          ],
+          [
+            -79.3906831741333,
+            43.682242800546135
+          ],
+          [
+            -79.39282894134521,
+            43.68711518739324
+          ],
+          [
+            -79.39480304718018,
+            43.68925642967865
+          ],
+          [
+            -79.39724922180176,
+            43.697975771783746
+          ],
+          [
+            -79.39827919006348,
+            43.69974430929246
+          ],
+          [
+            -79.39857959747314,
+            43.706104407756314
+          ],
+          [
+            -79.4022274017334,
+            43.72511862794109
+          ],
+          [
+            -79.4068193435669,
+            43.74459186600233
+          ],
+          [
+            -79.41093921661377,
+            43.76151727392542
+          ],
+          [
+            -79.41269874572754,
+            43.768738564033384
+          ],
+          [
+            -79.41583156585693,
+            43.781071626974814
+          ]
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#f6c213",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+          
+            //green line
+          map.addLayer({
+        "id": "subway-route-2",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+          [
+            -79.53547954559325,
+            43.637612578800066
+          ],
+          [
+            -79.5265531539917,
+            43.6449109182176
+          ],
+          [
+            -79.5246434211731,
+            43.64537673956842
+          ],
+          [
+            -79.51114654541014,
+            43.64821817158656
+          ],
+          [
+            -79.49893712997437,
+            43.650453958023796
+          ],
+          [
+            -79.49681282043457,
+            43.650500536022925
+          ],
+          [
+            -79.49436664581297,
+            43.649895019216856
+          ],
+          [
+            -79.48960304260254,
+            43.64814053861799
+          ],
+          [
+            -79.4871997833252,
+            43.648202645000865
+          ],
+          [
+            -79.48511838912964,
+            43.649584495409826
+          ],
+          [
+            -79.48389530181885,
+            43.64994159764943
+          ],
+          [
+            -79.47602033615112,
+            43.65168049995188
+          ],
+          [
+            -79.46677207946777,
+            43.65382300676892
+          ],
+          [
+            -79.45949792861937,
+            43.65554627200379
+          ],
+          [
+            -79.45265293121338,
+            43.65697452643116
+          ],
+          [
+            -79.4376540184021,
+            43.65990855122967
+          ],
+          [
+            -79.42568063735962,
+            43.66246988423254
+          ],
+          [
+            -79.41171169281006,
+            43.665527817491075
+          ],
+          [
+            -79.39894437789917,
+            43.66847694566027
+          ],
+          [
+            -79.39031839370728,
+            43.670184269427175
+          ],
+          [
+            -79.38722848892212,
+            43.67077406089649
+          ],
+          [
+            -79.38566207885742,
+            43.67077406089649
+          ],
+          [
+            -79.37628507614136,
+            43.672419238046814
+          ],
+          [
+            -79.37152147293091,
+            43.67243475837122
+          ],
+          [
+            -79.36853885650635,
+            43.67381605116974
+          ],
+          [
+            -79.36684370040894,
+            43.67476276157897
+          ],
+          [
+            -79.35946226119995,
+            43.6761905588656
+          ],
+          [
+            -79.35770273208618,
+            43.67719930820758
+          ],
+          [
+            -79.34467792510986,
+            43.67985301394873
+          ],
+          [
+            -79.33791875839233,
+            43.68120309989344
+          ],
+          [
+            -79.3303656578064,
+            43.682661779297774
+          ],
+          [
+            -79.32302713394164,
+            43.684275596036315
+          ],
+          [
+            -79.3127703666687,
+            43.68654107320606
+          ],
+          [
+            -79.30167675018309,
+            43.6890857537494
+          ],
+          [
+            -79.29850101470947,
+            43.68983051787641
+          ],
+          [
+            -79.28946733474731,
+            43.694671259285
+          ],
+          [
+            -79.28255796432495,
+            43.697572413818605
+          ],
+          [
+            -79.28104519844055,
+            43.69946506999592
+          ],
+          [
+            -79.2790174484253,
+            43.711145469808486
+          ],
+          [
+            -79.27833080291747,
+            43.715550235375034
+          ],
+          [
+            -79.27494049072266,
+            43.72214126922904
+          ],
+          [
+            -79.27348136901855,
+            43.72491704061533
+          ],
+          [
+            -79.26732301712036,
+            43.73116593227012
+          ],
+          [
+            -79.2628812789917,
+            43.732716424778886
+          ]
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#009247",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+          
+              //blue line
+          map.addLayer({
+        "id": "subway-route-3",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+         [
+            -79.26270961761475,
+            43.73277844364429
+          ],
+          [
+            -79.2701768875122,
+            43.75051320325138
+          ],
+          [
+            -79.27631378173828,
+            43.76691007943185
+          ],
+          [
+            -79.27687168121338,
+            43.76895549917517
+          ],
+          [
+            -79.27554130554199,
+            43.76979224163757
+          ],
+          [
+            -79.27206516265868,
+            43.77053600288821
+          ],
+          [
+            -79.25751686096191,
+            43.77453356114858
+          ],
+          [
+            -79.25412654876709,
+            43.775060351224695
+          ],
+          [
+            -79.25198078155518,
+            43.774998376162486
+          ]
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#0a80c5",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+             
+    
+             //purple line
+          map.addLayer({
+        "id": "subway-route-4",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+         [
+            -79.41089630126953,
+            43.76161025744937
+          ],
+          [
+            -79.38772201538086,
+            43.766724128714095
+          ],
+          [
+            -79.37660694122314,
+            43.76926540515574
+          ],
+          [
+            -79.3666934967041,
+            43.77093886970382
+          ],
+          [
+            -79.34639453887938,
+            43.77509133873172
+          ]
+        ]
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#a12268",
+            "line-width": 3,
+            'line-opacity': 0.7
+        }
+    });   
+             
+    
+            map.addLayer({
+        'id': 'kensington',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[[-79.39810752868652,43.65303121967545],[-79.40003871917725,43.657999122810814],[-79.40767765045166,43.65650879502444],[-79.4060468673706,43.65237915187759],[-79.40561771392822,43.65244125387767],[-79.40381526947021,43.65185128228425],[-79.39810752868652,43.65303121967545]]]
+                }
+            }
+        },
+                
+                
+                
+        'layout': {},
+        'paint': {
+            'fill-color': '#efefef',
+            'fill-opacity': 0.4
+        }
+    });
+          
+          
+
+    
+          });
+      
+    
 
   var stores = {
     "type": "FeatureCollection",
     "features": [
-      
+        
+        
         
     //Horseshoe Tavern
-      {
+     
+        
+        
+        {
         "type": "Feature",
         "geometry": {
           "type": "Point",
@@ -846,29 +1472,6 @@
         }
       },    
         
-        
-     //BeaLillie
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
--79.423258,43.643226]
-        },
-        "properties": {
-          "name": "Bea Lillie: 'The Funniest Woman in the World'",
-          "year": "1894-1989",
-          "image": '<img src="http://2.bp.blogspot.com/_dHMUkWjxiWM/SvG-wXJ9lQI/AAAAAAAAAX4/p3FW_s6-hfQ/s640/Bea2.jpg">',
-          "address": "1115 Queen St W, Toronto, ON",
-          "neighbourhood": "Queen West",
-          "city": "Toronto",
-          "presentedby": "myseum-of-toronto",
-          "description": "She was a reigning star of Broadway and London, but until the Duke of Edinburgh unveiled a plaque to her, few Torontonians knew she had been born in this city, just north of the railway tracks.",
-          "tags": "celebrities broadway acting",
-          "state": "<p>You might be surprised to learn that one of the most famous Broadway stars to ever take the stage grew up in a small row house on Dovercourt just south of Queen St., but that’s exactly where Beatrice Gladys Lillie, or Bea Lillie, was born. Life in Queen West had its perks—she especially enjoyed the Canadian National Exhibition as a child. But from a young age, Lillie felt inadequate and saw herself as a misanthrope, a feeling she never imagined would translate well into musical theater.During the 1910s, Lillie lived in London, England with her family, and it was there that she first began auditioning for singing roles in playhouses. It was there that her “awkward” mannerisms and personality soon came in handy.</p><p>Realizing she could rouse laughter with her physical mannerisms, she became a sensation among London theatregoers and soon entertained the press on both sides of the Atlantic. After marrying Robert Peel, the great grandson of the British prime minister of the same name, she traveled to New York City to debut. Broadway audiences likewise enjoyed her irreverent, whimsical attitude. To their amazement, she could turn any song into a comedy bit with her tongue-in-cheek performances.In 1939, her son enlisted in the army for the Second World War, and she spent a good amount of time entertaining troops. In 1942, however, her son would be declared missing in action off the Indian Coast.</p><p>After the war, she dabbled with film acting, but her true home would always be the stage. In 1989, she died at the age of 94, and in her honour, the Duke of Edinburgh installed a plaque at 1115 Queen St, located just around the corner from the small house she grew up in.</p>"
-        }
-      },    
-        
     
     //BeaLillie
       {
@@ -939,11 +1542,7 @@
           "state": "<p>Anderson Abbott is not simply an important figure for Toronto’s black community. As a Civil War captain and medical officer for the Union Army in the United States, his contribution to American history is astonishing as well.</p><p>For many of the black families living in Southern Ontario during the 19th century, life in Toronto, Leamington, Hamilton and Windsor meant a life away from slavery in America’s Confederate South. The Underground Railroad, a secretive collective of abolitionists located in both the United States and Canada, sought to free slaves by transporting them across border lines from as far as Mississippi to the Canadian line.</p><p>In Upper Canada, John Graves Simcoe had attempted to end slavery in Canada with the Anti-Slavery act in the year 1793, but wealthy landowners protested and refused to give away what they deemed to be property. Instead, slaves would not go free, but black immigrants would be deemed free in Canada.</p> <p>Abbott’s parents arrived in Toronto in 1835, as part of the approximately 30,000 black people who sought refuge in Canada before the Emancipation Proclamation. During the time, black men actually formed regiments to fight on the government side in William Lyon Mackenzie’s Rebellion in 1837.</p><p>From an early age, Abbott knew that he wanted to be a doctor. After graduating from the University of Toronto, he became the first black doctor born in Canada. Shortly after graduating, he joined the American army as the medical officer who would help in army hospitals on the front. He was one of only eight black physicians who participated in the American Civil War. </p><p>At the height of the Civil War in 1863, Abraham Lincoln invited Abbott to the White House, a meeting that drew infamy for the shocked reception of the crowd. Few during that period of time could have imagined a black man as army captain, but militarily he excelled in the position for the army that would achieve decisive victory. Lincoln and the First Lady remembered the meeting fondly, and were so moved by Abbott that when he died, Mary Todd Lincoln sent him the shawl he wore during his inauguration.</p><p>Abbott would eventually settle in Parkdale, at that point the extreme west of the city. He moved to Toronto after running a successful practice in Southern Ontario.</p>"
         }
       },  
-        
-        
-        
-        
-        
+         
          //Sunnyside Beach
       {
         "type": "Feature",
@@ -1033,6 +1632,14 @@
           "state": "<p>Courtesy of MyTownCrier.ca</p><p>A great mystery has been uncovered at 1597-1599 Bathurst St.Many know the building called The Hemingway, and also its Toronto Historical Board plaque, dated 1985. The brass marker informs visitors to the building that literary giant Ernest Hemingway lived there in 1923-24 while working for the Toronto Star.</p><p>I’ve always been intrigued by Hemingway, ever since his Old Man and the Sea was imposed on me in high school, and his lamentations on growing old (in Idaho) left an imprint. Back when Hemingway inhabited 1597-1599 Bathurst, the building was called Cedarvale Mansions, and the mystery that eluded Greg Heal, one of its current residents, was which unit the novelist called home.</p><p>“It was sort of nice when we had the mystery of what unit Hemingway lived in — we couldn’t figure it out,” Heal admits. “It was one of my hobbies to reach out to various resources: the John F. Kennedy Library.” Heal has resided in the building since the early ’90s and experienced its transition from a co-operative to a condominium. So, when one particular unit went up for sale two years ago the owners were looking to reinvigorate the sale of their apartment. “They reached out to me and said, ‘Oh Greg, is there anything current on the search for Hemingway?’ I said no. ‘Well, keep at it’,” Heal recalls. “He was able to connect with some writers who were putting together a book on Hemingway’s papers and, lo and behold, they just had a copy of his lease.”</p><p>That lease revealed the unit in question to be Number 19, where accountant Pat Cavanagh, 33, now lives, and took possession Nov. 1, 2013. He admits that when he purchased the unit it wasn’t known his abode was For Whom The Bell Tolls, and when he did learn of the unit’s former lodger he was far from awestruck.</p><p>“I’ll be totally honest, there was a bit of ignorance.” Cavanagh shares. “I know of him [but] I’ve actually never read any of his books. It was a cool thing to hear.”</p><p>That’s not to say Cavanagh doesn’t read. At least one of Hemingway’s celebrated works is on his to-read bookshelf.</p><p>“I am somewhat of an avid reader, and I do have one that I’m trying to get to of his,” he admits.</p>Much like the rumours of one of Hemingway’s contemporaries, Sinclair Lewis, it is alleged that Lewis hid his works in the basement of the Palmer House Hotel in Sauk Centre, Minn.No such luck here in Toronto.</p><p>“It’s always been a running joke that, ‘Hey, if you find some Hemingway papers you might be able to pay for your renovation, but nothing like that has turned up,” Heal says, with a laugh. “It’s an old building. You’ll never know what you’ll find.”</p><p>The unit in question was renovated before Cavanagh took possession.</p><p>Now, as much as the literary community loves Hemingway, the writer was not particularly keen on Hogtown.</p><p>Heal tells a story about how the bullfighting fan broke his lease at the building.</p><p>With Toronto being a fairly stayed place for a person who came from Chicago — itself a very vibrant city — Hemingway wanted to break his lease so he could go off to what was a more exciting Paris. He threw a party, and to each of his revelers that he invited he requested they take something with them when they left.</p><p>“It was a way for him to surreptitiously get his stuff out of the suite so the landlord wasn’t catching on to the fact that he was busting his lease, and he would be able to get his personal belongings out” Heal says. “That was a very creative way to take flight.”</p>"
         }
       },
+        
+    
+        
+      
+        
+     
+        
+
           
     //Royal Ontario Museum
       {
@@ -1055,8 +1662,14 @@
           "tags": "museum ontario education",
             "state": "sit amet, consectetur adipiscing elit. Aenean facilisis porta turpis, eu volutpat tellus posuere sed. In purus odio, fermentum rutrum lacus vel, aliquet vestibulum est. Donec aliquet dictum pretium. Duis ac ex et ex elementum vulputate. Curabitur non tortor blandit, ullamcorper felis sit amet, pretium augue. Donec lectus orci, pretium vel tempor sit amet, congue eget odio. Fusce a eleifend metus. Praesent eros quam, congue at dignissim eu, laoreet a mi. Donec nec rhoncus nisi, et elementum nibh. Nulla rutrum justo quis nisl pharetra egestas. Sed maximus egestas finibus. Etiam vel diam tellus. Donec pretium libero ut ipsum dictum malesuada.Cras enim justo, luctus quis maximus vitae, consectetur ut urna. Integer mi mauris, interdum ut facilisis id, mollis vel augue. Donec eget facilisis ligula. Fusce turpis justo, efficitur at tempus eu, pharetra ut erat. <h1>Maecenas</h1> ut ullamcorper tortor. Duis porta ligula mi, nec varius quam ullamcorper a. In et felis magna. Pellentesque convallis nisi eu facilisis scelerisque. Proin dignissim odio sem, sit amet feugiat risus sagittis vel. Aenean eu mauris id magna vestibulum bibendum cursus fringilla augue. Cras elit est, varius ut est eu, condimentum mattis neque. Nunc varius sagittis libero et ultricies.Proin eu felis convallis, ullamcorper sem dignissim, laoreet neque. Donec volutpat libero neque, ut facilisis orci scelerisque a. Nam est nunc, sollicitudin eget libero vel, semper scelerisque eros. Pellentesque elementum purus dolor, sed venenatis orci porttitor quis. Ut vulputate vitae augue eget placerat. Pellentesque lobortis sapien id arcu vehicula accumsan. Cras commodo augue turpis. Vestibulum aliquam dictum mauris eget ultricies. Mauris vitae faucibus ante. Sed fermentum lorem eu metus aliquam congue. Sed fermentum sapien et urna convallis elementum. Vestibulum lacinia viverra lacus."
         }
+          
+          
       }]
     };
+      
+  
+
+      
   // This adds the data to the map
   map.on('load', function (e) {
     // This is where your '.addLayer()' used to be, instead add only the source without styling a layer
@@ -1146,6 +1759,9 @@
                   )
           .addTo(map);
   }
+      
+     
+
 
 
   function buildLocationList(data) {
@@ -1166,7 +1782,6 @@
         
       var description = listing.appendChild(document.createElement('div'));
       description.innerHTML = prop.description;
-
 
       var details = listing.appendChild(document.createElement('div'));
       details.innerHTML = prop.neighbourhood;
@@ -1214,5 +1829,8 @@ $(document).ready(function(){
       
 
     </script>
+
+
+ 
   </body>
 </html>

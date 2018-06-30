@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/OwlCarousel2-2.3.3/src/js/owl.navigation.js",
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/OwlCarousel2-2.3.3/src/js/owl.support.js",
+        "/Users/philjames/Downloads/Coding/YQL Experiments/YQL-YUI-Experiments/Omniwire-Reader-Master/OwlCarousel2-2.3.3/docs_src/assets/js/foundation.min.js"
+    ]
+}

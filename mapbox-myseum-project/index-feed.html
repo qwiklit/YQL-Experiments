@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='utf-8' />
+      <title>Myseum Tours</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <style>
+
+        body {
+          color: white;
+          font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+          margin:0;
+            margin-left: 30px;
+          padding:0;
+          -webkit-font-smoothing:antialiased;
+            background: black;
+        }
+      a {color: white}
+
+      h2 {font-size: 15px; margin-top: 10px; margin-bottom: 10px; }
+      </style>
+  </head>
+
+  <body>
+      
+<div style="margin: 0 auto; width: 100%; position: relative;" class="modal fade" id="myModal-1" role="dialog">
+    <div style="width: 110%; " class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div style="margin: 0 auto; position: relative; z-index: 1; max-width: 85%;height: 90vh;" class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="background: black;" class="modal-title">Myseum of Toronto</h4>
+        </div>
+        <div style="height: 73vh;" class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+</div>
+      
+    </div>
+  </div>
+            
+        <div id="islington"></div>
+   
+
+                <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
+ <script>
+      
+              YUI().use('yql', function(Y){
+    var query = 'select * from rss(0,50) where url  = "http://feed.informer.com/digests/31EE8826QL/feeder.rss"'
+
+    var q = Y.YQL(query, function(r){
+        //r now contains the result of the YQL Query as a JSON
+        var feedmarkup = '<p>'
+        var feed = r.query.results.item // get feed as array of entries
+        for (var i=0; i<feed.length; i++){
+            feedmarkup += '<div class="row">'
+           
+            feedmarkup += '<a href="' + feed[i].link + '"<h2 style="display: inline;" class="read">' + feed[i].title  + '<h2>' + '</div></a>'
+        }
+        document.getElementById('islington').innerHTML = feedmarkup
+        
+      
+    })
+
+})
+              
+    </script> 
+
+
+ 
+  </body>
+</html>
