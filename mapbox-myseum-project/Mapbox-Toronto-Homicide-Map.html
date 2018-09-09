@@ -1,0 +1,124 @@
+  <meta charset='utf-8' />
+  <title>Toronto Homicide Map</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+  
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #2dc4b2;
+}
+
+#console {
+  position: absolute;
+  width: 350px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: white;
+height:300px;
+}  
+      .session {
+  margin-bottom: 20px;
+}
+
+      #sliderbar {width: 300px;}
+
+  </style>
+  
+  <div id='map'></div>
+<div id='console'>
+  <h1>Toronto Homicide Map</h1>
+  <p>Data: <a href='https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95'>Homicides in Toronto</a> between 2004-2017</p>
+<div  class='session' id='sliderbar'>
+  <h2>Year: <label id='active-hour'>2004</label></h2>
+  <input id='slider' class='row' type='range' min='2004' max='2018' step='1' value='14' />
+</div>
+</div>
+
+
+
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbG5pY29sYXNqYW1lcyIsImEiOiJjaXYycGU2a2cwMmZ1MnlwNjZ4YWEzbzRmIn0.hZO-ZaGNzM4jXhbvqtOH3w';
+
+var map = new mapboxgl.Map({
+  container: 'map', // container element id
+  style: 'mapbox://styles/mapbox/light-v9',
+  center: [-79.39227104187012,43.66110385356255], // initial map center in [lon, lat]
+  zoom: 12
+});
+    
+    
+    map.on('load', function() {
+    map.addLayer({
+      id: 'collisions',
+      type: 'circle',
+      source: {
+        type: 'geojson',
+        data: 'https://opendata.arcgis.com/datasets/d5af7989f1d94ddd9b05319eb601df8e_0.geojson' // replace this with the url of your own geojson
+      },
+      paint: {
+
+        'circle-color': [
+          'interpolate',
+          ['linear'],
+          ['number', ['get', 'year_']],
+          2004, '#494949',
+          2005, '#101010',
+          2006, '#636363',
+          2007, '#555555',
+          2008, '#222222',
+          2009, '#2DC4B2',
+          2010, '#3BB3C3',
+          2011, '#669EC4',
+          2012, '#8B88B6',
+          2013, '#A2719B',
+         2014, '#949494',
+          2015, '#222222',
+          2016, '#343434',
+          2017, '#969696',
+        2018, '#696969'
+        ],
+        'circle-opacity': 0.8
+      }
+    }, 'admin-2-boundaries-dispute');
+  });
+    
+document.getElementById('slider').addEventListener('input', function(e) {
+  var hour = parseInt(e.target.value);
+  // update the map
+  map.setFilter('collisions', ['==', ['number', ['get', 'year_']], year]);
+
+  // converting 0-23 hour to AMPM format
+  var ampm = hour >= 12 ? 'PM' : 'AM';
+  var hour12 = hour % 12 ? hour % 12 : 12;
+
+  // update text in the UI
+  document.getElementById('active-hour').innerText = hour12 + ampm;
+});
+</script>

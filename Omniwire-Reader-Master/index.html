@@ -1,186 +1,69 @@
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content=""><meta http-equiv="refresh" content="60" >
 
 <head>
-    
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="menus.css">
-
 <link rel="stylesheet" type="text/css" href="omniwire-css/style.css">
-<link rel="stylesheet" type="text/css" href="omniwire-css/front-page.css">
-<link rel="icon" href="new-icons/Tapestry-LOGO.png">
-
-    <!-- Custom CSS -->
-<link href="css/simple-sidebar.css" rel="stylesheet">
+<link rel="icon" href="logos/enso.png">
+<!-- Custom CSS -->
+<link href="omniwire-css/simple-sidebar.css" rel="stylesheet">
+<link href="style-carousel.less" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Catamaran|Goudy+Bookletter+1911|Martel:900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Slabo+13px|Ultra" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Slabo+13px|Ultra" rel="stylesheet">
-  <script src="js/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Catamaran:100,400|Open+Sans:300|Heebo" rel="stylesheet">
+<link rel="stylesheet" href="OwlCarousel2-2.3.3/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="OwlCarousel2-2.3.3/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+
+<script src="EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js"></script> 
+<!-- Using jQuery with a CDN -->
  
-   
+<link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.min.css"> 
+<link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css"> 
+
+    
+<script src="OwlCarousel2-2.3.3/docs/assets/vendors/jquery.min.js"></script> <script src="EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js"></script>  <link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.min.css">  <link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css"> 
+
+  
 <style>
-      .editors-choice .row {margin-left: 15px; margin-right: 15px;}
- 
-  
-      .shell {  background: rgba(255,255,255, 0.4);
-  border-radius: 2px;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  margin-top: 30px;
- 
-}
     
- .shell:hover {
-  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
-}
-
-
-.row p {display: none;}
     
-h4.publication a {
-  color:  black;
-  background: #e6e6e6;
-  padding: 10px 20px 5px 20px; 
-  box-shadow: #616161 0px 2px 3px 0px;
-  font-size: 15px;
-
-}
-    h4.publication-name {margin-top: 20px; margin-bottom: 20px;} 
-  h4.publication-name a {
-  color:  black;
-  background: #e6e6e6;
-  padding: 10px 20px 5px 20px; 
-  box-shadow: #616161 0px 2px 3px 0px;
-  font-size: 15px;
-
-}
-      
+    .search-top li.ui-menu-item {font-size: 20px;}
+    .owl-carousel { margin-top: -10px;border-bottom: solid 1px #efefef;}
+    .owl-carousel  .item {height: 250px;border-radius: 1px; }
+    .owl-carousel h4 {margin-top: 75px; font-size: 25px;}
+    .owl-theme .owl-nav {visibility: hidden;}
+    .owl-nav {display: none;}
+    .owl-dots {height: 70px; padding-top: 30px;}
+   .stretch-grid {margin-left: -18%; margin-right: -18%;}
+    .stretch-grid h1 img {height: 70px; width: auto; padding-left: 20px;}
+    h1.explore-subheader { font-family: 'Josefin Sans', serif; font-size: 2em; padding: 20px;    }
     
-h4.publication a[href="http://www.deadmule.com"], h4.publication a[href="http://pitheadchapel.com"] {
-   background: #616161; 
-   color: white;
+    @media only screen and (max-width: 700px) {
+       .latest-news-header   {font-size:1.7em;}   
 }
+    @media only screen and (max-width: 550px) 
+    {h2.read {text-align: center;}}
     
-    h4.publication a[href="http://atticusreview.org"] {
-   background: #b82427; 
-   color: white;
-}
-    h4.publication a[href="http://www.theawl.com"] {
-   background:  #1e3757; 
-   color: #cbff8f;
-}
-    h4.publication a[href="http://bookriot.com"] {
-   background: #eba921; 
-   color: black;
-}     
-    h4.publication a[href="http://www.brainpickings.org"] {
-   background: yellow; 
-   color: black;
-}
+    .item {background-size: cover;}
     
-       h4.publication a[href="http://coloradoreview.colostate.edu"] {
-   background: #93a039; 
-   color: white;
-}
     
-      h4.publication a[href="http://www.full-stop.net"] {
-   background:  #beb4c9; 
-   color: white;
-}
-    
-      h4.publication a[href="http://www.theguardian.com/books"] {
-   background:  #e9eff1; 
-   color: black;
-}
-    
-   
-     h4.publication a[href="http://harpers.org"] {
-   background:  #0033bb; 
-   color: white;
-}
-  
-    h4.publication a[href="http://www.imagejournal.org"] {
-   background:  #69a7af; 
-   color: white;
-}
-    h4.publication a[href="http://iowareview.org/"] {
-   background:  #423f24; 
-   color: white;
-}
-    
-
-    h4.publication a[href="http://www.kenyonreview.org"] {
-   background:  #73b9b9; 
-   color: white;
-}
-    
-       h4.publication a[href="http://www.lightspeedmagazine.com"] {
-   background: #fecf12; 
-   color: black;
-}
-    
-    h4.publication a[href="http://lithub.com"] {
-   background: #f9eed9; 
-   color: black;
-}
-   
-    h4.publication a[href="http://www.lrb.co.uk/"] {
-   background:#005689; 
-   color: white;
-}
-    
-    h4.publication a[href="http://www.npr.org/templates/story/story.php?storyId=1032"] {
-   background:  #f25c23; 
-   color: white;
-}
-    
-    h4.publication a[href="http://www.theparisreview.org/blog"] {
-   background:  #414141; 
-   color: white;
-}
-    
-         h4.publication a[href="http://www.theglobeandmail.com/?cmpid=rss2"] {
-   background:#db161f; 
-   color: white;
-}
-
-    h4.publication a[href="http://portlandreview.org"] ,h4.publication a[href="http://theoffingmag.com"] {
-   background: black; 
-   color: white;
-}
-    
-    h4.publication a[href="http://prairieschooner.unl.edu/blog"] {
-   background:    #02a5cd; 
-   color: white;
-}
-    
-   h4.publication a[href="http://www.the-tls.co.uk"] {
-   background: #d73f2b; 
-   color: white;
-}
-         
-    h4.publication a[href="http://www.thestar.com/content/thestar/feed.RSSManagerServlet.articles.entertainment.books.rss"] {
-   background:   #0164a4; 
-   color: white;
-}
-    
-</style>   
+</style>
 </head>
 <body>
 
-    
+    <title>Omniwire News Reader</title>
     <div id="wrapper">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav" id="sidebar-nav">
-               
+                
             </ul>
             
         </div>
@@ -191,539 +74,296 @@ h4.publication a[href="http://www.deadmule.com"], h4.publication a[href="http://
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        
-                       <!-- /Make sure to keep all page content within the <code>#page-content-wrapper</code>-->
-                 
+                       <!-- /Make sure to keep all page content within the <code>#page-content-wrapper</code>--> 
         <!-- /#page-content-wrapper -->
-             
-   
     <!-- /#wrapper -->
-
-
 <div id="navMenu"></div>
-                 
 <div id="mainheader">
-
-  
 </div>
+<div class="publication-header">
+<h1 class="cover-title">Local. News. Everywhere.<a href="about-us.html">
+<div><h4 style="subtitle">Discover how Omniwire is changing <br>the way you read news.</h4></div>
+<button style="margin-top: 25px;" class="launch-map btn-primary"><h4>Learn More</h4></button></a> 
+    
+<hr />  
+<div class="search"><input placeholder="Search..."
+ id="search-area" /></div>
 
+</h1> 
 
+</div>
+                        
 <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
 
 <div id="launcharea">
     
 <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
-<div class="parallax hero-image">
-  <div class="hero-text">
-    <h1>The Collected Works of Today.</h1>
-    <h2>Short stories, poetry, the latest book reviews and more. What more could you want?<h2>
-  <a href="about.html"><button type="button" class="btn btn-default">Learn More</button></a>
-  </div>
-</div>
-    
-<div style="display: none;" class="hero-image">
-     <div class="hero-text">
-         <input></input>
-     </div>
-</div>
-    
- <div class="col-lg-12 page-menu">
-<div class="row column-bar">
-
-  <div class="col-md-3 col-sm-3"><a href="#breaker-fiction">The Latest</a>
-    
-  </div>
-  <div class="col-md-3 col-sm-3"><a href="#breaker-1">Editor's Choice</a>
-    
-  </div>
-    
-  <div class="col-md-3 col-sm-3"><a href="authors.html">Authors</a>
-    
-  </div>
-    
-  <div class="col-md-3 col-sm-3"><a href="submit-your-stories.html">Browse</a>
-    
-</div>
-</div>
-</div>
- 
-
-<div style="height: 1px;" id="breaker-1"></div>
-
-                        <div class="tri-feed">
-                <div id="story-of-the-day">    
-   <h1 style="">Featured Stories</h1>
-             <h3 class="section-subtitle"><img src="new-icons/007-star.png"></h3>
-
-    </div> 
-                
-                               <div class="editors-choice">  
-  <div class="shell">   
-<div class="row">
-<div class="col-md-12">
-<a href="https://www.apex-magazine.com/asylum-of-cuckoos/"><h2 class="read">Asylum of Cuckoos</h2>
-</a>
-<h4 class="author">By <a class="pub-atlantic" href="https://www.apex-magazine.com">Lila Bowen</a></h4>
-<h4 class="publication-name"><a class="pub-atlantic" href="https://www.apex-magazine.com">Apex Magazine</a></h4><h3 class="read">Rhett Walker had always been a creature of unsettled dreams. When he woke on one particular night, somewhere in the dusty nowhere of west Durango, he couldn’t quite remember what had caused him to bolt upright, breathing heavy and screaming his throat raw, his hand already on his gun.</h3>
-</div>
-</div>
-</div>
-    
-  <div class="shell"> 
-<div class="row">
-    <div class="col-md-12">
-	<a href="http://www.narrativemagazine.com/issues/winter-2018/fiction/wanting-joyce-carol-oates"><h2 class="read">Wanting</h2>
-	</a>
- <h4 class="author">By <a class="pub-atlantic" href="http://www.narrativemagazine.com">Joyce Carol Oates</a></h4>
-
- <h4 class="publication-name"><a class="pub-atlantic" href="http://www.narrativemagazine.com">Narrative Magazine</a></h4>    
-    
-<h3 class="read">
-    
-Wanting must be glaring in her face. As obsidian glares in even the faintest light.
-Casually he approaches her. Stands beside her, leaning his elbows on the railing above the embankment where seed-flecked waves slap against the concrete in harsh arrhythmic surges.
-</h3>
-</div>
-</div>
-</div>
-       
-  <div class="shell"> 
-<div class="row">
-        <div class="col-md-12">
-
-	<a href="http://www.chelseastationmagazine.com/2017/07/opus-66.html"><h2 class="read">Opus 66</h2>
-	</a>
-     <h4 class="author">By <a class="pub-atlantic" href="http://www.chelseastationmagazine.com">Richard Natale</a></h4>
-
-   <h4 class="publication-name"><a class="pub-new-yorker" href="http://www.chelseastationmagazine.com">Chelsea Station</a></h4>     <h3 class="read">Back in Muncie, he’d developed the romantic notion of one day residing in New York’s famed bohemian enclave, tracing the footprints of the writers, artists and performers who had either lived or gotten their start in the Village</h3>
-
-</div>
-</div>
-</div>
- 
-<div class="shell">
-<div class="row">
-            <div class="col-md-12">
-
-	<a href="https://www.tor.com/2017/08/30/party-discipline/"><h2 class="read">Party Discipline</h2>
-	</a>
-<h4 class="author">By <a class="pub-atlantic" href="https://www.tor.com">Cory Doctorow</a></h4> 
-<h4 class="publication-name"><a class="pub-atlantic" href="https://www.tor.com">Tor</a></h4>   <h3 class="read">I don’t remember how we decided exactly to throw a Communist party. It had been a running joke all through senior year, whenever the obvious divisions between the semi-zottas and the rest of us came too close to the surface at Burbank High...</h3>
-
-</div>
-</div>
-</div>
       
-<div class="shell">
-<div class="row">
-        <div class="col-md-12">
+            <div class="stretch-grid">
+         <h1 class="latest-news-header">Explore <span>America</span><img src="new-icons/american-flag.png"></h1>
+                <h1 class="explore-subheader">Featured States</h1>
+    <div class="owl-carousel owl-theme">
+            <div  class="item" id="alabama-header">
+              <a href="omniwire-alabama.html"><h4>Alabama</h4></a>
+            </div>
+            <div  id="georgia-header" class="item">
+                <a href="omniwire-georgia.html"><h4>Georgia</h4></a>
+            </div>
+            <div  id="california-header" class="item">
+                <a href="omniwire-california.html"><h4>California</h4></a>
+            </div>      
+            <div id="utah-header" class="item">
+              <a href="omniwire-utah.html"><h4>Utah</h4></a>
+            </div>
+            <div id="north-dakota-header" class="item">
+                <a href="omniwire-north-dakota.html"><h4>North Dakota</h4></a>
+            </div>
+            <div id="texas-header" class="item">
+                <a href="omniwire-texas.html"><h4>Texas</h4></a>
+            </div> 
+           <div id="north-carolina-header" class="item">
+              <a href="omniwire-north-carolina.html"><h4>North Carolina</h4></a>
+            </div>
+            <div  id="illinois-header" class="item">
+                <a href="omniwire-illinois.html"><h4>Illinois</h4></a>
+            </div>
+            <div  id="maine-header" class="item">
+                <a href="omniwire-maine.html"><h4>Maine</h4></a>
+            </div>  
+                </div>
+                
+                                            <h1 class="explore-subheader">Cities in Focus</h1>
 
-	<a href="http://salamandermag.org/girls-girls-girls/"><h2 class="read">Girls Girls Girls</h2>
-	</a>
- <h4 class="author">By <a class="pub-atlantic" href="http://salamandermag.org">Cady Vishniac</a></h4> 
- <h4 class="publication-name"><a class="pub-atlantic" href="http://salamandermag.org">Salamander Magazine</a></h4>    <h3 class="read">Elkie trusts Don absolutely. He’s a cross between a boyfriend and a father, though Elkie knows boyfriends and fathers aren’t supposed to be the same thing, and he’s not at all like a regular client.</h3>
 
-</div>
-</div>
-</div>
-                                   
-<div style="height: 100px"></div>
-                                   
-                                         
-                    </div>  
-                          <div id="story-of-the-day">    
-   <h1>Featured Authors </h1>
-                          
-<h3 class="section-subtitle"><a href="authors.html" style="text-align: center;"><button style="background-color: #1e2951; margin-top: 20px; color: #fff7f6; font-family: 'Martel', sans-serif;" class="btn">Browse All Authors</button></a></h3>
+        <div class="owl-carousel owl-theme">
 
-    </div>   
-                            <div class="featured-authors row">
-                            <div class="author-box-1 col-md-4">
-                            <a href="author-svetlana-alexievich.html"><h2><div>Svetlana Alexievich </div><button type="button" class="btn btn-default">Read More</button></h2></a>
-                            
-                            </div>
-                            <div  class="author-box-2 col-md-4">
-                             <a href="author-david-foster-wallace.html"><h2><div>David Foster Wallace</div><button type="button" class="btn btn-default">Read More</button></h2>
-                            </div></a>
-                            <div  class="author-box-3 col-md-4">
-                                 <a href="author-ursula-k-le-guin.html"><h2><div>Ursula K. Le Guin<p>Planets and their politics</p></div> <button type="button" class="btn btn-default">Read More</button></h2></a>
+            <div  id="detroit-header" class="item">
+              <a href="omniwire-michigan-detroit.html"><h4>Detroit</h4></a>
+            </div>
+            <div  id="fargo-header" class="item">
+                <a href="omniwire-north-dakota-fargo.html"><h4>Fargo</h4></a>
+            </div>
+            <div  id="tulsa-header" class="item">
+                <a href="omniwire-oklahoma-tulsa.html"><h4>Tulsa</h4></a>
+            </div>      
+        <div  id="columbus-header" class="item">
+              <a href="omniwire-ohio-columbus.html"><h4>Columbus</h4></a>
+            </div>
+            <div  id="san-diego-header" class="item">
+                <a href="omniwire-california-sandiego.html"><h4>San Diego</h4></a>
+            </div>
+            <div id="cheyenne-header" class="item">
+                <a href="omniwire-wyoming-cheyenne.html"><h4>Cheyenne</h4></a>
+            </div> 
+        <div id="nashville-header" class="item">
+              <a href="omniwire-tennessee-nashville.html"><h4>Nashville</h4></a>
+            </div>
+            <div id="tucson-header" class="item">
+                <a href="omniwire-arizona-tucson.html"><h4>Tucson</h4></a>
+            </div>
+            <div  id="northern-arizona-header" class="item">
+                <a href="omniwire-arizona-northern-arizona.html"><h4>Northern Arizona</h4></a>
+            </div>  
+</div>
+        </div>
+    
+            <div class="stretch-grid">
+         <h1 class="latest-news-header">Explore <span>Canada</span><img src="new-icons/canada-flag-medium.png"></h1>
+                <h1 class="explore-subheader">Featured Provinces</h1>
+
+    <div class="owl-carousel owl-theme">
             
-                            </div>
-                            </div>
-                            <div id="breaker-fiction"> </div>
-                            
-  <div id="story-of-the-day">    
-   <h1 style="">The Latest Fiction</h1>
-<h3 class="section-subtitle"><h3 class="section-subtitle"><a href="fiction.html" style="text-align: center;"><button  class="btn">Browse All Fiction</button></a></h3>
-</h3>
-    </div> 
-             <div class="lit-feed-visible feedlist" id="Fictionlaunch"></div>
- <div id="story-of-the-day">    
-   <h1 style="">The Latest Nonfiction</h1>
-<h3 class="section-subtitle"><a href="nonfiction.html" style="text-align: center;"><button  class="btn">Browse All Nonfiction</button></a></h3>
-
-    </div> <div class="lit-feed-visible feedlist" id="Nonfictionlaunch"></div>
-                            
-                         
- <div id="story-of-the-day">    
-   <h1>News & Reviews</h1>
-<h3 class="section-subtitle"><a href="newsandreviews.html" style="text-align: center;"><button class="btn">Browse All News & Reviews</button></a></h3>
-    </div> <div class="lit-feed-visible feedlist" id="EditorsChoicelaunch"></div>
-
-<div style="height: 1px;" id="breaker-2"></div>
-
-
- <div id="story-of-the-day">    
-   <h1 id="story-feed" style="">More Stories</h1>
-<h3 class="section-subtitle"><img src="new-icons/006-notebook.png"></h3>
-
-    </div> <div class="lit-feed-visible feedlist" id="tapestrylaunch"></div>
-                            
-         <div style="height:100px;"></div>        
+          <div  id="manitoba-header" class="item">
+              <a href="omniwire-manitoba.html"><h4>Manitoba</h4></a>
+            </div>
+            <div id="british-columbia-header" class="item">
+                <a href="omniwire-british-columbia.html"><h4>British Columbia</h4></a>
+            </div>
+            <div id="quebec-header" class="item">
+                <a href="omniwire-quebec.html"><h4>Québec</h4></a>
+            </div>      
+        <div  id="nova-scotia-header" class="item">
+              <a href="omniwire-nova-scotia.html"><h4>Nova Scotia</h4></a>
+            </div>
+            <div  id="ontario-header" class="item">
+                <a href="omniwire-ontario.html"><h4>Ontario</h4></a>
+            </div>
+            <div  id="alberta-header" class="item">
+                <a href="omniwire-alberta.html"><h4>Alberta</h4></a>
+            </div> 
+  
 </div>
+        <h1 class="explore-subheader">Featured Cities</h1>
 
+                <div class="owl-carousel owl-theme">
+
+          <div style="background-size: cover;" id="stjohns-header" class="item">
+              <a href="omniwire-newfoundland-stjohns.html"><h4>St.John's</h4></a>
+            </div>
+            <div style="background-size: cover;" id="toronto-header" class="item">
+                <a href="omniwire-ontario-toronto.html"><h4>Toronto</h4></a>
+            </div>
+            <div style="background-size: cover;" id="winnipeg-header" class="item">
+                <a href="omniwire-manitoba-winnipeg.html"><h4>Winnipeg</h4></a>
+            </div>      
+            <div style="background-size: cover;" id="northern-ontario-header" class="item">
+              <a href="omniwire-ontario-northern-ontario.html"><h4>Northern Ontario</h4></a>
+            </div>
+            <div style="background-size: cover;" id="montreal-header" class="item">
+                <a href="omniwire-quebec-montreal.html"><h4>Montréal</h4></a>
+            </div>
+            <div style="background-size: cover;" id="saskatoon-header" class="item">
+                <a href="omniwire-saskatchewan-saskatoon.html"><h4>Saskatoon</h4></a>
+            </div> 
+        <div style="background-size: cover;" id="edmonton-header" class="item">
+              <a href="omniwire-alberta-edmonton.html"><h4>Edmonton</h4></a>
+            </div>
+            <div style="background-size: cover;" id="victoria-header" class="item">
+                <a href="omniwire-british-columbia-victoria.html"><h4>Victoria</h4></a>
+            </div>
+            <div style="background-size: cover;" id="labrador-header" class="item">
+                <a href="omniwire-newfoundland-labrador.html"><h4>Labrador</h4></a>
+            </div>  
+  
 </div>
+        </div>
+    
+        <h1 class="latest-news-header">The Latest</h1>
+    <hr />
 
-                    
-<a class="signature"><h6 style="text-align: center; color: black;">Welcome to Tapestry. Short Stories, Poetry, and everything in between.</h6></a>
+<div class="lit-feed-visible feedlist" id="tapestrylaunch-3"></div>
+
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_tracking_id = "qwiklitcom-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_linkid = "9571cf62d0533823e4336da8eb8052d3";
+amzn_assoc_asins = "B071ZMDBKL,B07524LHMT";
+amzn_assoc_design = "in_content";
+amzn_assoc_title = " ";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+</div>
                         
 
-        </div>
+<a href="#"><h4>© Tapestry Media 2018</h4></a>
+                        
+
+                    </div>
                </div>
             </div>
        </div>  
-         </div>
+    </div>
 </body>
+ 
 
-<script src="js/button-to-top.js"></script>
-<script src="sidebarnav.js"></script>
+
+<script src="omniwire-nav.js"></script>
 <script src="headerarea.js"></script>
+<script src="js/conditions.js"></script>
 
     <!-- jQuery -->
-   
+    <script src="js/jquery.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-
     <!-- Menu Toggle Script -->
     <script>
- //http://feed.informer.com/digests/Q6SHL3MTFW/feeder.rss
-        
-       YUI().use('yql', function(Y){
-    var query = 'select * from rss(30,70) where url = "http://feed.informer.com/digests/Q6SHL3MTFW/feeder.rss"'
-    var q = Y.YQL(query, function(r){
-        //r now contains the result of the YQL Query as a JSON
-        var feedmarkup = '<p>'
-        var feed = r.query.results.item // get feed as array of entries
-        for (var i=0; i<feed.length; i++){
-            feedmarkup += '<div class="shell">'
-            feedmarkup += '<div class="row" id="text-area">'
-            feedmarkup += '<a class="publication-link" id="pub-link" href="' + feed[i].link + '">'
-            feedmarkup += '<h2 class="read">' + feed[i].title  + '<h2>' + '</a>' 
-            feedmarkup += '<div id="link-name">'
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  feed[i].pubDate.substring(0, 17) + '</div>' + '</h4>' + '</a>' 
-            feedmarkup +=  '<h4 class="featured">' + '</h4>' + '</a>'
-            feedmarkup +=  '<h4 class="publication"' + '<span class="boldby">' + '<a href=' + feed[i].source.url + '>' + feed[i].source.url.substring(0,40) + '</h4>' + '</a>'
-            feedmarkup += '<h3 class="description cut-description">' + feed[i].description + '</h3>' + '</p>'  
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  '</h4>' + '</a>' + '</div>'
-            feedmarkup += '<div class="icon-logos">' + '<a href="https://www.facebook.com/sharer/sharer.php?u=' +  feed[i].link + '"' + 'target="_blank"><img src="logos/facebook.png">' + '<a href="http://twitter.com/share&url=' + feed[i].link + '"' + '>' +
-                    
-                    '<a href="https://twitter.com/intent/tweet?url=' + feed[i].link + '"' + 'target="_blank">'
-      + '<img src="logos/twitter.png">' +  '</a>' +
-                
-                
-'<a href="https://plusone.google.com/_/+1/confirm?hl=en&url='
- + feed[i].link + '"' + 'target="_blank">' + '<img src="logos/googleplus.png">' +  '</a>' + '</div>' + '</div>'
-         
-
-         
-        }
-        document.getElementById('tapestrylaunch').innerHTML = feedmarkup
-         
-   $(document).ready(function() {
-
-
-var strNewString2 = $('#tapestrylaunch').html().replace(/\https/g,'http');
-$('#tapestrylaunch').html(strNewString2);    
-});
-        
-   $.fn.wrapInTag = function(opts) {
-  
-  var tag = opts.tag || 'strong',
-      words = opts.words || [],
-      regex = RegExp(words.join('|'), 'gi'),
-      replacement = '<'+ tag +'>$&</'+ tag +'>';
-  
-  return this.html(function() {
-    return $(this).text().replace(regex, replacement);
-  });
-};
-
-$('h4.publication a').wrapInTag({
-  tag: 'em',
-  words: ['http://', '[/]', 'null', 'https://', 'content']
-});     
-         
-    })
-})
  
-       
-     YUI().use('yql', function(Y){
-    var query = 'select * from rss(0,10) where url = "http://feed.informer.com/digests/Q6SHL3MTFW/feeder.rss"'
+             YUI().use('yql', function(Y){
+    var query = 'select * from rss(15,60) where url in ("http://feed.informer.com/digests/ZMJRA3AGQ4/feeder.rss","http://feed.informer.com/digests/GWPLNYXAXG/feeder.rss") | sort(field="pubDate", descending="true")' 
+    
     var q = Y.YQL(query, function(r){
         //r now contains the result of the YQL Query as a JSON
         var feedmarkup = '<p>'
         var feed = r.query.results.item // get feed as array of entries
         for (var i=0; i<feed.length; i++){
             feedmarkup += '<div class="shell">'
-            feedmarkup += '<div class="row" id="text-area">'
-            feedmarkup += '<a class="publication-link" id="pub-link" href="' + feed[i].link + '">'
-            feedmarkup += '<h2 class="read">' + feed[i].title  + '<h2>' + '</a>' 
-            feedmarkup += '<div id="link-name">'
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  feed[i].pubDate.substring(0, 17) + '</div>' + '</h4>' + '</a>' 
-            feedmarkup +=  '<h4 class="featured">' + '</h4>' + '</a>'
-            feedmarkup +=  '<h4 class="publication"' + '<span class="boldby">' + '<a href=' + feed[i].source.url + '>' + feed[i].source.url.substring(0,40) + '</h4>' + '</a>'
-            feedmarkup += '<h3 class="description cut-description">' + feed[i].description + '</h3>' + '</p>'  
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  '</h4>' + '</a>' + '</div>'
-            feedmarkup += '<div class="icon-logos">' + '<a href="https://www.facebook.com/sharer/sharer.php?u=' +  feed[i].link + '"' + 'target="_blank"><img src="logos/facebook.png">' + '<a href="http://twitter.com/share&url=' + feed[i].link + '"' + '>' +
+            feedmarkup += '<div class="row">'
+            feedmarkup += '<a href="' + feed[i].link + '">'
+            feedmarkup += '<h2 style="display: inline;" class="read">' + feed[i].title  + '<h2>' + '</a>' 
+            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  feed[i].pubDate.substring(0, 17)  + '</h4>' + '</a>' + '<h5 class="read">' + feed[i].source.url  + '<h5>' + '</a>'
+          
+
+              feedmarkup += '<h3 class="description cut-description">' + feed[i].description + '</h3>' + '</p>'  
+                feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' + '</div>' + '</h4>' + '</a>' 
+                  feedmarkup += '<div class="icon-logos">' + '<a href="https://www.facebook.com/sharer/sharer.php?u=' +  feed[i].link + '"' + 'target="_blank"><img src="logos/facebook.png">' + '<a href="http://twitter.com/share&url=' + feed[i].link + '"' + '>' +
                     
                     '<a href="https://twitter.com/intent/tweet?url=' + feed[i].link + '"' + 'target="_blank">'
       + '<img src="logos/twitter.png">' +  '</a>' +
                 
                 
 '<a href="https://plusone.google.com/_/+1/confirm?hl=en&url='
- + feed[i].link + '"' + 'target="_blank">' + '<img src="logos/googleplus.png">' +  '</a>' + '</div>' + '</div>'
-         
-
-         
+ + feed[i].link + '"' + 'target="_blank">' + '<img src="logos/googleplus.png">' +  '</a>' + '</div>' + '</div>' + '</div>'
+                
         }
-document.getElementById('Fictionlaunch').innerHTML = feedmarkup
-$(document).ready(function() {
-var NFstrNewString = $('#Fictionlaunch').html().replace(/https/g,'http');
-$('#Fictionlaunch').html(NFstrNewString); 
-           
-         });
- $.fn.wrapInTag = function(opts) {
-  
-  var tag = opts.tag || 'strong',
-      words = opts.words || [],
-      regex = RegExp(words.join('|'), 'gi'),
-      replacement = '<'+ tag +'>$&</'+ tag +'>';
-  
-  return this.html(function() {
-    return $(this).text().replace(regex, replacement);
-  });
-};
+        document.getElementById('tapestrylaunch-3').innerHTML = feedmarkup
         
-        $('#Fictionlaunch h4.publication a').wrapInTag({
-  tag: 'em',
-  words: ['http://', '/', 'null', 'content']
-});  
-   
-      
-  var resource = document.createElement('script'); 
+       var resource = document.createElement('script'); 
   resource.src = "js/titles.js";
   var script = document.getElementsByTagName('script')[0];
   script.parentNode.insertBefore(resource, script);
-        
-
     })
-     
+
 })
-     
-     YUI().use('yql', function(Y){
-    var query = 'select * from rss(0,10) where url = "https://feed.informer.com/digests/CZOMIXFCK3/feeder.rss"'
-    var q = Y.YQL(query, function(r){
-        //r now contains the result of the YQL Query as a JSON
-        var feedmarkup = '<p>'
-        var feed = r.query.results.item // get feed as array of entries
-        for (var i=0; i<feed.length; i++){
-            feedmarkup += '<div class="shell">'
-            feedmarkup += '<div class="row" id="text-area">'
-            feedmarkup += '<a class="publication-link" id="pub-link" href="' + feed[i].link + '">'
-            feedmarkup += '<h2 class="read">' + feed[i].title  + '<h2>' + '</a>' 
-            feedmarkup += '<div id="link-name">'
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  feed[i].pubDate.substring(0, 17) + '</div>' + '</h4>' + '</a>' 
-            feedmarkup +=  '<h4 class="featured">' + '</h4>' + '</a>'
-            feedmarkup +=  '<h4 class="publication"' + '<span class="boldby">' + '<a href=' + feed[i].source.url + '>' + feed[i].source.url.substring(0,40) + '</h4>' + '</a>'
-            feedmarkup += '<h3 class="description cut-description">' + feed[i].description + '</h3>' + '</p>'  
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  '</h4>' + '</a>' + '</div>'
-            feedmarkup += '<div class="icon-logos">' + '<a href="https://www.facebook.com/sharer/sharer.php?u=' +  feed[i].link + '"' + 'target="_blank"><img src="logos/facebook.png">' + '<a href="http://twitter.com/share&url=' + feed[i].link + '"' + '>' +
-                    
-                    '<a href="https://twitter.com/intent/tweet?url=' + feed[i].link + '"' + 'target="_blank">'
-      + '<img src="logos/twitter.png">' +  '</a>' +
-                
-                
-'<a href="https://plusone.google.com/_/+1/confirm?hl=en&url='
- + feed[i].link + '"' + 'target="_blank">' + '<img src="logos/googleplus.png">' +  '</a>' + '</div>' + '</div>'
-         
-        }
-        document.getElementById('Nonfictionlaunch').innerHTML = feedmarkup
-        
-      $(document).ready(function() {
-var NFstrNewString = $('#Nonfictionlaunch').html().replace(/https/g,'http');
-$('#Nonfictionlaunch').html(NFstrNewString);
-});
-        
-  
-        
- $.fn.wrapInTag = function(opts) {
-  
-  var tag = opts.tag || 'strong',
-      words = opts.words || [],
-      regex = RegExp(words.join('|'), 'gi'),
-      replacement = '<'+ tag +'>$&</'+ tag +'>';
-  
-  return this.html(function() {
-    return $(this).text().replace(regex, replacement);
-  });
-};
-        
-
-        
-        
-        
-$('#Nonfictionlaunch h4.publication a').wrapInTag({
-  tag: 'em',
-  words: ['http://', '[/]', 'null', 'content']
-});   
-        
-         var resource = document.createElement('script'); 
-  resource.src = "js/titles.js";
-  var script = document.getElementsByTagName('script')[0];
-  script.parentNode.insertBefore(resource, script);
-        
-
-    })
-     
-})
-
-     
-     
-     
-     YUI().use('yql', function(Y){
-    var query = 'select * from rss(0,10) where url = "https://feed.informer.com/digests/TPYYY6AKHL/feeder.rss"'
-    
-    var q = Y.YQL(query, function(r){
-        //r now contains the result of the YQL Query as a JSON
-        var feedmarkup = '<p>'
-        var feed = r.query.results.item // get feed as array of entries
-        for (var i=0; i<feed.length; i++){
-         feedmarkup += '<div class="shell">'
-            feedmarkup += '<div class="row" id="text-area">'
-            feedmarkup += '<a class="publication-link" id="pub-link" href="' + feed[i].link + '">'
-            feedmarkup += '<h2 class="read">' + feed[i].title  + '<h2>' + '</a>' 
-            feedmarkup += '<div id="link-name">'
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  feed[i].pubDate.substring(0, 17) + '</div>' + '</h4>' + '</a>' 
-            feedmarkup +=  '<h4 class="featured">' + '</h4>' + '</a>'
-            feedmarkup +=  '<h4 class="publication"' + '<span class="boldby">' + '<a href=' + feed[i].source.url + '>' + feed[i].source.url.substring(0,40) + '</h4>' + '</a>'
-            feedmarkup += '<h3 class="description cut-description">' + feed[i].description + '</h3>' + '</p>'  
-            feedmarkup += '<a class="publication-name">' + '<h4 class="author"' + '<span class="boldby">' +  '</h4>' + '</a>' + '</div>'
-            feedmarkup += '<div class="icon-logos">' + '<a href="https://www.facebook.com/sharer/sharer.php?u=' +  feed[i].link + '"' + 'target="_blank"><img src="logos/facebook.png">' + '<a href="http://twitter.com/share&url=' + feed[i].link + '"' + '>' +
-                    
-                    '<a href="https://twitter.com/intent/tweet?url=' + feed[i].link + '"' + 'target="_blank">'
-      + '<img src="logos/twitter.png">' +  '</a>' +
-                
-                
-'<a href="https://plusone.google.com/_/+1/confirm?hl=en&url='
- + feed[i].link + '"' + 'target="_blank">' + '<img src="logos/googleplus.png">' +  '</a>' + '</div>' + '</div>'
-         
-        }
-
-document.getElementById('EditorsChoicelaunch').innerHTML = feedmarkup
-
-var strNewString2 = $('#EditorsChoicelaunch').html().replace(/\https/g,'http');
-$('#EditorsChoicelaunch').html(strNewString2);  
-        
-
-     $.fn.wrapInTag = function(opts) {
-  
-  var tag = opts.tag || 'strong',
-      words = opts.words || [],
-      regex = RegExp(words.join('|'), 'gi'),
-      replacement = '<'+ tag +'>$&</'+ tag +'>';
-  
-  return this.html(function() {
-    return $(this).text().replace(regex, replacement);
-  });
-};
-  
-    
-$('#EditorsChoicelaunch h4.publication a').wrapInTag({
-  tag: 'em',
-  words: [ 'null', 'http://', 'https://', '[/]', 'content', 'features', 'blog']
-});
-        
-                
-         var resource = document.createElement('script'); 
-  resource.src = "js/titles.js";
-  var script = document.getElementsByTagName('script')[0];
-  script.parentNode.insertBefore(resource, script);
-        
-
-     
-    })
-     
-})
-    
-       $("#menu-toggle").click(function(e) {
+         $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
-       
-    
     </script>
 
 <script>
-
-
-
-    
-// Create a clone of the menu, right next to original.
-$('.page-menu').addClass('original').clone().insertAfter('.page-menu').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
-
-scrollIntervalID = setInterval(stickIt, 10);
-
-
-function stickIt() {
-
-  var orgElementPos = $('.original').offset();
-  orgElementTop = orgElementPos.top;               
-
-  if ($(window).scrollTop() >= (orgElementTop)) {
-    // scrolled past the original position; now only show the cloned, sticky element.
-
-    // Cloned element should always have same left position and width as original element.     
-    orgElement = $('.original');
-    coordsOrgElement = orgElement.offset();
-    leftOrgElement = coordsOrgElement.left;  
-    widthOrgElement = orgElement.css('width');
-    $('.cloned').css('left',leftOrgElement+'px').css('background', '#e5dedd').css('top',0).css('width', '120%').css('margin-left','-18%').css('height','70px').css('border-bottom','1px solid #7f5b56').show();
-    $('.original').css('visibility','hidden');
-      $(window).resize(function(){
-	if ($(window).width() <= 720){	
-            $('.cloned').css('width','100%');
-	}	
+// Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+  interval: false
 });
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
   } else {
-    // not scrolled past the menu; only show the original menu.
-    $('.cloned').hide();
-    $('.original').css('visibility','visible');
-
-
-}}
-    
-    
-
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114227499-1"></script>
+
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114227499-1');
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 2,
+                nav: true,
+                loop: false,
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 2
+                  },
+                  1300: {
+                    items: 3
+                  }
+                }
+              })
+            })
 </script>
+
+<script src="OwlCarousel2-2.3.3/docs/assets/owlcarousel/owl.carousel.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+

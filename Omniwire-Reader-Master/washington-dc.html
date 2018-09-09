@@ -1,0 +1,82 @@
+
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css' type='text/css' />
+  </head>
+  <body>
+    <style>
+      body {
+        overflow: hidden;
+        margin:0; 
+        padding:0;
+      }
+
+      #map {
+          position:absolute; 
+          top:0; 
+          bottom:0; 
+          width:100%;
+      }
+
+      body * {
+         -webkit-touch-callout: none;
+           -webkit-user-select: none;
+              -moz-user-select: none;
+               -ms-user-select: none;
+                   user-select: none;
+      }
+
+      .map {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+      }
+        
+        div.compare-swiper {background-color: black;}
+    </style>
+
+    <div id='streets' class='map'></div>
+    <div id='historic' class='map'></div>
+
+
+    <script>
+     
+
+      // add the map
+      mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbG5pY29sYXNqYW1lcyIsImEiOiJjaXYycGU2a2cwMmZ1MnlwNjZ4YWEzbzRmIn0.hZO-ZaGNzM4jXhbvqtOH3w';
+
+      var streetsMap = new mapboxgl.Map({
+        container: 'streets',
+        style: 'mapbox://styles/philnicolasjames/cjklly54g007y2sqc2qx1pgeo',
+        center: [-77.03656196594238,
+          38.89631027122985],
+        zoom: 15.6,
+        pitch: 30
+        
+      });
+
+
+      var historicMap = new mapboxgl.Map({
+        container: 'historic',
+        style: 'mapbox://styles/philnicolasjames/cjkllwiei006d2sqckycv7fhe',
+          center: [-77.03656196594238,
+          38.89631027122985],
+        zoom: 15.6,
+        pitch: 30
+
+      });
+
+      var map = new mapboxgl.Compare(streetsMap, historicMap);
+    </script>
+
+  </body>
+
+</html>

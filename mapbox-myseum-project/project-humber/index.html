@@ -1,0 +1,92 @@
+<head>
+      <meta charset='utf-8' />
+      <title>Historical Plaques</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      
+    <script>function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("listings");
+    li = ul.getElementsByClassName('item');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+    
+
+      <link href='style.css' rel='stylesheet' />
+
+      <style>
+    .modal-body img {width: 100%;}
+    #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    height: 40px; background: black;
+    border-style: none;
+}   
+
+          
+
+      </style>
+
+</head>
+  <body>
+      
+        <!-- Sidebar -->
+ <div class="main-wrap">
+
+    <input id="slide-sidebar" type="checkbox" role="button" />
+    <label style="color: white; padding: 22.5px; background: #00AEEF" for="slide-sidebar">
+    <span class="menu-toggle" style="height: 65px; width: 65px; left: 25%;  z-index:99999;" ></span> <img style="height: 20px; width: 20px;" src="icons/hiking-icon.png"> </label>
+
+<div id="wrapper sidebar" class='sidebar'>
+              
+    
+      <div class='heading'>
+          <h1 style="padding-top: 25px; font-size: 15px; margin-left: 0px;">Toronto Historical Plaques</h1>
+       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    
+
+      </div>
+    <div id='listings' class='listings'></div>
+     </div>
+     
+     
+<div id="main-area" class="main-area">
+<div id='map' class='map'>
+</div>
+</div>
+
+  </div>        
+   
+<script src='mapping-historical-plaques.js'></script>
+
+

@@ -74,6 +74,9 @@ $("h5.read").text(function () {
     return $(this).text().replace("https://www.annistonstar.com/search/?f=rss&t=article&c=the_daily_home&l=50&s=start_time&sd=desc", "Anniston Star"); 
 });
 
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.wpbf.com", "WPBF"); 
+});
     
       $("h5.read").text(function () {
     return $(this).text().replace("http://www.wsfa.com/category/208523/mostpopularstory", "WSFA Montgomery"); 
@@ -95,8 +98,12 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.wbrc.com/category/151716/news", "WBRC"); 
 });
 
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.al.com/business/index.ssf/", "AL.com Business"); 
+});
 
     
+
     
 
 //Alaska
@@ -137,7 +144,22 @@ $("h5.read").text(function () {
 });    
     
 
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.kinyradio.com/news/news-of-the-north/", "KINY Radio"); 
+});
     
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.ktoo.org", "KTOO"); 
+});    
+    
+$("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/JuneauEmpire", "Juneau Empire"); 
+});    
+    
+$("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/ktva", "KTVA"); 
+});   
+
     //Arizona
     
 
@@ -236,6 +258,30 @@ $("h5.read").text(function () {
       $("h5.read").text(function () {
     return $(this).text().replace("https://www.abc15.com/northernarizona", "ABC 15"); 
 });  
+
+    
+$("h5.read").text(function () {
+    return $(this).text().replace("http://kawc.org", "KAWC"); 
+});  
+
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.azfamily.com/category/208655/atlanta-news", "AZ Family"); 
+});  
+
+ $("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/KVOA", "KVOA"); 
+}); 
+    
+
+ $("h5.read").text(function () {
+    return $(this).text().replace("http://www.fox10phoenix.com/news/local", "Fox 10 Phoenix"); 
+});  
+   
+     $("h5.read").text(function () {
+    return $(this).text().replace("http://www.mohavedailynews.com/search/?q=&t=article&l=100&d=&d1=&d2=&s=start_time&sd=desc&nsa=eedition&c%5B%5D=news,news/*&f=rss", "Mohave Daily News"); 
+});  
+    
+   
 
 
 
@@ -498,6 +544,21 @@ $("h5.read").text(function () {
 $("h5.read").text(function () {
     return $(this).text().replace("https://www.summitdaily.com", "Summit Daily"); 
 });
+    
+ $("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/9NEWS", "9 News"); 
+});   
+    
+ $("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/KRDONC13", "KRDONC 13"); 
+});    
+    
+ $("h5.read").text(function () {
+    return $(this).text().replace("http://denver.cbslocal.com", "CBS Denver"); 
+}); 
+    
+
+
 //Connecticut
 
 $("h5.read").text(function () {
@@ -556,6 +617,7 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.courant.com/news/connecticut/rss2.0.xml", "Hartford Courant"); 
 });    
 
+    
    
 
 //Delaware
@@ -667,7 +729,9 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.nwfdailynews.com", "Northwest Florida Daily News"); 
 });  
 
-
+ $("h5.read").text(function () {
+    return $(this).text().replace("http://www.miamiherald.com/news/", "Miami Herald"); 
+});  
 //Georgia
     
  $("h5.read").text(function () {
@@ -718,12 +782,30 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.macon.com/news/local/", "Macon.com"); 
 });
     
+$("h5.read").text(function () {
+    return $(this).text().replace("http://atlanta.bizjournals.com/atlanta/breaking_news.html?ana=from_rss", "Atlanta Business Chronicle"); 
+});    
+
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.wjcl.com", "WJCL"); 
+});
     
+
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.savannahnow.com/news", "Savannah Now"); 
+});
+    
+$("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/LedgerEnquirer", "Ledger Inquirer"); 
+});
+    
+   
+
+
 //
     
    
-    
-       $("h5.read").text(function () {
+          $("h5.read").text(function () {
     return $(this).text().replace("http://www.kitv.com/category/304202/news", "KITV"); 
 });
     
@@ -818,7 +900,22 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.dailyherald.com/", "Daily Herald"); 
 });  
     
- 
+ $("h5.read").text(function () {
+    return $(this).text().replace("http://www.starcourier.com/news", "Kewanee Star Courier"); 
+});
+
+$("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/WMBDNews", "WMBD News"); 
+});
+    
+$("h5.read").text(function () {
+    return $(this).text().replace("https://twitter.com/25NewsWEEK", "25 News Week"); 
+});
+
+
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.freeportnewsnetwork.com", "Freeport News Network"); 
+});
 
 
     
@@ -844,6 +941,10 @@ $("h5.read").text(function () {
     
 $("h5.read").text(function () {
     return $(this).text().replace("http://wqad.com", "WQAD"); 
+});
+    
+$("h5.read").text(function () {
+    return $(this).text().replace("http://www.eastidahonews.com", "East Idaho News"); 
 });
  
 //KANSAS
@@ -1086,7 +1187,12 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.wusa9.com/mb/local/maryland-news", "WUSA 9"); 
 });
     
+     $("h5.read").text(function () {
+    return $(this).text().replace("http://www.sunjournal.com", "Sun Journal"); 
+});
     
+    
+
 
 //Massachusetts
     
@@ -1660,11 +1766,28 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.kwqc.com/", "KWQC"); 
 }); 
  
+
+$("h5.read").text(function () {
+    return $(this).text().replace("http://newyork.cbslocal.com", "CBS New York"); 
+}); 
  
+$("h5.read").text(function () {
+    return $(this).text().replace("http://nypost.com", "New York Post"); 
+}); 
+ 
+$("h5.read").text(function () {
+    return $(this).text().replace("http://yonkers.dailyvoice.com", "Yonkers Daily Voice"); 
+});
+
+    $("h5.read").text(function () {
+    return $(this).text().replace("https://www.nytimes.com/section/nyregion", "New York Times"); 
+});
+
+    $("h5.read").text(function () {
+    return $(this).text().replace("https://www.bxtimes.com", "Bronx Times"); 
+});
 
 
-
-    
   //North Carolina  
         
 $("h5.read").text(function () {
@@ -2331,6 +2454,11 @@ $("h5.read").text(function () {
     return $(this).text().replace("https://twitter.com/WKOW", "WKOW"); 
 });
     
+$("h5.read").text(function () {
+    return $(this).text().replace("https://www.wvgazettemail.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc", "West Virginia Gazette-Mail"); 
+});
+
+    
 //Wyoming
     
 $("h5.read").text(function () {
@@ -2454,6 +2582,8 @@ $("h5.read").text(function () {
 $("h5.read").text(function () {
     return $(this).text().replace("http://www.timescolonist.com/cmlink/times-colonist-bc-valid-rss-1.1995931", "Times Colonist"); 
 });
+    
+
     
 
 
@@ -2705,15 +2835,28 @@ $("h5.read").text(function () {
     return $(this).text().replace("http://www.cbc.ca/north/?cmp=rss", "CBC Northern Canada"); 
 });
        
-       
+/*
+$( "li#usa-li" ).click(function() {
+  $(this).find( "ul.usa-sub" ).toggle();
+});       
 
-$( "#myUL2 li" ).click(function() {
-  $(this).find( "ul.dropdown-menu" ).toggle();
-});
+$( "li#canada-li" ).click(function() {
+  $(this).find( "ul.canada-sub" ).toggle();
+});*/
     
 $( "#myUL li" ).click(function() {
   $(this).find( "ul.dropdown-menu" ).toggle();
 });
+    
+$( "#myUL2 li" ).click(function() {
+  $(this).find( "ul.dropdown-menu" ).toggle();
+});
+    
+    
+/*$( "#USA-UL img" ).click(function() {
+  $(this).find( "ul.dropdown-menu" ).toggle();
+});*/
+    
     
     /*
 $(  "ul.dropdown-menu"  ).mouseout(function() {

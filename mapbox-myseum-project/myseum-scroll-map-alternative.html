@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+          <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+          
+        h3 {font-family: 'Source Sans Pro', sans-serif; color: white; font-size: 30px;}
+    #features {background: rgba(255,255,255,0.1); }
+        p {font-family: 'Source Sans Pro'; font-weight: 300; text-align: justify; color: #fefefe;font-size: 15px;}
+    
+    </style>
+</head>
+<body>
+
+<style>
+    
+        
+  
+    
+#map {
+    position: fixed;
+    width:50%;
+}
+#features {
+    width: 50%;
+    margin-left: 50%;
+    font-family: Tw Cen MT;
+    overflow-y: scroll;
+    background-color: #fafafa;
+    
+}
+section {
+    padding:  25px 50px;
+   margin-top: -10px; margin-bottom: -10px;
+    line-height: 25px;
+    border-bottom:  solid #efefef;
+    opacity: 0.25;
+    font-size: 20px;
+    height: 100vh;
+    margin-left: 0 auto; margin-right: 0 auto;
+       
+  
+     background: #353535;
+    
+}
+    
+    section:nth-child(2) {background: #696969}  
+
+    section#rules{
+    background: url("http://www.myseumoftoronto.com/wp-content/uploads/2018/05/pickford-hot-docs-display-photo.jpg");
+        background-size: cover;
+        background-position: center;
+    color: white;
+  
+    
+}
+    
+    section#section1 {background:black;}
+section.active {
+    opacity: 1;
+     animation: 0.3s;
+  
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 1000px;
+}
+    
+    section img {width:auto;  overflow-y: hidden; margin-top: -25px; }
+    section p img {text-align: center;width: 100%; }
+    
+</style>
+
+<div id='map'></div>
+<div id='features'>
+    <section style="background: url('http://www.myseumoftoronto.com/wp-content/uploads/2018/06/myseum-collects-streetcar-840-840.jpg'); color: #efefef; background-size: cover;" id='welcome' class='active'>
+        <h3>MYSEUM OF TORONTO PRESENTS: MAIN FEATURE!</h3>
+        <p>Main Feature! engages teams of young and old in a car-free urban photo scavenger hunt, exploring how Toronto's theatre history has framed the city's constantly evolving communities. Main Feature! s a one-day adventure that explores cultural history through theatres, not only the variety of film genres but also the design and urban navigation of our once-thriving Cinema boom!</p>
+        <p>Teams will explore and re-imagine the city's movie theatres, architecture and design, documenting how buildings from the past continue to shape communities, block by block. This is an opportunity to celebrate buildings and neighbourhoods; city blocks that hold countless stories of people and cultures that have lived, grown and continue in these shared spaces. </p>
+    </section>
+    <section id='rules' class='active'>
+        <h3>THE CHALLENGE</h3>
+        <ul>
+        <li><p>This package includes 12 vintage photos of film theatres with accompanying stories and clues for each. Teams must decipher the clues in order to locate the theatres.</p></li>
+        <li><p>You will have 6 hours to visit as many locations as you can, using only your bike or public transit.</p></li>
+        <li><p>Once located, you and your teammate(s) must retake the photo of the builidng in its present state, getting as close as possible to the footprint of the original photographer.</p></li>
+        <li><p>We encourage you to explore the neighbourhood of each location -- don't forget to take time throughout the day to eat and enjoy local spots!</p></li>
+        </ul>
+    </section>
+    <section style="color: white; background-size: cover; opacity: 0.8;" id='section1' class='active'>
+        <h3>NEED TO KNOW</h3>
+        <p>Meet us at TIFF Bell Lightbox to sign up and get started. We will be confirming your team and making sure you have everything you need to hit the ground running.</p>
+        <ul>
+        <li><strong>12:00pm</strong><p>Meet and greet at TIFF Bell Lightbox</p></li>
+        <li><strong>5:30pm</strong><p>Deadline for image submission</p></li>
+        <li><strong>6:00-7:30</strong><p>reception and awards ceremony</p></li>
+        
+
+        </ul>
+    </section>
+    <section id='section2'>
+        <h3>The Garden Theatre</h3>
+        <p style="text-align: center;"> <br><img style="width: 80%;" src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/garden-theatre-before.jpg"><br><br></p>
+        <p>Allen's Bloor Theatre opened on March 10, 1919 with the film, "Why Change Your Wife" starring Gloria Swanson. It was built and run by brothers Jules and Jay Allenwho opened their first, "moving picture theatre" in Brantfort in 1907. They arrived in Toronto in 1915 and went on to build a chain of theatres. The exteriors of their theatres were often plain but the interiors were palatial.</p>
+        <p>A Huge amount of now HUGE bands played their Toronto debut here. On April 16th, 1990 for example, Nirvana played a sparsely-attended gig here. It did not go so well. Other international bands who first Toronto appearances here first include Oasis, Red Hot Chili Peppers, The Verve, Blue, Smashing Pumpkins, Magnetic Fields, The Tragically Hip, Hey Rosetta!, The Sheepdogs, Arkell, July Talk and Mumford & Sons.</p>
+    </section>
+    <section id='section3'>
+        <h3>Allen's Bloor Theatre<strong> | 1 Point</strong></h3>
+        <p style="text-align: center;"><br><img style="width: 60%;" src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/bloor-theatre-before.jpg"><br><br>
+        </p>
+        <p>Allen's Bloor Theatre opened on March 10, 1919 with the film, "Why Change Your Wife" starring Gloria Swanson. It was built and run by brothers Jules and Jay Allenwho opened their first, "moving picture theatre" in Brantfort in 1907. They arrived in Toronto in 1915 and went on to build a chain of theatres. The exteriors of their theatres were often plain but the interiors were palatial.</p>
+        <p>A Huge amount of now HUGE bands played their Toronto debut here. On April 16th, 1990 for example, Nirvana played a sparsely-attended gig here. It did not go so well. Other international bands who first Toronto appearances here first include Oasis, Red Hot Chili Peppers, The Verve, Blue, Smashing Pumpkins, Magnetic Fields, The Tragically Hip, Hey Rosetta!, The Sheepdogs, Arkell, July Talk and Mumford & Sons.</p>
+    </section>
+    <section id='section4'>
+       <h3>The Pylon Theatre<strong> | 1 Point</strong></h3>
+        <p> <br><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/pylon-theatre-before-1.jpg"><br><br>
+        </p>
+          <p>The Pylon opened in October of 1939. The neighbourhood was predominantly British then. It is now Little Italy. Ray Lewis was the original owner. She put a roller skating rink ath the back of the theatre and a dance hall on the second floor.</p>
+        <p>In the late 1950's the demographics in the neighbourhood changed with an influx of Italian immigrants. Rocco Mastrangelo, owner of the Café Diplomatico, bought the theatre and started screening Italian films. In the 1990's, this theatre was briefly called The Golden Princess, screening mostly Asian films.</p>
+    </section>
+    <section id='section5'>
+        <h3>Loews Theatre<strong> | 1 Point</strong></h3>
+        <p style="text-align: center;"><br><img style="width: 70%;" src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/loews-before.jpg"><br><br> </p>
+        <p>This magnificent theatre first opened in 1913. It contains two full-sized theatres stacked on top of each other. Very few of these stacked theatres were ever built and this is the only one that survives in Canada</p>
+        <p>The lower theatre was called "Loew's Yonge Street Theatre". With seating for 2149 patrons, it was intended to be the flagship facility for the expanding vaudeville and film empire of New York's Marcus Loew. Irving Berlin came to the opening night. Back then, a typical show at Loew's consisted of 8 to 10 vaudeville acts with  a silent film and a newsreel. It was affectionately known as a "Grind House" because performers had to continuously grind out shows starting at 11 in the morning. </p>
+        <p>The Winter Garden Theatre was seven stories above Loew's and could accommodate 1410 patrons. It opened in 1914.  The décor of this theatre attempted to recreate an English country garden with cotton blossoms and real beech leaves dipped in preservatives. In 1928, after only 18 years in operation, this vaudeville theatre closed. Movies had taken over. </p>
+    </section>
+    <section id='section6'>
+        <h3>The Standard Theatre<strong> | 3 Points</strong></h3>
+        <p><br> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/standard-after.jpg"><br><br></p>
+    <p>The Standard Theatre opened in 1921. It was designed by the first registered Jewish architect in Toronto, Benjamin Brown. He also designed the beautiful Balfour Building further down Spadina and Adelaide. At one time The Standard was one of the finest Yiddish Theatres in North America. It was financed by selling shares to the local Kensington Market merchants. Melodrama! Comedies! Tragedies! New York touring companies performing Shakespeare in Yiddish.</p>
+        <p>In 1929, the local constabulary was called to break up a meeting at the theatre commemorating the death of Lenin. The pretext for this raid? It was illegal at that time to address a group in any language but English. In 1933, the Progressive Arts Club presented a play called Eight Men Speak, a defense of 8 imprisoned Communist Party leaders. The first performance sold out and the second was shut down when the local police threatenend to revoke the theatre's license. </p>
+    </section>
+    <section id='section7'>
+        <h3>The Orpheum Theatre<strong> | 3 Points</strong></h3>
+        <p><br><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/orpheum-before.jpg"><br><br>
+        </p>
+        <p>"This theatre would run Westerns all day for next to nothing. John Wayne, Horror, you name it. it was the place to be in the early 60s."</p>
+        <p>The Orpheum Theatre opened in 1930 and it was run by the Rittenberg family. This theatre provided an affordable escape from the harsh realities of Depression-era Toronto. The theatre once had 500 well-padded seats for their patrons with another 146 in the balcony, but it shtut down in 1977 because of the growing popularity of television. In 1983 it re-opened as The Golden Dragon, but then closed again in 1987 to become a jewelry store.</p>
+    </section>
+       <section id='section8'>
+        <h3>The Revue<strong> | 10 Points</strong></h3>
+        <p><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/revue-before.jpg"><br><br></p>
+<p>This theatre was built in 1911 and 1912 by The Suburban Amusement Company. It was owned by Jacob Smith and featured film and live theatre. This cinema screened silent films during the First World War, helping Torontonians escape the grim reality of that war.</p>
+<p>Movies were also very populr during the Great Depression, and in 1929, this cinema converted to screen "talkies". Throughout the 1960s, German films were regularly shown to serve west-end Toronto's growing German-speaking population. Thanks to community support, it didn't shut down in 2006 and is now operated by the not-for-profit Revue Film Society.</p>
+    </section>
+    
+       <section id='section9'>
+       
+            <h3>The Brighton Theatre<strong> | 10 Points</strong></h3>
+        <p><br><br> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/brighton-before.jpg"><br><br></p>
+              <p>This neighbourhood theatre opened just after the First World War. It was originally licensed to two brothers--Clarence and William Welsman.</p>
+        <p>With 400 wooden seats with backs covered in leatherette, the Brighton had a cozy feel to it in comparison to larger theatres. The building was more than just for entertainment. The theatre had no balcony but it had third floor apartments facing south. It was truly a comunity space.</p>
+    </section>
+       <section id='section10'>
+   <h3>The Parkdale Theatre<strong> | 3 Points</strong></h3>
+        <p><br><br> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/parkdale-theatre-underlay.jpg"><br><br></p>
+              <p>The Allen Brothers opened this palace in the spirng of 1920. They also owned and operated the Allen's on Bloor an the Allen's on the Danforth. The Sunnyside Amusement Park opened two years later helping to supply audiences looking to escape the summer heat--come for the fair, stay for the movie--it worked.</p>
+        <p>With 1546 seats thi beautiful theatre was fully fireproof, so smoking was advertised and in 1938, air-conditioning was added.</p>
+           <p>On February 21, 1950, two detectives overpowered a notorious bank-robber named "Baby-Faced Byers" in this theatre. He was 30 but he looked younger. When he was arrested he reached for his gun but failed to draw in time. If he had, the story might have ended differently.</p>
+    </section>
+       <section id='section11'>
+        <h3>Allen's Danforth Theatre<strong> | 10 Points</strong></h3>
+        <p><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/danforth-before.jpg"><br><br></p>
+              <p>Opened in 1919, Allen's Danforth Theatre was part of the Allan chain of theatres operated by two brothers Jay and Jule Allan. It was a big place with 1600 seats and it was designed by Hynes, Feldman and Watson who were part of the Detroit architectural firm of Howard Crane. This firm also designed both of the other Allan theatres. This was also a vaudeville house and in an attempt to project an image of respectability, the Allan's advertised their theatre as "Canada's First Super Photoplay Palace".</p>
+        <p>This theatre was taken over by Famous Players in 1923, renamed the Century and in 1919, converted to films that included sound, or 'talkies'. By the 1970s, this site was named the Tatania and was screening second-run films, kung-fu flicks and Greek movies for the local Greek community.</p>
+    </section>
+       <section id='section12'>
+        <h3>The Eastwood Theatre<strong> | 10 Points</strong></h3>
+        <p> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/eastwood-theatre-before.jpg"><br><br></p>
+              <p>Allen's Bloor Theatre opened on March 10, 1919 with the film, "Why change Your Wife" starring Gloria Swanson. It was built and run by brothers Jules and Jay Allenwho opened their first, "moving picture theatre" in Brantfort in 1907. They arrived in Toronto in 1915 and went on to build a chain of theatres. The exteriors of their theatres were often plain but the interiors were palatial.</p>
+        <p>A Huge amount of now HUGE bands played their Toronto debut here. On April 16th, 1990 for example, Nirvana played a sparsely-attended gig here. It did not go so well. Other international bands who first Toronto appearances here first include Oasis, Red Hot Chili Peppers, The Verve, Blue, Smashing Pumpkins, Magnetic Fields, The Tragically Hip, Hey Rosetta!, The Sheepdogs, Arkell, July Talk and Mumford & Sons.</p>
+    </section>
+       <section id='section13'>
+        <h3>The Eglinton Theatre<strong> | 10 Points</strong></h3>
+        <p><br><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/eglinton-theatre-before.jpg"><br><br></p>
+              <p>Allen's Bloor Theatre opened on March 10, 1919 with the film, "Why change Your Wife" starring Gloria Swanson. It was built and run by brothers Jules and Jay Allenwho opened their first, "moving picture theatre" in Brantfort in 1907. They arrived in Toronto in 1915 and went on to build a chain of theatres. The exteriors of their theatres were often plain but the interiors were palatial.</p>
+        <p>A Huge amount of now HUGE bands played their Toronto debut here. On April 16th, 1990 for example, Nirvana played a sparsely-attended gig here. It did not go so well. Other international bands who first Toronto appearances here first include Oasis, Red Hot Chili Peppers, The Verve, Blue, Smashing Pumpkins, Magnetic Fields, The Tragically Hip, Hey Rosetta!, The Sheepdogs, Arkell, July Talk and Mumford & Sons.</p>
+    </section>
+     <section id='section14'>
+        <h3>FINISH!</h3>
+        <p>Congrats! You've just completed Main Feature!<br><br><img src=""><br><br></p>
+    </section>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbG5pY29sYXNqYW1lcyIsImEiOiJjaXYycGU2a2cwMmZ1MnlwNjZ4YWEzbzRmIn0.hZO-ZaGNzM4jXhbvqtOH3w';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/philnicolasjames/cjedfwna22z0f2slkntq3pddu',
+        bearing: -0,
+        center: [-79.39487814903258,
+          43.6479115207761],
+        zoom: 15,
+        speed: 0.8,
+        pitch: 20
+});
+    
+
+    
+var chapters = {
+    'welcome': {
+        bearing: -0,
+        center: [-79.39041495323181,
+          43.646541277142155],
+        zoom: 15,
+        speed: 0.8,
+        pitch: 0
+    },
+    'section1': {
+        bearing: 0,
+        center: [-79.39041495323181,
+          43.646541277142155],
+        zoom: 15.00,
+         speed: 0.8,
+        pitch: 40
+    },
+    'section2': {
+        center: [  -79.40144956111908,
+          43.65783612001078
+],
+        bearing: 54.40,
+        zoom: 18,
+        speed: 0.6,
+        pitch: 44.50
+    },
+    'section3': {
+        bearing: 12.80,
+        center: [   -79.40951764583588,
+          43.66542692370103],
+        zoom: 18,
+        speed: 0.6,
+        pitch: 40.00
+    },
+    'section4': {
+        bearing: 60,
+        center: [   -79.41330760717392,
+          43.6553871437279],
+        zoom: 18,
+        speed: 0.6,
+        pitch: 45
+    },
+    'section5': {
+        bearing: 15.20,
+        center: [-79.37921941280365,
+          43.65274011885481],
+        zoom: 18,
+        pitch: 40.50,
+        speed: 0.6
+    },
+    'section6': {
+        bearing: 0,
+        center: [-79.39792513847351,
+          43.653132134297216],
+        zoom: 18,
+        pitch: 40,
+        speed: 0.6
+    },
+    'section7': {
+        bearing: -0,
+        center: [-79.40467894077301,
+          43.64716623633106],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section8': {
+        bearing: -0,
+        center: [ -79.45101141929626,
+          43.651071113580606],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section9': {
+        bearing: -0,
+        center: [-79.44758892059326,
+          43.64290008126971],
+        zoom:18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section10': {
+        bearing: -0,
+        center: [-79.44390624761581,
+          43.63910725773219],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section11': {
+        bearing: -0,
+        center: [ -79.35710191726685,
+          43.67650870471961],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section12': {
+        bearing: -0,
+        center: [ -79.32867050170898,43.67088270606131],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+     'section13': {
+        bearing: -0,
+        center: [-79.41061198711395,
+          43.70428176558769],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section14': {
+        bearing: -0,
+        center: [-79.41061198711395,
+          43.70428176558769],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    }
+};
+    
+    
+
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = 'baker';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+</body>
+</html>

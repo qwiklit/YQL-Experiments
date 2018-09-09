@@ -162,7 +162,7 @@ img.hover-shadow {
 <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
 <script>
 YUI().use('yql', function(Y){
-    var query = 'select * from csv(600,100) where url = "http://docs.google.com/spreadsheets/d/e/2PACX-1vQ-NYhcHanwfQUIpLQPsCp5GiXRd5pSpRGhwAmV91004Gc6ynh32VmpfCoUbt2oJ4fspyaNteevDZS_/pub?output=csv"'
+    var query = 'select * from csv(100,1000) where url = "http://docs.google.com/spreadsheets/d/e/2PACX-1vQ-NYhcHanwfQUIpLQPsCp5GiXRd5pSpRGhwAmV91004Gc6ynh32VmpfCoUbt2oJ4fspyaNteevDZS_/pub?output=csv"'
     var q = Y.YQL(query, function(r){
         //r now contains the result of the YQL Query as a JSON
         var feedmarkup = '<p>'

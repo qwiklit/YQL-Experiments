@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
 <meta name="description" content="">
-<meta name="author" content="">
+<meta name="author" content=""><meta http-equiv="refresh" content="60" >
 
 <head>
 
@@ -18,10 +18,10 @@
 <link href="https://fonts.googleapis.com/css?family=Catamaran:100,400|Open+Sans:300|Heebo" rel="stylesheet">
 <link rel="stylesheet" href="OwlCarousel2-2.3.3/docs/assets/owlcarousel/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="OwlCarousel2-2.3.3/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
-<script src="OwlCarousel2-2.3.3/docs/assets/vendors/jquery.min.js"></script>
+<script src="OwlCarousel2-2.3.3/docs/assets/vendors/jquery.min.js"></script> <script src="EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js"></script>  <link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.min.css">  <link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css"> 
   
 <style>
-    .row {margin-left: 0px;}   
+    .row {margin-left: -15px;}   
     
 </style>
 </head>
@@ -59,7 +59,7 @@
 </div>
 
  
-<div id="launcharea">
+<div id="launcharea"><button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
         <h1 class="latest-news-header">The Latest News</h1>
     <hr />
 
@@ -96,13 +96,14 @@
         
      
          YUI().use('yql', function(Y){
-    var query = 'select * from rss(0,50) where url  = "http://feed.informer.com/digests/PYUVQYUQFZ/feeder.rss"'
+    var query = 'select * from rss(0,50) where url  = "http://feed.informer.com/digests/UMRZSE1AEV/feeder"'
 
     var q = Y.YQL(query, function(r){
         //r now contains the result of the YQL Query as a JSON
         var feedmarkup = '<p>'
         var feed = r.query.results.item // get feed as array of entries
         for (var i=0; i<feed.length; i++){
+            feedmarkup += '<div class="shell">'
             feedmarkup += '<div class="row">'
             feedmarkup += '<a href="' + feed[i].link + '">'
             feedmarkup += '<h2 style="display: inline;" class="read">' + feed[i].title  + '<h2>' + '</a>' 
@@ -120,7 +121,6 @@
 '<a href="https://plusone.google.com/_/+1/confirm?hl=en&url='
  + feed[i].link + '"' + 'target="_blank">' + '<img src="logos/googleplus.png">' +  '</a>' + '</div>' + '</div>' + '</div>'
                 
-            feedmarkup += '<hr>'
         }
         document.getElementById('tapestrylaunch-3').innerHTML = feedmarkup
         
@@ -166,7 +166,7 @@ $('.multi-item-carousel .item').each(function(){
               owl.owlCarousel({
                 margin: 5,
                 nav: true,
-                loop: true,
+                loop: false,
                 responsive: {
                   0: {
                     items: 1
@@ -181,5 +181,4 @@ $('.multi-item-carousel .item').each(function(){
               })
             })
 </script>
-<script src="OwlCarousel2-2.3.3/docs/assets/owlcarousel/owl.carousel.js"></script>
-<script src="OwlCarousel2-2.3.3/docs/assets/owlcarousel/owl.carousel.js"></script>
+<script src="OwlCarousel2-2.3.3/docs/assets/owlcarousel/owl.carousel.js"></script><script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>

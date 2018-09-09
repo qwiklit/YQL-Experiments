@@ -161,10 +161,6 @@ border-left-color: #e5dedd;
     }
 }
 
- li:hover .submenu {
-  display: block;
-  max-height: 5000px;
-}
 
 .submenu a {
   background-color: #999;
@@ -174,6 +170,13 @@ border-left-color: #e5dedd;
 .submenu a:hover {
   background-color: #666;
 }
+
+
+ li:hover .submenu {
+  display: block;
+  max-height: 5000px;
+ }
+
 
 /* this is the initial state of all submenus.
   we set it to max-height: 0, and hide the overflowed content.

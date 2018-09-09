@@ -1,6 +1,6 @@
 
       body {background: #FFF; margin-left: 12%; margin-right: 12%;}
-        h2 {color: #0d0630; font-family: 'Catamaran', sans-serif; font-weight: 600; letter-spacing: 1.3; font-size: 1.6em; opacity: 0.88; line-height: 1.5; margin-top: 8px; margin-bottom: 3px; font-size: 25px;}
+        h2 {color: #0d0630; font-family: 'Catamaran', sans-serif; font-weight: 600; letter-spacing: 1.3; font-size: 1.4em; opacity: 0.88; line-height: 1.3; margin-top: 8px; margin-bottom: 3px; font-size: 25px;}
         h4 { font-family: 'Open Sans', 'sans-serif'; font-weight: 300; letter-spacing: 1.1;}
 h4.author { font-size: 0.55em; display: inline;}
 h4 a {color: #805b57; font-family:'martel', serif}
@@ -10,11 +10,6 @@ h4 a {color: #805b57; font-family:'martel', serif}
 h3.description p:nth-child(2) {display: none;}
 #tapestrylaunch .col-md-10 {display: inline-block;}
 
-#Fictionlaunch .row {margin-left: 10px; margin-right: 10px;}
-#nonfictionlaunch .row {margin-left: 10px; margin-right: 10px;}
-#Editorschoicelaunch .row {margin-left: 10px; margin-right: 10px;}
-#Editorschoicelaunch p {text-decoration: none; display: none;}
-#Editorschoicelaunch p a {display: none;}
 
         .toptitle {text-align: center; color: black; padding-top: 10px; font-family: 'Josefin Sans', 'helvetica neue', serif;     font-size: 2.3em; margin-left: -10px; margin-top: 11px;}
         a.signature  {text-decoration: none; font-size: 10px; display: inline-block; width: 100%;}
@@ -70,7 +65,9 @@ hr { border: 1px solid black;
 h4.author a {color:#FA8CB1;}
 h4.author {color:#455268; }
 h4.publication a {font-size: 17px;}
-h1.pub-title {text-align: center; font-family: 'Josefin Sans', serif;  margin-bottom: 40px; padding-top: 80px; padding-bottom: 80px; margin-left: -50%; margin-right: -50%; margin-top: 0px; letter-spacing: 1.7; font-size: 2.9em;  background:  url(../images/map-blur.jpg); background-size: cover; color: white;}
+h1.cover-title {text-align: center; font-family: 'Josefin Sans', serif;  margin-bottom: 40px; padding-top: 110px; padding-bottom: 80px; margin-left: -50%; margin-right: -50%; margin-top: 0px; letter-spacing: 1.7; font-size: 2.9em;  background:  url(../images/pic-quebec.jpg); background-size: cover; color: white; height: 70vh;}
+h1.pub-title {text-align: center; font-family: 'Josefin Sans', serif;  margin-bottom: 40px; padding-top: 110px; padding-bottom: 80px; margin-left: -50%; margin-right: -50%; margin-top: 0px; letter-spacing: 1.7; font-size: 2.9em;  background:  url(../images/hero-image-2.jpg); background-size: cover; color: white; height: 40vh;}
+
 h3.description p {text-align: left; line-height: 1.55;}
 h3.description p:first-child {display: block;}
  {display: none;}
@@ -86,8 +83,8 @@ h3.description hr {display: none;}
 h3.description br {display: none;}
 h3.description ul li {display: none;}
 h3.description .field {display: none;}
-    h3.description a {background-image: none;}
-    h3.description p a {display: none;}
+h3.description a {background-image: none;}
+h3.description p a {display: none;}
 h3.description {font-family: 'Open Sans', serif; margin-bottom: 10px }
 h3.description .feedflare {display: none;}
 h3.description p em {display: none;}
@@ -140,7 +137,7 @@ padding: 0px;
 max-width: auto;
 overflow-y: hidden;
 overflow-x:auto;
-margin-left: -30px;
+margin-left: -20px;
      }
 
 
@@ -234,26 +231,18 @@ input[type=text] {margin-left: 20px;}
 }
 /*FEATURED AUTHORS*/
 
-.featured-authors {margin-bottom: auto; }
-.featured-authors .col-md-4 {background-size: cover; background-repeat:no-repeat; text-align:center;height: 400px; margin: 5px;width: 30%; margin-left: 2%;}
-.featured-authors .col-md-4 div {height: 100px; }
 
-.featured-authors div button {background: rgba(0,0,0,0.75); color: white; border-radius: 0px; padding-left: 20px; padding-right: 20px; transition: 0.3s; -webkit-transition: 0.3s; -mozkit-transition: 0.3s; }
-.featured-authors div button:hover {padding-left: 40px; padding-right: 40px; background-color:#e5dedd; }
-.featured-authors div h2 {  background: #e5dedd; padding: 10%;  margin-top: 55%; color: black; }
-
-.author-box-1 {background-image: url(/images/svetlana-alexievich-featured-author.jpg)}
-.author-box-2 {background-image: url(/images/david-foster-wallace-author.jpeg)}
-.author-box-3 {background-image: url(/images/ursula-k-le-guin-featured-author.jpg)}
-
-
-
-.featured-authors.row {margin-left: -150px; margin-right: -150px; margin-top: 65px}
 .editors-choice h2.read {font-size: 2.3em;  width:100%; text-align: left; color: black; }
 .editors-choice h4.author a {color: #282729;}
 
 .tri-feed h1 {margin-left: -25px; font-family: 'Ultra', serif;}
-h2.read { margin-top: 5px; margin-bottom: 5px;}
+h2.read { margin-top: 5px; margin-bottom: 5px; overflow-wrap: break-word;
+  word-wrap: break-word;  
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
 .editors-choice img.featured-publication {height: auto; width: 180px; margin-top: 20px; }
 img.enso {height:38px; width: 38px; margin-top: -12.5px; margin-left: -3px; }
 
@@ -291,29 +280,29 @@ img.enso {height:38px; width: 38px; margin-top: -12.5px; margin-left: -3px; }
 body {
   position: relative
 }
-
     
     .featured-authors .col-md-4 div {margin-top: 0px; font-size: 0.8em;}
     .featured-authors .row {margin-left: 0px; margin-right: 0px;}
     .icon-logos {text-align: center;    margin-left: 0px;}
     .icon-logos img {height: 25px; width: 25px; display: inline; margin: 10px; padding: 0px; background-image: none; }
-    .icon-logos {display: block;margin: 0px;padding: 0px;max-width: auto;overflow-y: hidden;overflow-x:auto;margin-left: -30px;  
+    .icon-logos {display: block;margin: 0px;padding: 0px;max-width: auto;overflow-y: hidden;overflow-x:auto;margin-left: 0px;  
      }
     .icon-logos a {background-image: none;}  
     h4.publication a {font-size: 14px;background-position: center; letter-spacing: 0.5px; display: block; }
     h3.description.cut-description {text-align: center;}
-    .tri-feed h2, tri-feed h4, h1
+    h2.read {font-size: 1.3em; text-align: center;}
+    .tri-feed h2, tri-feed h4, h1, h5.read
     {text-align: center;}
-    h1.pub-title {font-size: 1.8em}
+    h1.pub-title {font-size: 1.8em; height: 50vh;}
+    h1.cover-title  {font-size: 1.8em; height: 50vh; padding-top: 75px;}
     .publication-header {margin-left: -40px; margin-right: -40px}
     .feedlist {margin-left: -15px; margin-right: -15px;}
     .toptitle {font-size: 1.8em;}
     #mainheader {margin-left: -12px; margin-top: -12px;}
             img.enso {height: 30px; width: 30px;}
 
+  
 }
-
-
 
 
 #myBtn {
@@ -351,12 +340,12 @@ h3.description em {display: none;}
 
     h1.latest-news-header {text-align: center; font-weight: 700; font-family: 'Josefin Sans', serif; margin-top: 25px; margin-bottom: 25px;}
 
-.icon-logos {margin-left: -5px;}
+
      .container {margin-left: 0%; }
     
     .description img {display: none; margin-left: 0 auto; margin-right: 0 auto;}
     .owl-carousel h4 {font-size: 14px; text-align: center; color: white;  }
-    .owl-carousel .item {background: #0d0630; height: 100px; padding-top: 30px; border-radius: 5px;}
+    .owl-carousel .item {background: #0d0630; height: 100px; padding-top: 30px; border-radius: 5px; background-size: cover;}
     .publication-header hr {border: solid white 1px; margin-bottom: 40px;}
 .state-header {font-size: 1.6em; color: white; background: #0d0630; text-align: center; padding: 20px; border: 1px solid transparent; border-radius: 5px;}
     
@@ -366,3 +355,367 @@ img.plus-button {height: 20px; width: 20px; display: inline;  float: right; marg
 li.city {color: white; margin-left: 10px;}
 ul.city-dropdown.dropdown-menu  {background:transparent; margin-left: 20px; width: 100%; position: relative; border-style: none; border-radius: 0;  }
 ul.city-dropdown.dropdown-menu a {background:transparent;}
+
+
+      .shell {  background: rgba(255,255,255, 0.4);
+  border-radius: 2px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.34);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  margin-top: 30px;
+ padding-left: 30px; padding-right: 30px; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+          margin-right: -30px;
+
+}
+    
+ .shell:hover {
+  box-shadow: 0 7px 14px rgba(0,0,0,0.55), 0 5px 5px rgba(0,0,0,0.52);
+}
+
+h4 {text-decoration: none; color: white; font-weight: 500;}
+h4:hover {text-decoration: none;}
+
+.btn-primary {border-color: lime; color: lime}
+.btn-primary h4 {color: lime;}
+
+input#search-area {background: rgba(0,0,0, 0.2); color: white; border-style: none; padding: 10px 20px 10px 20px;}
+.search-top input#search-area { color: black; border-style: none; padding: 10px 50px 0px 15px; float: right; margin-top: -60px; margin-right: -10%; background: url('/new-icons/008-search.png'); background-repeat: no-repeat; background-position: center; font-size: 30px;}
+
+
+
+input[type=search] {
+    -webkit-appearance: textfield;
+}
+
+::-webkit-search-cancel-button { display: none; }
+
+ 
+li {list-style-type: none;}
+
+
+ .publication-header .search span {display: none;}
+  .publication-header    ul.ui-autocomplete {background: #fefefe; width: 50px; padding: 0px 0px 0px 0px; opacity: 1; border-color: #fefefe; border-style: solid; }
+   .publication-header   input#search-area li {list-style-type: none;}
+   .publication-header   a.ui-corner-all {font-size: 30px; color: black; margin-left: 20px;;  }
+   .publication-header   a.ui-corner-all li {list-style-type: none;}
+   .publication-header   li.ui-menu-item { height: 50px; cursor:pointer;padding-top:10px;}
+    .publication-header  li.ui-menu-item:hover {background: #efefef;text-decoration: none;}
+    
+    .search-top span {display: none;}
+  ul.ui-autocomplete {background: #fefefe; min-width: 300px; padding: 0px 0px 0px 0px; opacity: 1; border-color: #fefefe; border-style: solid; height: auto; overflow-y: scroll; max-width: 300px; max-height: 300px; border-color: gainsboro; border-width: 1px;z-index: 99999999;}
+     li {list-style-type: none;}
+   .search-top a.ui-corner-all {font-size: 24px; margin-left: 40px; font-weight: 600;   }
+    .search-top a.ui-corner-all li {list-style-type: none;color: black; font-size: 24px; }
+    li.ui-menu-item { height: 50px; cursor:pointer;padding-top:16px;color: black;padding-left: 15px; font-size: 16px; color:black; border-top: 1px solid #fefefe; }
+    li.ui-menu-item:hover {background: #efefef;text-decoration: none;} 
+
+.search-top input {  outline: none; float: right; border: 1px solid rgba(0,0,0,0.2);	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	/*background-image: url("/new-icons/002-search.png");*/
+	height: 50px;
+	border: 1px solid rgba(0,0,0,0.2);
+	width: 0px;
+  transition: 240ms;
+	padding: 3px 3px 3px 8px;
+  }
+
+.search-top input#search-area:focus {width: 250px;background-color: #696969; z-index: 999999999; background:white; background-image: none;margin-top: -10px; background-color: white; margin-right: -150px ;border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: lime;
+}
+@media only screen and (max-width: 550px) {
+
+    .search-top input#search-area {padding: 20px 50px 0px 15px;}
+    .search-top input#search-area:focus {margin-top: -20px; background-color: white; font-size: 22px;background-image: none; margin-right: -100px;   }
+    h1.pub-title .search {display: none;}
+    h1.cover-title .search {display: none;}
+    h1.cover-title {padding-top: 60px;}
+}
+ .search-top input[type="text"]:invalid {
+	outline: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background: black url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAIVBMVEW/v7+/v78AAAC/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v79QUkolAAAAC3RSTlOLYAAJeoMjRhpOcbsbtd4AAABJSURBVHjaVc1JDsAgDATB9uAF8v8Hx0QcSN9KssZI5eClDj18PRsFlmlQDcfUGd6A3EgYP1xncQ+sa5qYOk9jRQt1Y0izhU5bL2o2AW3ZQKeJAAAAAElFTkSuQmCC) 10px 6px no-repeat;
+}
+
+/*LOCATIONS AND BACKGROUNDS.*/
+/*
+.Alabama-header {background: url(/images/pic-alabama.jpg);}
+.Alaska-header {background: url(/images/pic-alaska.jpg); }
+.Arizona-header {background: url(/images/pic-arizona-tucson.jpg); background-size: cover;}
+.Arkansas-header {background: url(/images/pic-arkansas.jpg); background-size: cover;}
+.California-header {background: url(/images/pic-california.jpg); background-size: cover;}
+.Colorado-header {background: url(images/); background-size: cover;}
+.Connecticut-header {background: url(images/); background-size: cover;}
+.Delaware-header {background: url(images/); background-size: cover;}
+.Florida-header {background: url(images/); background-size: cover;}
+.Georgia-header {background: url(/images/pic-georgia.jpg); background-size: cover;}
+.Hawaii-header {background: url(images/); background-size: cover;}
+.Idaho-header {background: url(images/); background-size: cover;}
+.Illinois-header {background: url(/images/pic-illinois.jpg); background-size: cover;}
+.Indiana-header {background: url(images/); background-size: cover;}
+.Iowa-header {background: url(images/); background-size: cover;}
+.Kansas-header {background: url(images/); background-size: cover;}
+.Kentucky-header {background: url(images/); background-size: cover;}
+.Louisiana-header {background: url(images/); background-size: cover;}
+.Maine-header {background: url(/images/pic-maine.jpg); background-size: cover;}
+.Maryland-header {background: url(images/); background-size: cover;}
+.Massachusetts-header {background: url(images/); background-size: cover;}
+.Michigan-header {background: url(images/); background-size: cover;}
+.Minnesota-header {background: url(images/); background-size: cover;}
+.Mississippi-header {background: url(images/); background-size: cover;}
+.Missouri-header {background: url(images/); background-size: cover;}
+.Montana-header {background: url(images/); background-size: cover;}
+.Nebraska-header {background: url(images/); background-size: cover;}
+.Nevada-header {background: url(images/); background-size: cover;}
+.New-Hampshire-header {background: url(images/); background-size: cover;}
+.New-Jersey-header {background: url(images/); background-size: cover;}
+.New-Mexico-header {background: url(images/); background-size: cover;}
+.New-York-header {background: url(images/); background-size: cover;}
+.North-Carolina-header {background: url(/images/pic-north-carolina.jpg); background-size: cover;}
+.North-Dakota-header {background: url(/images/pic-north-dakota.jpg); background-size: cover;}
+.Ohio-header {background: url(images/); background-size: cover;}
+.Oklahoma-header {background: url(images/); background-size: cover;}
+.Oregon-header {background: url(images/); background-size: cover;}
+.Pennsylvania-header {background: url(images/); background-size: cover;}
+.Rhode Island-header {background: url(images/); background-size: cover;}
+.South Carolina-header {background: url(images/); background-size: cover;}
+.South Dakota-header {background: url(images/); background-size: cover;}
+.Tennessee-header {background: url(images/); background-size: cover;}
+.Texas-header {background: url(/images/pic-texas.jpg); background-size: cover;}
+.Utah-header {background: url(/images/pic-utah.jpg); background-size: cover;}
+.Vermont-header {background: url(images/); background-size: cover;}
+.Virginia-header {background: url(images/); background-size: cover;}
+.Washington-header {background: url(images/); background-size: cover;}
+.West-Virginia-header {background: url(images/); background-size: cover;}
+.Wisconsin-header {background: url(images/); background-size: cover;}
+.Wyoming-header {background: url(images/); background-size: cover;}
+.Washingtondc-header {background: url(images/); background-size: cover;}
+
+/*
+
+.Alberta-header {background: url(images/); background-size: cover;}
+.British-Columbia-header {background: url(images/); background-size: cover;}
+.Manitoba-header {background: url(images/); background-size: cover;}
+.New-Brunswick-header {background: url(images/); background-size: cover;}
+.Newfoundland-and-Labrador-header {background: url(images/); background-size: cover;}
+.Northwest-Territories-header {background: url(images/); background-size: cover;}
+.Nova-Scotia-header {background: url(images/); background-size: cover;}
+.Nunavut-header {background: url(images/); background-size: cover;}
+.Ontario-header {background: url(images/); background-size: cover;}
+.Prince-Edward-Island-header {background: url(images/); background-size: cover;}
+.Quebec-header {background: url(images/); background-size: cover;}
+.Saskatchewan-header {background: url(images/); background-size: cover;}
+.Yukon-header {background: url(images/); background-size: cover;}
+
+/*
+.alabama-birmingham-header {background: url(images/); background-size: cover;}
+.alabama-huntsville-header {background: url(images/); background-size: cover;}
+.alabama-mobile-header {background: url(images/); background-size: cover;}
+.alabama-montgomery-header {background: url(images/); background-size: cover;}
+.alaska-anchorage-header {background: url(images/); background-size: cover;}
+.alaska-juneau-header {background: url(images/); background-size: cover;}
+.alberta-calgary-header {background: url(images/); background-size: cover;}
+.alberta-edmonton-header {background: url(/images/pic-alberta-edmonton.jpg); background-size: cover;}
+.alberta-northern-alberta-header {background: url(images/); background-size: cover;}
+.alberta-rocky-mountains-header {background: url(images/); background-size: cover;}
+.arizona-northern-arizona-header {background: url(/images/pic-arizona-northern-arizona.jpg); background-size: cover;}
+.arizona-phoenix-header {background: url(images/); background-size: cover;}
+.arizona-tucson-header {background: url(images/); background-size: cover;}
+.arkansas-fayetteville-header {background: url(images/); background-size: cover;}
+.arkansas-little-rock-header {background: url(images/); background-size: cover;}
+.british-columbia-interior-header {background: url(images/); background-size: cover;}
+.british-columbia-northern-bc-header {background: url(images/); background-size: cover;}
+.british-columbia-vancouver-header {background: url(images/); background-size: cover;}
+.british-columbia-victoria-header {background: url(/images/pic-british-columbia-victoria.jpg); background-size: cover;}
+.california-bay-area-header {background: url(images/); background-size: cover;}
+.california-los-angeles-header {background: url(images/); background-size: cover;}
+.california-norcal-header {background: url(images/); background-size: cover;}
+.california-san-diego-header {background: url(/images/pic-california-san-diego.jpg); background-size: cover;}
+.colorado-boulder-header {background: url(images/); background-size: cover;}
+.colorado-colorado-springs-header {background: url(images/); background-size: cover;}
+.colorado-denver-header {background: url(images/); background-size: cover;}
+.connecticut-hartford-header {background: url(images/); background-size: cover;}
+.florida-fort-lauderdale-header {background: url(images/); background-size: cover;}
+.florida-jacksonville-header {background: url(images/); background-size: cover;}
+.florida-miami-header {background: url(images/); background-size: cover;}
+.florida-orlando-header {background: url(images/); background-size: cover;}
+.florida-tampa-header {background: url(images/); background-size: cover;}
+.georgia-atlanta-header {background: url(images/); background-size: cover;}
+.georgia-macon-header {background: url(images/); background-size: cover;}
+.georgia-savannah-header {background: url(images/); background-size: cover;}
+.hawaii-honolulu-header {background: url(images/); background-size: cover;}
+.idaho-boise-header {background: url(images/); background-size: cover;}
+.illinois-chicago-header {background: url(images/); background-size: cover;}
+.illinois-peoria-header {background: url(images/); background-size: cover;}
+.illinois-rockford-header {background: url(images/); background-size: cover;}
+.indiana-evansville-header {background: url(images/); background-size: cover;}
+.indiana-fort-wayne-header {background: url(images/); background-size: cover;}
+.indiana-indianapolis-header {background: url(images/); background-size: cover;}
+.iowa-cedar-rapids-header {background: url(images/); background-size: cover;}
+.iowa-davenport-header {background: url(images/); background-size: cover;}
+.iowa-des-moines-header {background: url(images/); background-size: cover;}
+.iowa-iowa-city-header {background: url(images/); background-size: cover;}
+.kansas-kansas-city-header {background: url(images/); background-size: cover;}
+.kansas-topeka-header {background: url(images/); background-size: cover;}
+.kansas-wichita-header {background: url(images/); background-size: cover;}
+.kentucky-bowling-green-header {background: url(images/); background-size: cover;}
+.kentucky-lexington-header {background: url(images/); background-size: cover;}
+.kentucky-louisville-header {background: url(images/); background-size: cover;}
+.louisiana-baton-rouge-header {background: url(images/); background-size: cover;}
+.louisiana-lafayette-header {background: url(images/); background-size: cover;}
+.lousiana-new-orleans-header {background: url(images/); background-size: cover;}
+.louisiana-shreveport-header {background: url(images/); background-size: cover;}
+.maine-lewiston-header {background: url(images/); background-size: cover;}
+.maine-portland-header {background: url(images/); background-size: cover;}
+.manitoba-brandon-header {background: url(images/); background-size: cover;}
+.manitoba-winnipeg-header {background: url(/images/pic-manitoba-winnipeg.jpg); background-size: cover;}
+.maryland-annapolis-header {background: url(images/); background-size: cover;}
+.maryland-baltimore-header {background: url(images/); background-size: cover;}
+.maryland-montgomery-county-header {background: url(images/); background-size: cover;}
+.massachusetts-boston-header {background: url(images/); background-size: cover;}
+.masschusetts-cape-cod-header {background: url(images/); background-size: cover;}
+.massachusetts-western-mass-header {background: url(images/); background-size: cover;}
+.michigan-detroit-header {background: url(/images/pic-michigan-detroit.jpg); background-size: cover;}
+.michigan-flint-header {background: url(images/); background-size: cover;}
+.michigan-grand-rapids-header {background: url(images/); background-size: cover;}
+.michigan-northern-peninsula-header {background: url(images/); background-size: cover;}
+.minnesota-minneapolis-header {background: url(images/); background-size: cover;}
+.minnesota-rochester-header {background: url(images/); background-size: cover;}
+.mississippi-jackson-header {background: url(images/); background-size: cover;}
+.missouri-columiba-header {background: url(images/); background-size: cover;}
+.missouri-kansas-city-header {background: url(images/); background-size: cover;}
+.missouri-springfield-header {background: url(images/); background-size: cover;}
+.missouri-stlouis-header {background: url(images/); background-size: cover;}
+.montana-billings-header {background: url(images/); background-size: cover;}
+.montana-helena-header {background: url(images/); background-size: cover;}
+.montana-missoula-header {background: url(images/); background-size: cover;}
+.nebraska-lincoln-header {background: url(images/); background-size: cover;}
+.nebraska-omaha-header {background: url(images/); background-size: cover;}
+.nevada-carson-city-header {background: url(images/); background-size: cover;}
+.nevada-las-vegas-header {background: url(images/); background-size: cover;}
+.nevada-reno-header {background: url(images/); background-size: cover;}
+.new-brunswick-saint-john-header {background: url(images/); background-size: cover;}
+.new-hampshire-portsmouth-header {background: url(images/); background-size: cover;}
+.new-jersey-newark-header {background: url(images/); background-size: cover;}
+.new-mexico-albuquerque-header {background: url(images/); background-size: cover;}
+.new-mexico-santa-fe-header {background: url(images/); background-size: cover;}
+.new-york-albany-header {background: url(images/); background-size: cover;}
+.new-york-buffalo-header {background: url(images/); background-size: cover;}
+.new-york-long-island-header {background: url(images/); background-size: cover;}
+.new-york-new-york-city-header {background: url(images/); background-size: cover;}
+.new-york-rochester-header {background: url(images/); background-size: cover;}
+.new-york-syracuse-header {background: url(images/); background-size: cover;}
+.newfoundland-labrador-header {background: url(/images/pic-newfoundland-labrador.jpg); background-size: cover;}
+.newfoundland-st-johns-header {background: url(/images/pic-newfoundland-stjohns.jpg); background-size: cover;}
+.north-carolina-charlotte-header {background: url(images/); background-size: cover;}
+.north-carolina-asheville-header {background: url(images/); background-size: cover;}
+.north-carolina-greensboro-header {background: url(images/); background-size: cover;}
+.north-carolina-raleigh-durham-header {background: url(images/); background-size: cover;}
+.north-dakota-bakken-header {background: url(images/); background-size: cover;}
+.north-dakota-bismarck-header {background: url(images/); background-size: cover;}
+.north-dakota-fargo-header {background: url(/images/pic-north-dakota-fargo.jpg); background-size: cover;}
+.nova-scotia-halifax-header {background: url(images/); background-size: cover;}
+.ohio-cincinnati-header {background: url(images/); background-size: cover;}
+.ohio-clevand-header {background: url(images/); background-size: cover;}
+.ohio-columbus-header {background: url(/images/pic-ohio-columbus.jpg); background-size: cover;}
+.ohio-dayton-header {background: url(images/); background-size: cover;}
+.oklahoma-oklahoma-city-header {background: url(images/); background-size: cover;}
+.oklahoma-tulsa-header {background: url(/images/pic-oklahoma-tulsa.jpg); background-size: cover;}
+.ontario-golden-horseshoe-header {background: url(images/); background-size: cover;}
+.ontario-kitchener-waterloo-header {background: url(images/); background-size: cover;}
+.ontario-northern-ontario-header {background: url(/images/pic-ontario-northern-ontario.jpg); background-size: cover;}
+.ontario-ottawa-header {background: url(images/); background-size: cover;}
+.ontario-toronto-header {background: url(/images/pic-ontario-toronto.jpg); background-size: cover;}
+.oregon-eugene-header {background: url(images/); background-size: cover;}
+.oregon-portland-header {background: url(images/); background-size: cover;}
+.oregon-salem-header {background: url(images/); background-size: cover;}
+.pennsylvania-harrisburg-header {background: url(images/); background-size: cover;}
+.pennsylvania-philadelphia-header {background: url(images/); background-size: cover;}
+.pennsylvania-pittsburgh-header {background: url(images/); background-size: cover;}
+.quebec-montreal-header {background: url(/images/pic-quebec-montreal.jpg); background-size: cover;}
+.quebec-quebec-city-header {background: url(images/); background-size: cover;}
+.quebec-sherbrooke-header {background: url(images/); background-size: cover;}
+.rhode-island-providence-header {background: url(images/); background-size: cover;}
+.saskatchewan-regina-header {background: url(images/); background-size: cover;}
+.saskatchewan-saskatoon-header {background: url(/images/pic-saskatchewan-saskatoon.jpg); background-size: cover;}
+.south-carolina-charleston-header {background: url(images/); background-size: cover;}
+.south-carolina-greenville-header {background: url(images/); background-size: cover;}
+.south-carolina-myrtle-beach-header {background: url(images/); background-size: cover;}
+.south-dakota-pierre-header {background: url(images/); background-size: cover;}
+.south-dakota-rapid-city-header {background: url(images/); background-size: cover;}
+.south-dakota-sioux-falls-header {background: url(images/); background-size: cover;}
+.tennessee-chattanooga-header {background: url(images/); background-size: cover;}
+.tennessee-knoxville-header {background: url(images/); background-size: cover;}
+.tennessee-memphis-header {background: url(images/); background-size: cover;}
+.tennessee-nashville-header {background: url(/images/pic-tennessee-nashville.jpg); background-size: cover;}
+.texas-austin-header {background: url(images/); background-size: cover;}
+.texas-dallas-fort-worth-header {background: url(images/); background-size: cover;}
+.texas-el-paso-header {background: url(images/); background-size: cover;}
+.texas-houston-header {background: url(images/); background-size: cover;}
+.texas-san-antonio-header {background: url(images/); background-size: cover;}
+.texas-west-texas-header {background: url(images/); background-size: cover;}
+.utah-salt-lake-city-header {background: url(images/); background-size: cover;}
+.vermont-burlington-header {background: url(images/); background-size: cover;}
+.virginia-newport-news-header {background: url(images/); background-size: cover;}
+.virginia-nova-header {background: url(images/); background-size: cover;}
+.virginia-richmond-header {background: url(images/); background-size: cover;}
+.washington-olympia-header {background: url(images/); background-size: cover;}
+.washington-seattle-header {background: url(images/); background-size: cover;}
+.washington-spokane-header {background: url(images/); background-size: cover;}
+.washington-tacoma-header {background: url(images/); background-size: cover;}
+.west-virginia-charleston-header {background: url(images/); background-size: cover;}
+.west-virginia-clarksburg-header {background: url(images/); background-size: cover;}
+.west-virginia-morgantown-header {background: url(images/); background-size: cover;}
+.wisconsin-eau-claire-header {background: url(images/); background-size: cover;}
+.wisconsin-green-bay-header {background: url(images/); background-size: cover;}
+.wisconsin-madison-header {background: url(images/); background-size: cover;}
+.wisconsin-milwaukee-header {background: url(images/); background-size: cover;}
+.wyoming-cheyenne-header {background: url(/images/pic-wyoming-cheyenne.jpg); background-size: cover;}
+.wyoming-jackson-hole-header {background: url(images/); background-size: cover;}
+.wyoming-laramie-header {background: url(images/); background-size: cover;}
+
+*/
+
+    #alabama-header.item {background: url(/images/pic-alabama-thumb.jpg); background-size: cover;}
+
+    #texas-header.item {background: url(/images/pic-texas-thumb.jpg); background-size: cover;}
+    #north-carolina-header.item {background: url(/images/pic-north-carolina-thumb.jpg); background-size: cover;}
+    #north-dakota-header.item {background: url(/images/pic-north-dakota-thumb.jpg); background-size: cover;}
+    #maine-header.item {background: url(/images/pic-maine-thumb.jpg); background-size: cover;}
+    #illinois-header.item {background: url(/images/pic-illinois-thumb.jpg); background-size: cover;}
+    #california-header.item {background: url(/images/pic-california-thumb.jpg); background-size: cover;}
+    #utah-header.item {background: url(/images/pic-utah-thumb.jpg); background-size: cover;}
+    #georgia-header.item {background: url(/images/pic-georgia-thumb.jpg); background-size: cover;}
+    #manitoba-header.item {background: url(/images/pic-manitoba-thumb.jpg); background-size: cover;}
+    #tucson-header.item {background: url(/images/pic-arizona-tucson-thumb.jpg); background-size: cover;}
+   
+    #quebec-header.item {background: url(/images/pic-quebec-thumb.jpg); background-size: cover;}
+    #nova-scotia-header.item {background: url(/images/pic-nova-scotia-thumb.jpg); background-size: cover;}
+    #ontario-header.item {background: url(/images/pic-ontario-toronto-thumb.jpg); background-size: cover;}
+    #alberta-header.item {background: url(/images/pic-alberta-thumb.jpg); background-size: cover;}
+    
+    #nashville-header.item {background: url(/images/pic-tennessee-nashville-thumb.jpg); background-size: cover;}
+    #cheyenne-header.item {background: url(/images/pic-wyoming-cheyenne-thumb.jpg); background-size: cover;}
+    #tulsa-header.item {background: url(/images/pic-oklahoma-tulsa-thumb.jpg); background-size: cover;}
+    #columbus-header.item {background: url(/images/pic-ohio-columbus-thumb.jpg); background-size: cover;}
+    #detroit-header.item {background: url(/images/pic-michigan-detroit-thumb.jpg); background-size: cover;}
+    #san-diego-header.item {background: url(/images/pic-california-san-diego-thumb.jpg); background-size: cover;}
+    #fargo-header.item {background: url(/images/pic-north-dakota-fargo-thumb.jpg); background-size: cover;}
+    #cheyenne-header.item {background: url(/images/pic-wyoming-cheyenne-thumb.jpg); background-size: cover;}
+    #british-columbia-header.item {background: url(/images/pic-british-columbia-thumb.jpg); background-size: cover;}
+    #montreal-header.item {background: url(/images/pic-quebec-montreal-thumb.jpg); background-size: cover;}
+    #labrador-header.item {background: url(/images/pic-newfoundland-labrador-thumb.jpg); background-size: cover;}
+    #stjohns-header.item {background: url(/images/pic-newfoundland-stjohns-thumb.jpg); background-size: cover;}
+    #toronto-header.item {background: url(/images/pic-ontario-toronto-thumb.jpg); background-size: cover;}
+    #winnipeg-header.item {background: url(/images/pic-manitoba-winnipeg-thumb.jpg); background-size: cover;}
+    #saskatoon-header.item {background: url(/images/pic-saskatchewan-saskatoon-thumb.jpg); background-size: cover;}
+    #victoria-header.item {background: url(/images/pic-british-columbia-victoria-thumb.jpg); background-size: cover;}
+    #edmonton-header.item {background: url(/images/pic-alberta-edmonton-thumb.jpg); background-size: cover;}
+    #northern-ontario-header.item {background: url(/images/pic-ontario-northern-ontario-thumb.jpg); background-size: cover;}
+    #northern-arizona-header.item {background: url(/images/pic-arizona-northern-arizona-thumb.jpg); background-size: cover;}
+    

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+          <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+          
+        h3 {font-family: 'Source Sans Pro', sans-serif; color: white; font-size: 30px;}
+    #features {background: rgba(255,255,255,0.1); }
+        p {font-family: 'Source Sans Pro'; font-weight: 300; text-align: justify; color: #fefefe;font-size: 15px;}
+    
+    </style>
+</head>
+<body>
+
+<style>
+    
+        
+  
+    
+#map {
+    position: fixed;
+    width:50%;
+}
+#features {
+    width: 50%;
+    margin-left: 50%;
+    font-family: Tw Cen MT;
+    overflow-y: scroll;
+    background-color: #fafafa;
+    
+}
+section {
+    padding:  25px 50px;
+   margin-top: -10px; margin-bottom: -10px;
+    line-height: 25px;
+    border-bottom:  solid #efefef;
+    opacity: 0.25;
+    font-size: 20px;
+    height: 100vh;
+    margin-left: 0 auto; margin-right: 0 auto;
+       
+  
+     background: #353535;
+    
+}
+    
+    section:nth-child(2) {background: #696969}  
+
+    section#rules{
+    background: url("http://www.myseumoftoronto.com/wp-content/uploads/2018/05/pickford-hot-docs-display-photo.jpg");
+        background-size: cover;
+        background-position: center;
+    color: white;
+  
+    
+}
+    
+    section#section1 {background:black;}
+section.active {
+    opacity: 1;
+     animation: 0.3s;
+  
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 1000px;
+}
+    
+    section img {width:auto;  overflow-y: hidden; margin-top: -25px; }
+    section p img {text-align: center;width: 100%; }
+    
+</style>
+
+<div id='map'></div>
+<div id='features'>
+    <section style="background: url('http://www.myseumoftoronto.com/wp-content/uploads/2018/06/myseum-collects-streetcar-840-840.jpg'); color: #efefef; background-size: cover;" id='welcome' class='active'>
+        <h3 style="text-align: center;">Sherlock Mysteries</h3><button><h1>Start Game</h1></button>
+    </section>
+    <section id='rules' class='active'>
+        <h3>THE CHALLENGE</h3>
+        <ul>
+        <li><p>This package includes 12 vintage photos of film theatres with accompanying stories and clues for each. Teams must decipher the clues in order to locate the theatres.</p></li>
+        <li><p>You will have 6 hours to visit as many locations as you can, using only your bike or public transit.</p></li>
+        <li><p>Once located, you and your teammate(s) must retake the photo of the builidng in its present state, getting as close as possible to the footprint of the original photographer.</p></li>
+        <li><p>We encourage you to explore the neighbourhood of each location -- don't forget to take time throughout the day to eat and enjoy local spots!</p></li>
+        </ul>
+    </section>
+    <section style="color: white; background-size: cover; opacity: 0.8;" id='section1' class='active'>
+        <h3>NEED TO KNOW</h3>
+        <p>Meet us at TIFF Bell Lightbox to sign up and get started. We will be confirming your team and making sure you have everything you need to hit the ground running.</p>
+        <ul>
+        <li><strong>12:00pm</strong><p>Meet and greet at TIFF Bell Lightbox</p></li>
+        <li><strong>5:30pm</strong><p>Deadline for image submission</p></li>
+        <li><strong>6:00-7:30</strong><p>reception and awards ceremony</p></li>
+        
+
+        </ul>
+    </section>
+    <section id='section2'>
+        <h3>Quest #1<strong> | 1 Point</strong></h3>
+        <p style="text-align: center;"> <br><img style="width: 80%;" src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/garden-theatre-before.jpg"><br><br></p>
+<p></p>
+<p></p>
+    </section>
+    <section id='section3'>
+        <h3>Quest #2<strong> | 1 Point</strong></h3>
+        <p style="text-align: center;"><br><img style="width: 60%;" src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/bloor-theatre-before.jpg"><br><br>
+        </p>
+<p></p>
+<p></p>
+    </section>
+    <section id='section4'>
+       <h3>Quest #3<strong> | 1 Point</strong></h3>
+        <p> <br><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/pylon-theatre-before-1.jpg"><br><br>
+        </p>
+<p></p>
+<p></p>
+    </section>
+    <section id='section5'>
+        <h3>Quest #4<strong> | 1 Point</strong></h3>
+        <p style="text-align: center;"><br><img style="width: 70%;" src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/loews-before.jpg"><br><br> </p>
+<p></p>
+<p></p>
+    </section>
+    <section id='section6'>
+        <h3>Quest #5<strong> | 3 Points</strong></h3>
+        <p><br> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/standard-after.jpg"><br><br></p>
+<p></p>
+<p></p>
+    </section>
+    <section id='section7'>
+        <h3>Quest #6<strong> | 3 Points</strong></h3>
+        <p><br><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/orpheum-before.jpg"><br><br>
+        </p>
+<p></p>
+<p></p>
+    </section>
+       <section id='section8'>
+        <h3>Quest #7<strong> | 10 Points</strong></h3>
+<p></p>
+<p></p>
+    </section>
+    
+       <section id='section9'>
+       
+        <h3>Quest #8<strong> | 10 Points</strong></h3>
+        <p><br><br> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/brighton-before.jpg"><br><br></p>
+            <p></p>
+           <p></p>
+    </section>
+       <section id='section10'>
+   <h3>Quest #9<strong> | 3 Points</strong></h3>
+        <p><br><br> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/parkdale-theatre-underlay.jpg"><br><br></p>
+           <p></p>
+           <p></p>
+    </section>
+       <section id='section11'>
+        <h3>Quest #10<strong> | 10 Points</strong></h3>
+        <p><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/danforth-before.jpg"><br><br></p>
+<p></p>
+<p></p>
+    </section>
+       <section id='section12'>
+        <h3>Quest #11<strong> | 10 Points</strong></h3>
+        <p> <img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/eastwood-theatre-before.jpg"><br><br></p>
+           <p></p>
+           <p></p>     
+    </section>
+       <section id='section13'>
+        <h3>Quest #12<strong> | 10 Points</strong></h3>
+        <p><br><img src="http://www.myseumoftoronto.com/wp-content/uploads/2018/07/eglinton-theatre-before.jpg"><br><br></p>
+           <p></p>
+           <p></p>
+    </section>
+     <section id='section14'>
+        <h3>Quest #13</h3>
+        <p><br><br><img src=""><br><br></p>
+    </section>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbG5pY29sYXNqYW1lcyIsImEiOiJjaXYycGU2a2cwMmZ1MnlwNjZ4YWEzbzRmIn0.hZO-ZaGNzM4jXhbvqtOH3w';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/philnicolasjames/cjedfwna22z0f2slkntq3pddu',
+        bearing: -0,
+        center: [-79.39487814903258,
+          43.6479115207761],
+        zoom: 15,
+        speed: 0.8,
+        pitch: 20
+});
+    
+
+    
+var chapters = {
+    'welcome': {
+        bearing: -0,
+        center: [-79.39041495323181,
+          43.646541277142155],
+        zoom: 15,
+        speed: 0.8,
+        pitch: 0
+    },
+    'section1': {
+        bearing: 0,
+        center: [-79.39041495323181,
+          43.646541277142155],
+        zoom: 15.00,
+         speed: 0.8,
+        pitch: 40
+    },
+    'section2': {
+        center: [  -79.40144956111908,
+          43.65783612001078
+],
+        bearing: 54.40,
+        zoom: 18,
+        speed: 0.6,
+        pitch: 44.50
+    },
+    'section3': {
+        bearing: 12.80,
+        center: [   -79.40951764583588,
+          43.66542692370103],
+        zoom: 18,
+        speed: 0.6,
+        pitch: 40.00
+    },
+    'section4': {
+        bearing: 60,
+        center: [   -79.41330760717392,
+          43.6553871437279],
+        zoom: 18,
+        speed: 0.6,
+        pitch: 45
+    },
+    'section5': {
+        bearing: 15.20,
+        center: [-79.37921941280365,
+          43.65274011885481],
+        zoom: 18,
+        pitch: 40.50,
+        speed: 0.6
+    },
+    'section6': {
+        bearing: 0,
+        center: [-79.39792513847351,
+          43.653132134297216],
+        zoom: 18,
+        pitch: 40,
+        speed: 0.6
+    },
+    'section7': {
+        bearing: -0,
+        center: [-79.40467894077301,
+          43.64716623633106],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section8': {
+        bearing: -0,
+        center: [ -79.45101141929626,
+          43.651071113580606],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section9': {
+        bearing: -0,
+        center: [-79.44758892059326,
+          43.64290008126971],
+        zoom:18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section10': {
+        bearing: -0,
+        center: [-79.44390624761581,
+          43.63910725773219],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section11': {
+        bearing: -0,
+        center: [ -79.35710191726685,
+          43.67650870471961],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section12': {
+        bearing: -0,
+        center: [ -79.32867050170898,43.67088270606131],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+     'section13': {
+        bearing: -0,
+        center: [-79.41061198711395,
+          43.70428176558769],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    },
+    'section14': {
+        bearing: -0,
+        center: [-79.41061198711395,
+          43.70428176558769],
+        zoom: 18,
+        speed: 0.8,
+        pitch: 40
+    }
+};
+    
+    
+
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = 'baker';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+</body>
+</html>

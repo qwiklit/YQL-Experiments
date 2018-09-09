@@ -1,0 +1,375 @@
+
+        body {
+          color:#404040;
+          font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+          margin:0;
+          padding:0;
+          -webkit-font-smoothing:antialiased;
+        }
+
+        * {
+          -webkit-box-sizing:border-box;
+          -moz-box-sizing:border-box;
+          box-sizing:border-box;
+        }
+
+        .sidebar {
+          position:absolute;
+          width:25%;
+          height:100%;
+          top:0;left:0;
+          overflow:hidden;
+          border-right:1px solid rgba(0,0,0,0.25);
+          opacity: 1;
+        transition: 0.5s;
+            z-index:2;
+        }
+      
+      
+     
+      
+ 
+      
+        .pad2 {
+          padding:20px;
+        }
+
+        .map {
+          position:absolute;
+          left:0%;
+          width:100%;
+          top:0;bottom:0;
+          
+        }
+
+        h1 {
+          font-size:22px;
+          margin:0;
+          font-weight:400;
+          line-height: 20px;
+          padding: 20px 2px;
+            font-family: 'helvetica';
+            font-weight: 200;
+        }
+
+        a {
+          color:#404040;
+          text-decoration:none;
+        }
+
+        a:hover {
+          color:#101010;
+        }
+
+        .heading {
+          background:#fff;
+          border-bottom:1px solid #eee;
+          min-height:60px;
+          line-height:60px;
+          padding:0 10px;
+          background-color: black;
+          color: #fff;
+        }
+
+        .listings {
+          height:100%;
+          overflow:auto;
+          padding-bottom:60px;
+              background: black;
+        
+        }
+          
+          .listings div 
+          {color: #fefefe}
+
+        .listings .item {
+          display:block;
+          border-bottom:1px solid #eee;
+          padding:10px;
+          text-decoration:none;
+         
+        }
+
+        .listings .item:last-child { border-bottom:none; }
+        .listings .item .title {
+          display:block;
+          color:#00AEEF;
+          font-weight:700;
+          
+        }
+
+        .listings .item .title small { font-weight:400; }
+        .listings .item.active .title,
+        .listings .item .title:hover {           color:#00AEEF;
+ text-decoration: underline; }
+        .listings .item.active {
+            background: #003366;
+        }
+        ::-webkit-scrollbar {
+          width:3px;
+          height:3px;
+          border-left:0;
+          background:rgba(0,0,0,0.1);
+        }
+        ::-webkit-scrollbar-track {
+          background:none;
+        }
+        ::-webkit-scrollbar-thumb {
+          background:#3fc2f3;
+          border-radius:0;
+        }
+
+        .marker {
+          border: none;
+          cursor: pointer;
+          height: 40px;
+          width: 40px;
+          background-image: url(icons/marker-black.png);
+            background-repeat: no-repeat;
+          background-color: rgba(0, 0, 0, 0);
+        }
+
+        .clearfix { display:block; }
+        .clearfix:after {
+          content:'.';
+          display:block;
+          height:0;
+          clear:both;
+          visibility:hidden;
+        }
+
+        /* Marker tweaks */
+        .mapboxgl-popup {
+          padding-bottom: 50px;
+        }
+
+        .mapboxgl-popup-close-button {
+          display:none;
+      
+        }
+        .mapboxgl-popup-content {
+          font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+          padding:0;
+          width:180px;
+         opacity: 1;
+        }
+        .mapboxgl-popup-content-wrapper {
+          padding:1%;
+        }
+        .mapboxgl-popup-content h3 {
+          background:black;
+          color:#fff;
+          margin:0;
+          display:block;
+          padding:10px;
+          border-radius:3px 3px 0 0;
+          font-weight:700;
+          margin-top:-15px;
+          text-align: center;
+        }
+
+        .mapboxgl-popup-content h4 {
+          margin:0;
+          display:block;
+          padding: 10px 10px 10px 10px;
+          font-weight:400;
+        background: black;
+            color: #00AEEF;
+            text-align: center;
+            
+        }
+
+        .mapboxgl-popup-content div {
+          padding:10px;
+          border-style: none;
+          
+        }
+
+        .mapboxgl-container .leaflet-marker-icon {
+          cursor:pointer;
+        }
+
+        .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+          margin-top: 15px;
+        }
+
+        .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+          border-bottom-color: #3fc2f3;
+        }
+          
+          .modal-footer button {border-radius: 1px; padding: 10px 25px 10px 25px; color: black;}
+          .modal-footer button:hover {color: black;}
+          .modal-footer button p {padding-top: 0px; padding-bottom: 0px;}
+          .myButton {
+    z-index: 999999999;
+	background-color:#1b1b1b;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:0px;
+	border-top:1px dotted white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#f7f7f7;
+	font-family:Arial;
+	font-size:17px;
+	padding:11px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #284966;
+              width: 100%;
+              text-align: center;
+}
+      
+      .btn-info {background: #00AEEF; border-color: black;}
+          
+          .modal h1 {color: white; padding: 15px 2px 5px 2px; margin-top: -5px;font-family: 'HelveticaNeue-Light',Arial,Helvetica,sans-serif;text-transform: uppercase; }
+          .modal h5 {font-size: 16px; font-style: italic;}
+          .modal p {padding-top 10px; padding-bottom: 10px;font-family: 'HelveticaNeue-Medium', Arial,Helvetica,sans-serif;}
+.myButton:hover {color: white;}         
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+    
+
+          .modal-content { margin: 0 auto; max-width: 800px;background: black; border-radius: 0px; color: white; width: inherit; height: 70vh;margin-left: -35%; background: black; margin-top: 0vh;margin-top: -130px;}
+          .mapboxgl-popup-content {width: 250px; }
+.mapboxgl-popup-content button { position: inherit; z-index: 9999999999;}
+          .modal-dialog { position: absolute; overflow-y: initial!important; display: inherit;}
+          .modal-body {    overflow-y: auto;height: 50vh; }
+          .modal {display: inline-table; height: 500px; padding: 0px; margin-top: -50%;}
+          .modal-open {position: table-cell; vertical-align: middle;display: inherit;  }
+          p {margin-bottom: 0px;}
+      
+
+          .mapboxgl-popup-content div {padding-right: 10px;}
+          h4.modal-title {padding-left: 0px; background: white;}
+          .modal-backdrop { position: inherit;}
+          p.image-box img { width: 100%; padding: 10px 0px 10px 0px;}
+          p.year-tags {font-size: 12px; margin-bottom: 10px;}
+          .listings div {font-size: 13px; line-height: 1.4;}
+      
+      
+      iframe {width: 100%; height: 2000px; border-style: none;}
+      .tour-icon {padding: 5px;}
+      .tour-list img {height: 150px; width: 150px; border-radius: 8px; }
+      .tour-list h1 {text-align: center;}
+      h5.tour-label {margin-top: -5px;font-style: normal; text-align: center;color: #efefef}
+      
+ 
+#sidebar {
+    top: 0px;
+    width: 25%;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+
+}
+.main-area {
+    top: 0px;
+    
+    right: 0;
+    bottom: 0px;
+   left: 0;
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+      label{
+   z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    background-color: blue;
+    
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+      }
+      
+      input[type=checkbox] {
+   display: none;
+}
+      
+
+input:checked ~ .sidebar { 
+margin-left: -65%;
+
+}
+   
+input:checked ~ .main-area { 
+    left:-25%;
+}
+
+
+input:checked ~ label {
+    left: 0;
+}
+    
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+      
+      
+     @media only screen and (max-width: 600px) {
+      .sidebar {
+       width: 60%;   
+      }
+          label {
+          margin-left: 35%;
+          }
+          
+          input:checked ~ label { 
+    margin-left:0%;
+          }}
+           @media only screen and (max-width: 768px) {
+             .modal-content { margin: 0 auto; background: black; border-radius: 0px; color: white; width: inherit; height: inherit; width: 90vw; margin-left: -25%; margin-top:15vh; padding: 25px;  }
+            .modal-footer {height: 50px; }
+               .vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+               .mapboxgl-popup-content h3 { font-size: 1.3em;}
+            .btn-info {padding: 5px 5px 5px 5px}
+
+      }
+      
+      
+    #close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:black;
+    color: white;
+        font-size: 1.5em;
+        transition: 500ms;
+                
+
+}
+      #card {background: black; padding-top:30px;}     
+@media only screen and (max-width: 450px) {
+         
+.modal-content { margin: 0 auto; background: black; border-radius: 0px; color: white; width: inherit; height: inherit; width: 102vw; margin-left: -28%; margin-top:15vh; padding: 0px 35px 0px 35px; }
+.mapboxgl-popup-content {width: 250px;}
+.modal h1 {text-align: center;}
+.modal h5 {text-align: center;}
+    .modal p {text-align: justify;}}
+      

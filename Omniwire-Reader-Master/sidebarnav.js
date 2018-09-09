@@ -234,7 +234,9 @@ document.getElementById("sidebar-nav").innerHTML =
                 '<li>'+
                     '<a href="submit-your-stories.html">Submit Your Stories</a>'+
                     
-                '</li>' 
+                '</li>'+
+    
+    '<div><img src="images/seventh-seal-ingmar-bergman.png"></div>'
 ;
 
 

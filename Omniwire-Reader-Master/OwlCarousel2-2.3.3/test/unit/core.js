@@ -2,7 +2,7 @@ module('Core tests');
 
 test('replace with loop', function() {
 	expect(1);
-	before_and_after_replace({ loop: true });
+	before_and_after_replace({ loop: false });
 });
 
 test('replace without loop', function() {
@@ -28,7 +28,7 @@ function before_and_after_replace(options) {
 test('remove with loop', function() {
 	expect(3);
 	
-	before_and_after_remove({ loop: true });
+	before_and_after_remove({ loop: false });
 });
 
 test('remove without loop', function() {
@@ -71,7 +71,7 @@ function before_and_after_remove(options) {
 test('remove and add with loop', function() {
 	expect(1);
 	
-	before_and_after_remove_add({ loop: true });
+	before_and_after_remove_add({ loop: false });
 });
 
 test('remove and add without loop', function() {
